@@ -10,82 +10,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 "161 D:\mplab\include\pic18.h
 [v __delay `JF3779 ~T0 @X0 0 e ]
 [p i __delay ]
-"27 test_main.c
-[p x PLLDIV=1 ]
-"28
-[p x CPUDIV=OSC1_PLL2 ]
-"29
-[p x USBDIV=1 ]
-"32
-[p x FOSC=INTOSCIO_EC ]
-"33
-[p x FCMEN=OFF ]
-"34
-[p x IESO=OFF ]
-"37
-[p x PWRT=OFF ]
-"38
-[p x BOR=OFF ]
-"39
-[p x BORV=3 ]
-"40
-[p x VREGEN=OFF ]
-"43
-[p x WDT=OFF ]
-"44
-[p x WDTPS=32768 ]
-"47
-[p x CCP2MX=OFF ]
-"48
-[p x PBADEN=OFF ]
-"49
-[p x LPT1OSC=OFF ]
-"50
-[p x MCLRE=OFF ]
-"53
-[p x STVREN=ON ]
-"54
-[p x LVP=ON ]
-"55
-[p x ICPRT=OFF ]
-"56
-[p x XINST=OFF ]
-"59
-[p x CP0=OFF ]
-"60
-[p x CP1=OFF ]
-"61
-[p x CP2=OFF ]
-"62
-[p x CP3=OFF ]
-"65
-[p x CPB=OFF ]
-"66
-[p x CPD=OFF ]
-"69
-[p x WRT0=OFF ]
-"70
-[p x WRT1=OFF ]
-"71
-[p x WRT2=OFF ]
-"72
-[p x WRT3=OFF ]
-"75
-[p x WRTC=OFF ]
-"76
-[p x WRTB=OFF ]
-"77
-[p x WRTD=OFF ]
-"80
-[p x EBTR0=OFF ]
-"81
-[p x EBTR1=OFF ]
-"82
-[p x EBTR2=OFF ]
-"83
-[p x EBTR3=OFF ]
-"86
-[p x EBTRB=OFF ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3594,73 +3518,149 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 161: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 163: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 165: extern __nonreentrant void _delay3(unsigned char);
-[; ;test_main.c: 96: void ms_delay(unsigned int);
-"98 test_main.c
+"30 fuses.h
+[p x PLLDIV=1 ]
+"31
+[p x CPUDIV=OSC1_PLL2 ]
+"32
+[p x USBDIV=1 ]
+"35
+[p x FOSC=INTOSCIO_EC ]
+"36
+[p x FCMEN=OFF ]
+"37
+[p x IESO=OFF ]
+"40
+[p x PWRT=OFF ]
+"41
+[p x BOR=OFF ]
+"42
+[p x BORV=3 ]
+"43
+[p x VREGEN=OFF ]
+"46
+[p x WDT=OFF ]
+"47
+[p x WDTPS=32768 ]
+"50
+[p x CCP2MX=OFF ]
+"51
+[p x PBADEN=OFF ]
+"52
+[p x LPT1OSC=OFF ]
+"53
+[p x MCLRE=OFF ]
+"56
+[p x STVREN=ON ]
+"57
+[p x LVP=ON ]
+"58
+[p x ICPRT=OFF ]
+"59
+[p x XINST=OFF ]
+"62
+[p x CP0=OFF ]
+"63
+[p x CP1=OFF ]
+"64
+[p x CP2=OFF ]
+"65
+[p x CP3=OFF ]
+"68
+[p x CPB=OFF ]
+"69
+[p x CPD=OFF ]
+"72
+[p x WRT0=OFF ]
+"73
+[p x WRT1=OFF ]
+"74
+[p x WRT2=OFF ]
+"75
+[p x WRT3=OFF ]
+"78
+[p x WRTC=OFF ]
+"79
+[p x WRTB=OFF ]
+"80
+[p x WRTD=OFF ]
+"83
+[p x EBTR0=OFF ]
+"84
+[p x EBTR1=OFF ]
+"85
+[p x EBTR2=OFF ]
+"86
+[p x EBTR3=OFF ]
+"89
+[p x EBTRB=OFF ]
+[; ;test_main.c: 35: void ms_delay(unsigned int);
+"37 test_main.c
 [v _main `(v ~T0 @X0 1 ef ]
-"99
+"38
 {
-[; ;test_main.c: 98: void main()
-[; ;test_main.c: 99: {
+[; ;test_main.c: 37: void main()
+[; ;test_main.c: 38: {
 [e :U _main ]
 [f ]
-[; ;test_main.c: 100: OSCCON=0x72;
-"100
+[; ;test_main.c: 39: OSCCON=0x72;
+"39
 [e = _OSCCON -> -> 114 `i `uc ]
-[; ;test_main.c: 101: TRISB=0x00;
-"101
+[; ;test_main.c: 40: TRISB=0x00;
+"40
 [e = _TRISB -> -> 0 `i `uc ]
-[; ;test_main.c: 102: while(1)
-"102
+[; ;test_main.c: 41: while(1)
+"41
 [e :U 364 ]
-[; ;test_main.c: 103: {
-"103
+[; ;test_main.c: 42: {
+"42
 {
-[; ;test_main.c: 104: LATB = 0xff;
-"104
+[; ;test_main.c: 43: LATB = 0xFF;
+"43
 [e = _LATB -> -> 255 `i `uc ]
-[; ;test_main.c: 106: _delay((unsigned long)((500)*(8000000/4000.0)));
-"106
+[; ;test_main.c: 45: _delay((unsigned long)((500)*(8000000/4000.0)));
+"45
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;test_main.c: 107: LATB = 0;
-"107
+[; ;test_main.c: 46: LATB = 0x00;
+"46
 [e = _LATB -> -> 0 `i `uc ]
-[; ;test_main.c: 109: _delay((unsigned long)((500)*(8000000/4000.0)));
-"109
+[; ;test_main.c: 48: _delay((unsigned long)((500)*(8000000/4000.0)));
+"48
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"110
+"49
 }
 [e :U 363 ]
-"102
+"41
 [e $U 364  ]
 [e :U 365 ]
-[; ;test_main.c: 110: }
-[; ;test_main.c: 111: }
-"111
+[; ;test_main.c: 49: }
+[; ;test_main.c: 50: }
+"50
 [e :UE 362 ]
 }
-"127
+"66
 [v _ms_delay `(v ~T0 @X0 1 ef1`ui ]
-"128
+"67
 {
-[; ;test_main.c: 127: void ms_delay(unsigned int val)
-[; ;test_main.c: 128: {
+[; ;test_main.c: 66: void ms_delay(unsigned int val)
+[; ;test_main.c: 67: {
 [e :U _ms_delay ]
-"127
+"66
 [v _val `ui ~T0 @X0 1 r1 ]
-"128
+"67
 [f ]
-"129
+"68
 [v _i `ui ~T0 @X0 1 a ]
 [v _j `ui ~T0 @X0 1 a ]
-[; ;test_main.c: 129: unsigned int i,j;
-[; ;test_main.c: 130: for(i=0;i<val;i++)
-"130
+[; ;test_main.c: 68: unsigned int i,j;
+[; ;test_main.c: 69: for(i=0;i<val;i++)
+"69
 {
 [e = _i -> -> 0 `i `ui ]
 [e $U 370  ]
-"131
+"70
 [e :U 367 ]
-[; ;test_main.c: 131: for(j=0;j<165;j++);
+[; ;test_main.c: 70: for(j=0;j<165;j++);
 {
 [e = _j -> -> 0 `i `ui ]
 [e $ < _j -> -> 165 `i `ui 371  ]
@@ -3670,14 +3670,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $ < _j -> -> 165 `i `ui 371  ]
 [e :U 372 ]
 }
-"130
+"69
 [e ++ _i -> -> 1 `i `ui ]
 [e :U 370 ]
 [e $ < _i _val 367  ]
 [e :U 368 ]
-"131
+"70
 }
-[; ;test_main.c: 132: }
-"132
+[; ;test_main.c: 71: }
+"71
 [e :UE 366 ]
 }

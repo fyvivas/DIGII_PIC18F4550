@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.41 build -162212810 
-                                                                                               Tue Nov 17 12:43:32 2020
+                                                                                               Tue Nov 17 12:58:16 2020
 
 Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
      1                           	processor	18F4550
@@ -89,7 +89,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
     75 ;;
     76 ;; *************** function _main *****************
     77 ;; Defined at:
-    78 ;;		line 98 in file "test_main.c"
+    78 ;;		line 37 in file "test_main.c"
     79 ;; Parameters:    Size  Location     Type
     80 ;;		None
     81 ;; Auto vars:     Size  Location     Type
@@ -121,22 +121,22 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    107  007FC4                     _main:
    108                           	opt stack 31
    109                           
-   110                           ;test_main.c: 100: OSCCON=0x72;
+   110                           ;test_main.c: 39: OSCCON=0x72;
    111                           
    112                           ;incstack = 0
    113  007FC4  0E72               	movlw	114
    114  007FC6  6ED3               	movwf	4051,c	;volatile
    115                           
-   116                           ;test_main.c: 101: TRISB=0x00;
+   116                           ;test_main.c: 40: TRISB=0x00;
    117  007FC8  0E00               	movlw	0
    118  007FCA  6E93               	movwf	3987,c	;volatile
    119  007FCC                     l622:
    120                           
-   121                           ;test_main.c: 103: {
-   122                           ;test_main.c: 104: LATB = 0xff;
+   121                           ;test_main.c: 42: {
+   122                           ;test_main.c: 43: LATB = 0xFF;
    123  007FCC  688A               	setf	3978,c	;volatile
    124                           
-   125                           ;test_main.c: 106: _delay((unsigned long)((500)*(8000000/4000.0)));
+   125                           ;test_main.c: 45: _delay((unsigned long)((500)*(8000000/4000.0)));
    126  007FCE  0E06               	movlw	6
    127  007FD0  6E02               	movwf	(??_main+1)& (0+255),c
    128  007FD2  0E13               	movlw	19
@@ -150,11 +150,11 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    136  007FE0  2E02               	decfsz	(??_main+1)& (0+255),f,c
    137  007FE2  D7FA               	bra	u47
    138                           
-   139                           ;test_main.c: 107: LATB = 0;
+   139                           ;test_main.c: 46: LATB = 0x00;
    140  007FE4  0E00               	movlw	0
    141  007FE6  6E8A               	movwf	3978,c	;volatile
    142                           
-   143                           ;test_main.c: 109: _delay((unsigned long)((500)*(8000000/4000.0)));
+   143                           ;test_main.c: 48: _delay((unsigned long)((500)*(8000000/4000.0)));
    144  007FE8  0E06               	movlw	6
    145  007FEA  6E02               	movwf	(??_main+1)& (0+255),c
    146  007FEC  0E13               	movlw	19
@@ -284,7 +284,7 @@ SFR                  0      0       0     200        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.41 build -162212810 
-Symbol Table                                                                                   Tue Nov 17 12:43:32 2020
+Symbol Table                                                                                   Tue Nov 17 12:58:16 2020
 
                      u47 7FD8                       u57 7FF2              __CFG_BORV$3 000000  
            __CFG_CP0$OFF 000000             __CFG_CP1$OFF 000000             __CFG_CP2$OFF 000000  
