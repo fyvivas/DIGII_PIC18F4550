@@ -1,0 +1,38 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"62 D:\mplab\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 D:\mplab\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 D:\mplab\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 D:\mplab\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 D:\mplab\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"10 D:\mplab\sources\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 D:\mplab\sources\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 D:\mplab\sources\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 D:\mplab\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"98 C:\Users\ASUS\Documents\GitHub\ARQCA\test\test.X\test_main.c
+[v _main main `(v  1 e 1 0 ]
+"3033 D:\mplab\include\pic18f4550.h
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+"3580
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"7882
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+"98 C:\Users\ASUS\Documents\GitHub\ARQCA\test\test.X\test_main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"111
+} 0
