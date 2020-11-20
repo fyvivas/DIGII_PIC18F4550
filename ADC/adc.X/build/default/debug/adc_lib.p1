@@ -1,26 +1,62 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"3954 D:\mplab\include\pic18f4550.h
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"3383
-[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
-"7888
-[s S339 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
-[n S339 . SCS IOFS OSTS IRCF IDLEN ]
-"7895
-[s S340 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S340 . SCS0 SCS1 FLTS . IRCF0 IRCF1 IRCF2 ]
-"7887
-[u S338 `S339 1 `S340 1 ]
-[n S338 . . . ]
-"7905
-[v _OSCCONbits `VS338 ~T0 @X0 0 e@4051 ]
-"18 adc_lib.h
-[v _adc_init `(v ~T0 @X0 0 ef ]
-"3221 D:\mplab\include\pic18f4550.h
-[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
-"19 adc_lib.h
-[v _adc_read `(uc ~T0 @X0 0 ef ]
+"6503 D:\mplab\include\pic18f4550.h
+[s S264 :4 `uc 1 :2 `uc 1 ]
+[n S264 . PCFG VCFG ]
+"6507
+[s S265 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S265 . PCFG0 PCFG1 PCFG2 PCFG3 VCFG0 VCFG1 ]
+"6515
+[s S266 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S266 . . CHSN3 VCFG01 VCFG11 ]
+"6502
+[u S263 `S264 1 `S265 1 `S266 1 ]
+[n S263 . . . . ]
+"6522
+[v _ADCON1bits `VS263 ~T0 @X0 0 e@4033 ]
+"6587
+[s S268 :1 `uc 1 :1 `uc 1 ]
+[n S268 . . GO_NOT_DONE ]
+"6591
+[s S269 :1 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S269 . ADON GO_nDONE CHS ]
+"6596
+[s S270 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S270 . . GO_DONE CHS0 CHS1 CHS2 CHS3 ]
+"6604
+[s S271 :1 `uc 1 :1 `uc 1 ]
+[n S271 . . DONE ]
+"6608
+[s S272 :1 `uc 1 :1 `uc 1 ]
+[n S272 . . GO ]
+"6612
+[s S273 :1 `uc 1 :1 `uc 1 ]
+[n S273 . . NOT_DONE ]
+"6616
+[s S274 :1 `uc 1 :1 `uc 1 ]
+[n S274 . . nDONE ]
+"6620
+[s S275 :1 `uc 1 :1 `uc 1 ]
+[n S275 . . GODONE ]
+"6586
+[u S267 `S268 1 `S269 1 `S270 1 `S271 1 `S272 1 `S273 1 `S274 1 `S275 1 ]
+[n S267 . . . . . . . . . ]
+"6625
+[v _ADCON0bits `VS267 ~T0 @X0 0 e@4034 ]
+"6433
+[s S261 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S261 . ADCS ACQT . ADFM ]
+"6439
+[s S262 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S262 . ADCS0 ADCS1 ADCS2 ACQT0 ACQT1 ACQT2 ]
+"6432
+[u S260 `S261 1 `S262 1 ]
+[n S260 . . . ]
+"6448
+[v _ADCON2bits `VS260 ~T0 @X0 0 e@4032 ]
+"6711
+[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
+[; ;adc_lib.h: 18: void adc_init ();
+[; ;adc_lib.h: 19: unsigned char adc_read();
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3529,120 +3565,58 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 161: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 163: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 165: extern __nonreentrant void _delay3(unsigned char);
-"16 fuses.h
-[p x PLLDIV=1 ]
-"17
-[p x CPUDIV=OSC1_PLL2 ]
-"18
-[p x USBDIV=1 ]
-"21
-[p x FOSC=INTOSCIO_EC ]
-"22
-[p x FCMEN=OFF ]
-"23
-[p x IESO=ON ]
-"26
-[p x PWRT=ON ]
-"27
-[p x BOR=OFF ]
-"28
-[p x BORV=3 ]
-"29
-[p x VREGEN=OFF ]
-"32
-[p x WDT=OFF ]
-"33
-[p x WDTPS=32768 ]
-"36
-[p x CCP2MX=ON ]
-"37
-[p x PBADEN=OFF ]
-"38
-[p x LPT1OSC=OFF ]
-"39
-[p x MCLRE=OFF ]
-"42
-[p x STVREN=ON ]
-"43
-[p x LVP=OFF ]
-"44
-[p x ICPRT=OFF ]
-"45
-[p x XINST=OFF ]
-"48
-[p x CP0=OFF ]
-"49
-[p x CP1=OFF ]
-"50
-[p x CP2=OFF ]
-"51
-[p x CP3=OFF ]
-"54
-[p x CPB=OFF ]
-"55
-[p x CPD=OFF ]
-"58
-[p x WRT0=OFF ]
-"59
-[p x WRT1=OFF ]
-"60
-[p x WRT2=OFF ]
-"61
-[p x WRT3=OFF ]
-"64
-[p x WRTC=OFF ]
-"65
-[p x WRTB=OFF ]
-"66
-[p x WRTD=OFF ]
-"69
-[p x EBTR0=OFF ]
-"70
-[p x EBTR1=OFF ]
-"71
-[p x EBTR2=OFF ]
-"72
-[p x EBTR3=OFF ]
-"75
-[p x EBTRB=OFF ]
-[; ;adc_lib.h: 18: void adc_init ();
-[; ;adc_lib.h: 19: unsigned char adc_read();
-"6 adc_pot.c
-[v _main `(v ~T0 @X0 1 ef ]
+"7 adc_lib.c
+[v _adc_init `(v ~T0 @X0 1 ef ]
 {
-[; ;adc_pot.c: 6: void main(void) {
-[e :U _main ]
+[; ;adc_lib.c: 7: void adc_init (){
+[e :U _adc_init ]
 [f ]
-[; ;adc_pot.c: 7: TRISD = 0x00;
-"7
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;adc_pot.c: 8: TRISA = 0xFF;
+[; ;adc_lib.c: 8: ADCON1bits.PCFG = 0b1110;
 "8
-[e = _TRISA -> -> 255 `i `uc ]
-[; ;adc_pot.c: 9: OSCCONbits.IRCF = 0b111;
+[e = . . _ADCON1bits 0 0 -> -> 14 `i `uc ]
+[; ;adc_lib.c: 9: ADCON1bits.VCFG = 0b00;
 "9
-[e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
-[; ;adc_pot.c: 10: OSCCONbits.SCS = 0b10;
+[e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
+[; ;adc_lib.c: 10: ADCON0bits.CHS = 0b0000;
 "10
-[e = . . _OSCCONbits 0 0 -> -> 2 `i `uc ]
-[; ;adc_pot.c: 12: adc_init();
+[e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
+[; ;adc_lib.c: 11: ADCON2bits.ACQT = 0b010;
+"11
+[e = . . _ADCON2bits 0 1 -> -> 2 `i `uc ]
+[; ;adc_lib.c: 12: ADCON2bits.ADCS = 0b001;
 "12
-[e ( _adc_init ..  ]
-[; ;adc_pot.c: 22: while (1) {
-"22
-[e :U 364 ]
-{
-[; ;adc_pot.c: 27: LATD = adc_read();
-"27
-[e = _LATD ( _adc_read ..  ]
-"28
+[e = . . _ADCON2bits 0 0 -> -> 1 `i `uc ]
+[; ;adc_lib.c: 13: ADCON2bits.ADFM = 0;
+"13
+[e = . . _ADCON2bits 0 3 -> -> 0 `i `uc ]
+[; ;adc_lib.c: 14: ADCON0bits.ADON = 1;
+"14
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;adc_lib.c: 15: }
+"15
+[e :UE 362 ]
 }
-[e :U 363 ]
-"22
+"19
+[v _adc_read `(uc ~T0 @X0 1 ef ]
+{
+[; ;adc_lib.c: 19: unsigned char adc_read(){
+[e :U _adc_read ]
+[f ]
+[; ;adc_lib.c: 20: ADCON0bits.GO_DONE = 1;
+"20
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+[; ;adc_lib.c: 21: while (ADCON0bits.GO_DONE);
+"21
 [e $U 364  ]
 [e :U 365 ]
-[; ;adc_pot.c: 28: }
-[; ;adc_pot.c: 29: }
-"29
-[e :UE 362 ]
+[e :U 364 ]
+[e $ != -> . . _ADCON0bits 2 1 `i -> -> -> 0 `i `Vuc `i 365  ]
+[e :U 366 ]
+[; ;adc_lib.c: 22: return ADRESH;
+"22
+[e ) _ADRESH ]
+[e $UE 363  ]
+[; ;adc_lib.c: 23: }
+"23
+[e :UE 363 ]
 }

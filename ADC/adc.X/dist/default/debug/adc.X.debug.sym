@@ -213,9 +213,9 @@ text0 7FB6 7FD5 CODE 7FB6 0
 text1 7FAC 7FB5 CODE 7FAC 0
 cinit 7FA6 7FAB CODE 7FA6 0
 %locals
-dist/default/production\adc.X.production.obj
+dist/default/debug\adc.X.debug.obj
 D:\mplab\include\pic18f4550.h
-C:\Users\ASUS\AppData\Local\Temp\s4mg.
+C:\Users\ASUS\AppData\Local\Temp\s9nc.
 825 7FA6 0 CODE 0
 827 7FA6 0 CODE 0
 830 7FA6 0 CODE 0

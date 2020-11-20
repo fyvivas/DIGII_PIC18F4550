@@ -3,11 +3,11 @@ Microchip MPLAB XC8 Compiler V1.41 ()
 Linker command line:
 
 -W-3 --edf=D:\mplab\dat\en_msgs.txt -cs \
-  -h+dist/default/production\adc.X.production.sym \
-  --cmf=dist/default/production\adc.X.production.cmf -z -Q18F4550 \
-  -oC:\Users\ASUS\AppData\Local\Temp\s4mg.2 \
-  -Mdist/default/production/adc.X.production.map -E1 -ver=XC8 \
-  -ASTACK=060h-07ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
+  -h+dist/default/debug\adc.X.debug.sym \
+  --cmf=dist/default/debug\adc.X.debug.cmf -z -Q18F4550 \
+  -oC:\Users\ASUS\AppData\Local\Temp\s9nc.2 \
+  -Mdist/default/debug/adc.X.debug.map -E1 -ver=XC8 -ASTACK=060h-07ffh \
+  -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
   -AABS1=00h-07FFh -ABIGRAM=01h-07FFh -ARAM=060h-0FFh,0100h-01FFhx7 \
   -ABANK0=060h-0FFh -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh \
@@ -22,8 +22,8 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\ASUS\AppData\Local\Temp\s4mg.obj \
-  dist/default/production\adc.X.production.obj 
+  C:\Users\ASUS\AppData\Local\Temp\s9nc.obj \
+  dist/default/debug\adc.X.debug.obj 
 
 Object code version is 3.11
 
@@ -35,11 +35,11 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\ASUS\AppData\Local\Temp\s4mg.obj
+C:\Users\ASUS\AppData\Local\Temp\s9nc.obj
                 init                                  0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
-dist/default/production\adc.X.production.obj
+dist/default/debug\adc.X.debug.obj
                 text2                              7FD6     7FD6       2A     3FEB       0
                 text1                              7FAC     7FAC        A     3FD6       0
                 text0                              7FB6     7FB6       20     3FDB       0

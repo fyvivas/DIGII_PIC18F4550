@@ -27,6 +27,7 @@ void main(void) {
     ADCON0bits.ADON = 1; //  Habilita el Módulo AD.
 
     //Configura TIMER1 = 10ms (multiplexar display 7 segmentos de 2 digitos)
+    
     T1CON = 0b10010000;
     TMR1H = 0xD8; //Registro TMR1 =  55535
     TMR1L = 0xEF;

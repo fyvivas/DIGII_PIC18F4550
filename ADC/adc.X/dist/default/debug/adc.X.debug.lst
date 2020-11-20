@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.41 build -162212810 
-                                                                                               Fri Nov 20 12:43:52 2020
+                                                                                               Fri Nov 20 12:43:57 2020
 
 Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
      1                           	processor	18F4550
@@ -398,7 +398,7 @@ SFR                  0      0       0     200        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.41 build -162212810 
-Symbol Table                                                                                   Fri Nov 20 12:43:52 2020
+Symbol Table                                                                                   Fri Nov 20 12:43:57 2020
 
                      l32 7FAE              __CFG_BORV$3 000000             __CFG_CP0$OFF 000000  
            __CFG_CP1$OFF 000000             __CFG_CP2$OFF 000000             __CFG_CP3$OFF 000000  

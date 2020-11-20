@@ -6,7 +6,7 @@
   200008h - 2FFFFFh
   30000Eh - 30003Fh
   
- dist/default/production\adc.X.production.hex ranges:
+ dist/default/debug\adc.X.debug.hex ranges:
   0h - 3h
   7FA6h - 7FFFh
   200000h - 200007h
@@ -23,7 +23,7 @@
   T = Trailing code
   & = Find & replace opcode
   X = Find & delete opcode
-  1 = dist/default/production\adc.X.production.hex
+  1 = dist/default/debug\adc.X.debug.hex
 00000000: 1111------------------------------------------------------------
 00007F80: --------------------------------------11111111111111111111111111
 00007FC0: 1111111111111111111111111111111111111111111111111111111111111111
