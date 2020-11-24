@@ -5,7 +5,6 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>fuses.h</itemPath>
-      <itemPath>adc_lib.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -14,9 +13,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>adc_pot.c</itemPath>
-      <itemPath>adc_lm35.c</itemPath>
-      <itemPath>adc_lib.c</itemPath>
+      <itemPath>contador.c</itemPath>
+      <itemPath>temporizador.c</itemPath>
+      <itemPath>delay_1ms.c</itemPath>
+      <itemPath>delay_1ms_irq.c</itemPath>
+      <itemPath>reloj.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -125,7 +126,6 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
       </HI-TECH-LINK>
       <Simulator>
-        <property key="W0223_ADC_UNDERFLOW" value="report"/>
         <property key="periphADC1.minTacq" value="5"/>
       </Simulator>
       <XC8-config-global>
@@ -136,7 +136,33 @@
         <property key="stack-size-main" value="auto"/>
         <property key="stack-type" value="compiled"/>
       </XC8-config-global>
-      <item path="adc_lm35.c" ex="true" overriding="false">
+      <item path="contador.c" ex="false" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="delay_1ms.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="delay_1ms_irq.c" ex="true" overriding="false">
+      </item>
+      <item path="reloj.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="temporizador.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
