@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=uart_lm35.c bluetooth.c
+SOURCEFILES_QUOTED_IF_SPACED=uart_lm35.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/uart_lm35.p1 ${OBJECTDIR}/bluetooth.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/uart_lm35.p1.d ${OBJECTDIR}/bluetooth.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/uart_lm35.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/uart_lm35.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/uart_lm35.p1 ${OBJECTDIR}/bluetooth.p1
+OBJECTFILES=${OBJECTDIR}/uart_lm35.p1
 
 # Source Files
-SOURCEFILES=uart_lm35.c bluetooth.c
+SOURCEFILES=uart_lm35.c
 
 
 CFLAGS=
@@ -95,14 +95,6 @@ ${OBJECTDIR}/uart_lm35.p1: uart_lm35.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/uart_lm35.d ${OBJECTDIR}/uart_lm35.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/uart_lm35.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/bluetooth.p1: bluetooth.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/bluetooth.p1.d 
-	@${RM} ${OBJECTDIR}/bluetooth.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=none  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/bluetooth.p1  bluetooth.c 
-	@-${MV} ${OBJECTDIR}/bluetooth.d ${OBJECTDIR}/bluetooth.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/bluetooth.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 else
 ${OBJECTDIR}/uart_lm35.p1: uart_lm35.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -111,14 +103,6 @@ ${OBJECTDIR}/uart_lm35.p1: uart_lm35.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/uart_lm35.p1  uart_lm35.c 
 	@-${MV} ${OBJECTDIR}/uart_lm35.d ${OBJECTDIR}/uart_lm35.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/uart_lm35.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/bluetooth.p1: bluetooth.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/bluetooth.p1.d 
-	@${RM} ${OBJECTDIR}/bluetooth.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/bluetooth.p1  bluetooth.c 
-	@-${MV} ${OBJECTDIR}/bluetooth.d ${OBJECTDIR}/bluetooth.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/bluetooth.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

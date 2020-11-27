@@ -1,5 +1,5 @@
 
-# 1 "contador.c"
+# 1 "LCD_20x4_C_file.c"
 
 # 26 "D:\mplab\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -4737,91 +4737,86 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
+# 20 "LCD_20x4_H_file.h"
+void LCD_Command (char);
+void LCD_Char (char);
+void LCD_Init (void);
+void LCD_String (const char*);
+void LCD_String_xy (char,char,const char*);
+void LCD_Clear (void);
+void MSdelay(unsigned int);
 
-# 16 "fuses.h"
-#pragma config PLLDIV = 1
-#pragma config CPUDIV = OSC1_PLL2
-#pragma config USBDIV = 1
-
-
-#pragma config FOSC = HS
-#pragma config FCMEN = OFF
-#pragma config IESO = OFF
-
-
-#pragma config PWRT = ON
-#pragma config BOR = OFF
-#pragma config BORV = 3
-#pragma config VREGEN = OFF
-
-
-#pragma config WDT = OFF
-#pragma config WDTPS = 32768
-
-
-#pragma config CCP2MX = ON
-#pragma config PBADEN = OFF
-#pragma config LPT1OSC = OFF
-#pragma config MCLRE = OFF
-
-
-
-
-#pragma config STVREN = ON
-#pragma config LVP = OFF
-#pragma config ICPRT = OFF
-#pragma config XINST = OFF
-
-
-#pragma config CP0 = OFF
-#pragma config CP1 = OFF
-#pragma config CP2 = OFF
-#pragma config CP3 = OFF
-
-
-#pragma config CPB = OFF
-#pragma config CPD = OFF
-
-
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-#pragma config WRT2 = OFF
-#pragma config WRT3 = OFF
-
-
-#pragma config WRTC = OFF
-#pragma config WRTB = OFF
-#pragma config WRTD = OFF
-
-
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-#pragma config EBTR2 = OFF
-#pragma config EBTR3 = OFF
-
-
-#pragma config EBTRB = OFF
-
-# 25 "contador.c"
-unsigned char count = 0;
-
-int main(void) {
-INTCONbits.GIE = 0;
-T0CONbits.T0CS = 1;
-T0CONbits.T0SE = 1;
-T0CONbits.T08BIT = 1;
-T0CONbits.TMR0ON = 1;
-TMR0L = 0;
-TRISD = 0x00;
-LATD = 0x00;
-TRISAbits.RA4 = 1;
-while (1) {
-if (TMR0L == 10) {
-TMR0L = 0;
-count = 0;
+# 11 "LCD_20x4_C_file.c"
+void LCD_Command (char cmd)
+{
+LATB = cmd;
+LATC0 = 0;
+LATC1 = 0;
+LATC2 = 1;
+__nop();
+LATC2 = 0;
+MSdelay(3);
 }
-count = TMR0L;
-LATD = (1 << 4) | count;
+
+void LCD_Char (char char_data)
+{
+LATB = char_data;
+LATC0 = 1;
+LATC1 = 0;
+LATC2 = 1;
+__nop();
+LATC2 = 0;
+MSdelay(3);
 }
-return 1;
+
+void LCD_Init (void)
+{
+TRISC = 0;
+TRISB = 0;
+
+MSdelay(20);
+LCD_Command (0x38);
+LCD_Command (0x0C);
+LCD_Command (0x06);
+LCD_Command (0x01);
+MSdelay(3);
+LCD_Command (0x80);
+}
+
+void LCD_String (const char *str)
+{
+int i;
+while((*str)!=0)
+{
+LCD_Char (*str);
+str++;
+}
+}
+
+void LCD_String_xy (char row, char pos,const char *str)
+{
+if (row == 1)
+LCD_Command((pos & 0x0F)|0x80);
+else if (row == 2)
+LCD_Command((pos & 0x0F)|0xC0);
+else if (row == 3)
+LCD_Command((pos & 0x0F)|0x94);
+else if (row == 4)
+LCD_Command((pos & 0x0F)|0xD4);
+LCD_String(str);
+}
+
+void LCD_Clear (void)
+{
+LCD_Command (0x01);
+MSdelay(3);
+LCD_Command (0x80);
+MSdelay(1);
+}
+
+void MSdelay(unsigned int val)
+{
+unsigned int i,j;
+for(i=0;i<val;i++)
+for(j=0;j<165;j++);
 }
