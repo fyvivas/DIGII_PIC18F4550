@@ -1,0 +1,243 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"492 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"63 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"22 C:\Users\Shubh\MPLABXProjects\DHT11.X\humidity_Temp.c
+[v _main main `(v  1 e 0 0 ]
+"73
+[v _DHT11_ReadData DHT11_ReadData `(uc  1 e 1 0 ]
+"89
+[v _DHT11_Start DHT11_Start `(v  1 e 0 0 ]
+"100
+[v _DHT11_CheckResponse DHT11_CheckResponse `(v  1 e 0 0 ]
+"5 C:\Users\Shubh\MPLABXProjects\DHT11.X\LCD_16x2.c
+[v _LCD_Init LCD_Init `(v  1 e 0 0 ]
+"22
+[v _LCD_Command LCD_Command `(v  1 e 0 0 ]
+"32
+[v _LCD_Char LCD_Char `(v  1 e 0 0 ]
+"43
+[v _LCD_String LCD_String `(v  1 e 0 0 ]
+"53
+[v _LCD_String_xy LCD_String_xy `(v  1 e 0 0 ]
+"72
+[v _MSdelay MSdelay `(v  1 e 0 0 ]
+[s S67 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+]
+"2618 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4550.h
+[s S75 . 1 `uc 1 AN0 1 0 :1:0 
+`uc 1 AN1 1 0 :1:1 
+`uc 1 AN2 1 0 :1:2 
+`uc 1 AN3 1 0 :1:3 
+`uc 1 T0CKI 1 0 :1:4 
+`uc 1 AN4 1 0 :1:5 
+`uc 1 OSC2 1 0 :1:6 
+]
+[s S83 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 VREFM 1 0 :1:2 
+`uc 1 VREFP 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S89 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 HLVDIN 1 0 :1:5 
+]
+[s S92 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RA7 1 0 :1:7 
+]
+[s S95 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RJPU 1 0 :1:7 
+]
+[s S98 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+]
+[u S100 . 1 `S67 1 . 1 0 `S75 1 . 1 0 `S83 1 . 1 0 `S89 1 . 1 0 `S92 1 . 1 0 `S95 1 . 1 0 `S98 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES100  1 e 1 @3968 ]
+"3495
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+[s S148 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+]
+"4006
+[u S164 . 1 `S148 1 . 1 0 `S67 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES164  1 e 1 @3986 ]
+"4173
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"4565
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"7173
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"8589
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+"10173
+[v _LATA0 LATA0 `VEb  1 e 0 @31816 ]
+"10215
+[v _LATD0 LATD0 `VEb  1 e 0 @31840 ]
+"10217
+[v _LATD1 LATD1 `VEb  1 e 0 @31841 ]
+"354 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\doprnt.c
+[v _dpowers dpowers `C[5]ui  1 s 10 dpowers ]
+"22 C:\Users\Shubh\MPLABXProjects\DHT11.X\humidity_Temp.c
+[v _main main `(v  1 e 0 0 ]
+{
+"26
+[v main@value value `[10]uc  1 a 10 30 ]
+"25
+[v main@Checksum Checksum `uc  1 a 1 44 ]
+"24
+[v main@T_Integral T_Integral `uc  1 a 1 43 ]
+[v main@T_Decimal T_Decimal `uc  1 a 1 42 ]
+[v main@RH_Integral RH_Integral `uc  1 a 1 41 ]
+[v main@RH_Decimal RH_Decimal `uc  1 a 1 40 ]
+"71
+} 0
+"492 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+"528
+[v sprintf@val val `ui  1 a 2 23 ]
+"494
+[v sprintf@ap ap `[1]*.39v  1 a 2 19 ]
+"499
+[v sprintf@c c `c  1 a 1 25 ]
+"506
+[v sprintf@prec prec `c  1 a 1 22 ]
+"508
+[v sprintf@flag flag `uc  1 a 1 21 ]
+"492
+[v sprintf@sp sp `*.39uc  1 p 2 12 ]
+[v sprintf@f f `*.25Cuc  1 p 2 14 ]
+"1541
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 11 ]
+"8
+[v ___lwmod@dividend dividend `ui  1 p 2 7 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 9 ]
+"26
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 4 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 6 ]
+"8
+[v ___lwdiv@dividend dividend `ui  1 p 2 0 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
+"31
+} 0
+"53 C:\Users\Shubh\MPLABXProjects\DHT11.X\LCD_16x2.c
+[v _LCD_String_xy LCD_String_xy `(v  1 e 0 0 ]
+{
+[v LCD_String_xy@row row `uc  1 a 1 wreg ]
+"55
+[v LCD_String_xy@location location `uc  1 a 1 13 ]
+"53
+[v LCD_String_xy@row row `uc  1 a 1 wreg ]
+[v LCD_String_xy@pos pos `uc  1 p 1 9 ]
+[v LCD_String_xy@msg msg `*.35Cuc  1 p 2 10 ]
+"55
+[v LCD_String_xy@row row `uc  1 a 1 12 ]
+"70
+} 0
+"43
+[v _LCD_String LCD_String `(v  1 e 0 0 ]
+{
+[v LCD_String@msg msg `*.35Cuc  1 p 2 7 ]
+"51
+} 0
+"32
+[v _LCD_Char LCD_Char `(v  1 e 0 0 ]
+{
+[v LCD_Char@dat dat `uc  1 a 1 wreg ]
+[v LCD_Char@dat dat `uc  1 a 1 wreg ]
+"34
+[v LCD_Char@dat dat `uc  1 a 1 6 ]
+"40
+} 0
+"5
+[v _LCD_Init LCD_Init `(v  1 e 0 0 ]
+{
+"15
+} 0
+"22
+[v _LCD_Command LCD_Command `(v  1 e 0 0 ]
+{
+[v LCD_Command@cmd cmd `uc  1 a 1 wreg ]
+[v LCD_Command@cmd cmd `uc  1 a 1 wreg ]
+"24
+[v LCD_Command@cmd cmd `uc  1 a 1 6 ]
+"30
+} 0
+"72
+[v _MSdelay MSdelay `(v  1 e 0 0 ]
+{
+"74
+[v MSdelay@j j `ui  1 a 2 4 ]
+[v MSdelay@i i `ui  1 a 2 2 ]
+"72
+[v MSdelay@val val `ui  1 p 2 0 ]
+"77
+} 0
+"89 C:\Users\Shubh\MPLABXProjects\DHT11.X\humidity_Temp.c
+[v _DHT11_Start DHT11_Start `(v  1 e 0 0 ]
+{
+"98
+} 0
+"73
+[v _DHT11_ReadData DHT11_ReadData `(uc  1 e 1 0 ]
+{
+"75
+[v DHT11_ReadData@data data `uc  1 a 1 1 ]
+[v DHT11_ReadData@i i `uc  1 a 1 0 ]
+"87
+} 0
+"100
+[v _DHT11_CheckResponse DHT11_CheckResponse `(v  1 e 0 0 ]
+{
+"105
+} 0
