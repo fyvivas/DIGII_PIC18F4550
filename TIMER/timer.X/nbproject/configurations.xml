@@ -160,7 +160,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="reloj.c" ex="false" overriding="false">
+      <item path="reloj.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -168,7 +168,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="temporizador.c" ex="true" overriding="false">
+      <item path="temporizador.c" ex="false" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>

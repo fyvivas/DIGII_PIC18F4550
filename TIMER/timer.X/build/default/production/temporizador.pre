@@ -1,70 +1,5 @@
 
-# 1 "reloj.c"
-
-
-# 16 "fuses.h"
-#pragma config PLLDIV = 1
-#pragma config CPUDIV = OSC1_PLL2
-#pragma config USBDIV = 1
-
-
-#pragma config FOSC = HS
-#pragma config FCMEN = OFF
-#pragma config IESO = OFF
-
-
-#pragma config PWRT = ON
-#pragma config BOR = OFF
-#pragma config BORV = 3
-#pragma config VREGEN = OFF
-
-
-#pragma config WDT = OFF
-#pragma config WDTPS = 32768
-
-
-#pragma config CCP2MX = ON
-#pragma config PBADEN = OFF
-#pragma config LPT1OSC = OFF
-#pragma config MCLRE = OFF
-
-
-
-
-#pragma config STVREN = ON
-#pragma config LVP = OFF
-#pragma config ICPRT = OFF
-#pragma config XINST = OFF
-
-
-#pragma config CP0 = OFF
-#pragma config CP1 = OFF
-#pragma config CP2 = OFF
-#pragma config CP3 = OFF
-
-
-#pragma config CPB = OFF
-#pragma config CPD = OFF
-
-
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-#pragma config WRT2 = OFF
-#pragma config WRT3 = OFF
-
-
-#pragma config WRTC = OFF
-#pragma config WRTB = OFF
-#pragma config WRTD = OFF
-
-
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-#pragma config EBTR2 = OFF
-#pragma config EBTR3 = OFF
-
-
-#pragma config EBTRB = OFF
+# 1 "temporizador.c"
 
 # 26 "D:\mplab\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -4802,76 +4737,117 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 29 "reloj.c"
-unsigned char flag_run = 0;
-unsigned char counter_digito = 0;
-unsigned int counter_segundos = 0;
-unsigned char counter_20ms = 0;
+
+# 16 "fuses.h"
+#pragma config PLLDIV = 1
+#pragma config CPUDIV = OSC1_PLL2
+#pragma config USBDIV = 1
+
+
+#pragma config FOSC = HS
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
+
+
+#pragma config PWRT = ON
+#pragma config BOR = OFF
+#pragma config BORV = 3
+#pragma config VREGEN = OFF
+
+
+#pragma config WDT = OFF
+#pragma config WDTPS = 32768
+
+
+#pragma config CCP2MX = ON
+#pragma config PBADEN = OFF
+#pragma config LPT1OSC = OFF
+#pragma config MCLRE = OFF
+
+
+
+
+#pragma config STVREN = ON
+#pragma config LVP = OFF
+#pragma config ICPRT = OFF
+#pragma config XINST = OFF
+
+
+#pragma config CP0 = OFF
+#pragma config CP1 = OFF
+#pragma config CP2 = OFF
+#pragma config CP3 = OFF
+
+
+#pragma config CPB = OFF
+#pragma config CPD = OFF
+
+
+#pragma config WRT0 = OFF
+#pragma config WRT1 = OFF
+#pragma config WRT2 = OFF
+#pragma config WRT3 = OFF
+
+
+#pragma config WRTC = OFF
+#pragma config WRTB = OFF
+#pragma config WRTD = OFF
+
+
+#pragma config EBTR0 = OFF
+#pragma config EBTR1 = OFF
+#pragma config EBTR2 = OFF
+#pragma config EBTR3 = OFF
+
+
+#pragma config EBTRB = OFF
+
+# 27 "temporizador.c"
+unsigned char count = 0;
 
 int main(void) {
 INTCONbits.GIE = 0;
-T1CONbits.RD16 = 1;
-T1CONbits.TMR1CS = 0;
-T1CONbits.T1CKPS = 0b01;
-TMR1H = 0xD8;
-TMR1L = 0xEF;
-T1CONbits.TMR1ON = 1;
-PIR1bits.TMR1IF = 0;
-PIE1bits.TMR1IE = 1;
+T0CONbits.T0CS = 0;
+T0CONbits.PSA = 0;
+T0CONbits.T0PS = 0b001;
+T0CONbits.T08BIT = 0;
+TMR0L = 0xDA;
+TMR0H = 0x0B;
+T0CONbits.TMR0ON = 1;
+TRISD = 0x00;
+LATD = 0x00;
+TRISAbits.RA4 = 1;
+INTCONbits.TMR0IF = 0;
+INTCONbits.TMR0IE = 1;
 INTCONbits.PEIE = 1;
 INTCONbits.GIE = 1;
-TRISD = 0;
-TRISAbits.RA0 = 1;
-TRISAbits.RA1 = 1;
-ADCON1 = 0x0F;
-CMCON = 0x07;
 while (1) {
-if (!PORTAbits.RA0) {
-_delay((unsigned long)((50)*(8000000L/4000.0)));
-flag_run = !flag_run;
-while (!PORTAbits.RA0);
-_delay((unsigned long)((50)*(8000000L/4000.0)));
-}
-if (!PORTAbits.RA1) {
-_delay((unsigned long)((50)*(8000000L/4000.0)));
-counter_segundos = 0;
-flag_run = 0;
+
+LATD = (1 << 4) + (count % 10);
+_delay((unsigned long)((20)*(1000000L/4000.0)));
+LATD = (1 << 5) + (count / 10);
+_delay((unsigned long)((20)*(1000000L/4000.0)));
+
+
+if (!PORTAbits.RA4) {
+_delay((unsigned long)((50)*(1000000L/4000.0)));
+count = 0;
+TMR0L = 0xDA;
+TMR0H = 0x0B;
+INTCONbits.TMR0IF = 0;
 }
 }
 return 1;
 }
 
-void interrupt ISR_TIMER_1(void) {
-if (PIE1bits.TMR1IE && PIR1bits.TMR1IF) {
-TMR1H = 0xD8;
-TMR1L = 0xEF;
-
-if (++counter_20ms == 100 && flag_run) {
-counter_20ms = 0;
-if (++counter_segundos == 3600) {
-counter_segundos = 0;
+void interrupt ISR_TIMER_0(void) {
+if (INTCONbits.TMR0IE && INTCONbits.TMR0IF) {
+if (++count == 100) {
+count = 0;
+}
+TMR0L = 0xDA;
+TMR0H = 0x0B;
+INTCONbits.TMR0IF = 0;
 }
 }
 
-switch (counter_digito) {
-case 0:
-LATD = (counter_digito << 4) + (counter_segundos / 60) / 10;
-counter_digito = 1;
-break;
-case 1:
-LATD = (counter_digito << 4) + (counter_segundos / 60) % 10;
-counter_digito = 2;
-break;
-case 2:
-LATD = (counter_digito << 4) + (counter_segundos % 60) / 10;
-counter_digito = 3;
-break;
-case 3:
-LATD = (counter_digito << 4) + (counter_segundos % 60) % 10;
-counter_digito = 0;
-break;
-}
-
-PIR1bits.TMR1IF = 0;
-}
-}
