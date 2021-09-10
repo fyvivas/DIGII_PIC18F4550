@@ -1,0 +1,67 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"37 C:\Users\ASUS\Documents\GitHub\ARQCA\BLINK\blink.X\blink.c
+[v _main main `(v  1 e 1 0 ]
+"66
+[v _delay_ms delay_ms `(v  1 e 1 0 ]
+"62 D:\mplab\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 D:\mplab\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 D:\mplab\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 D:\mplab\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 D:\mplab\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"10 D:\mplab\sources\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 D:\mplab\sources\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 D:\mplab\sources\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 D:\mplab\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+[s S24 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"2448 D:\mplab\include\pic18f4550.h
+[s S33 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S41 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S44 . 1 `S24 1 . 1 0 `S33 1 . 1 0 `S41 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES44  1 e 1 @3969 ]
+"7882
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+"9444
+[v _LATB0 LATB0 `VEb  1 e 0 @31824 ]
+"10080
+[v _TRISB0 TRISB0 `VEb  1 e 0 @31896 ]
+"10094
+[v _TRISB7 TRISB7 `VEb  1 e 0 @31903 ]
+"37 C:\Users\ASUS\Documents\GitHub\ARQCA\BLINK\blink.X\blink.c
+[v _main main `(v  1 e 1 0 ]
+{
+"43
+[v main@btn_val btn_val `uc  1 a 1 2 ]
+"55
+} 0
