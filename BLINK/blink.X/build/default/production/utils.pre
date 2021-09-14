@@ -1,0 +1,14 @@
+
+# 1 "utils.c"
+
+# 15 "utils.h"
+void MSdelay(unsigned int);
+
+# 16 "utils.c"
+void MSdelay(unsigned int val)
+{
+unsigned int i,j;
+for(i=0;i<val;i++)
+for(j=0;j<165;j++);
+}
+

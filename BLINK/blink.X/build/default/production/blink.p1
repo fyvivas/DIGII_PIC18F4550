@@ -4,8 +4,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
 "10080
 [v _TRISB0 `Vb ~T0 @X0 0 e@31896 ]
+"3954
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
 "10094
 [v _TRISB7 `Vb ~T0 @X0 0 e@31903 ]
+"3221
+[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
 "2424
 [s S102 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S102 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
@@ -3614,109 +3618,151 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTRB=OFF ]
 [; ;blink.c: 26: void delay_ms(unsigned int delay_val);
 [; ;blink.c: 27: void blink(unsigned int val);
-"37 blink.c
+"35 blink.c
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;blink.c: 37: void main(){
+[; ;blink.c: 35: void main(){
 [e :U _main ]
 [f ]
-[; ;blink.c: 38: OSCCON = 0x72;
-"38
+[; ;blink.c: 36: OSCCON = 0x72;
+"36
 [e = _OSCCON -> -> 114 `i `uc ]
-[; ;blink.c: 39: TRISB0 = 0;
-"39
+[; ;blink.c: 37: TRISB0 = 0;
+"37
 [e = _TRISB0 -> -> 0 `i `b ]
-[; ;blink.c: 40: TRISB7 = 1;
-"40
+[; ;blink.c: 38: TRISD = 0;
+"38
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;blink.c: 39: TRISB7 = 1;
+"39
 [e = _TRISB7 -> -> 1 `i `b ]
-[; ;blink.c: 42: while(1){
-"42
+[; ;blink.c: 41: LATD = 0x03;
+"41
+[e = _LATD -> -> 3 `i `uc ]
+[; ;blink.c: 43: while(1){
+"43
 [e :U 364 ]
 {
-"43
+"44
 [v _btn_val `uc ~T0 @X0 1 a ]
-[; ;blink.c: 43: unsigned char btn_val = PORTBbits.RB7;
+[; ;blink.c: 44: unsigned char btn_val = PORTBbits.RB7;
 [e = _btn_val . . _PORTBbits 0 7 ]
-[; ;blink.c: 51: LATB0 = btn_val;
-"51
+[; ;blink.c: 45: if(btn_val){
+"45
+[e $ ! != -> _btn_val `i -> -> -> 0 `i `uc `i 366  ]
+{
+[; ;blink.c: 46: LATB0 = btn_val;
+"46
 [e = _LATB0 -> _btn_val `b ]
-[; ;blink.c: 52: _delay((unsigned long)((500)*(8000000/4000.0)));
+[; ;blink.c: 47: LATD = 0x00;
+"47
+[e = _LATD -> -> 0 `i `uc ]
+"48
+}
+[; ;blink.c: 48: }
+[e $U 367  ]
+"49
+[e :U 366 ]
+[; ;blink.c: 49: else{
+{
+[; ;blink.c: 50: LATB0 = 0;
+"50
+[e = _LATB0 -> -> 0 `i `b ]
+[; ;blink.c: 51: LATD = LATD << 2;
+"51
+[e = _LATD -> << -> _LATD `i -> 2 `i `uc ]
+[; ;blink.c: 52: if(LATD == 0x00){
 "52
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e $ ! == -> _LATD `i -> 0 `i 368  ]
+{
+[; ;blink.c: 53: LATD = 0x03;
 "53
+[e = _LATD -> -> 3 `i `uc ]
+"54
+}
+[e :U 368 ]
+[; ;blink.c: 54: }
+[; ;blink.c: 55: _delay((unsigned long)((500)*(8000000/4000.0)));
+"55
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"56
+}
+[e :U 367 ]
+"58
 }
 [e :U 363 ]
-"42
+"43
 [e $U 364  ]
 [e :U 365 ]
-[; ;blink.c: 53: }
-[; ;blink.c: 55: }
-"55
+[; ;blink.c: 56: }
+[; ;blink.c: 58: }
+[; ;blink.c: 60: }
+"60
 [e :UE 362 ]
 }
-"57
+"62
 [v _blink `(v ~T0 @X0 1 ef1`ui ]
 {
-[; ;blink.c: 57: void blink(unsigned int val){
+[; ;blink.c: 62: void blink(unsigned int val){
 [e :U _blink ]
 [v _val `ui ~T0 @X0 1 r1 ]
 [f ]
-[; ;blink.c: 58: LATB0 = 1;
-"58
+[; ;blink.c: 63: LATB0 = 1;
+"63
 [e = _LATB0 -> -> 1 `i `b ]
-[; ;blink.c: 59: delay_ms(val);
-"59
+[; ;blink.c: 64: delay_ms(val);
+"64
 [e ( _delay_ms (1 _val ]
-[; ;blink.c: 60: LATB0 = 0;
-"60
+[; ;blink.c: 65: LATB0 = 0;
+"65
 [e = _LATB0 -> -> 0 `i `b ]
-[; ;blink.c: 61: delay_ms(val);
-"61
-[e ( _delay_ms (1 _val ]
-[; ;blink.c: 62: }
-"62
-[e :UE 366 ]
-}
+[; ;blink.c: 66: delay_ms(val);
 "66
+[e ( _delay_ms (1 _val ]
+[; ;blink.c: 67: }
+"67
+[e :UE 369 ]
+}
+"71
 [v _delay_ms `(v ~T0 @X0 1 ef1`ui ]
 {
-[; ;blink.c: 66: void delay_ms(unsigned int delay_val){
+[; ;blink.c: 71: void delay_ms(unsigned int delay_val){
 [e :U _delay_ms ]
 [v _delay_val `ui ~T0 @X0 1 r1 ]
 [f ]
-"67
+"72
 [v _i `ui ~T0 @X0 1 a ]
 [v _j `ui ~T0 @X0 1 a ]
-[; ;blink.c: 67: unsigned int i, j;
-[; ;blink.c: 68: for(i=0;i<delay_val;i++){
-"68
+[; ;blink.c: 72: unsigned int i, j;
+[; ;blink.c: 73: for(i=0;i<delay_val;i++){
+"73
 {
 [e = _i -> -> 0 `i `ui ]
-[e $U 371  ]
-[e :U 368 ]
+[e $U 374  ]
+[e :U 371 ]
 {
-[; ;blink.c: 69: for(j=0;j<204;j++);
-"69
+[; ;blink.c: 74: for(j=0;j<204;j++);
+"74
 {
 [e = _j -> -> 0 `i `ui ]
-[e $ < _j -> -> 204 `i `ui 372  ]
-[e $U 373  ]
-[e :U 372 ]
+[e $ < _j -> -> 204 `i `ui 375  ]
+[e $U 376  ]
+[e :U 375 ]
 [e ++ _j -> -> 1 `i `ui ]
-[e $ < _j -> -> 204 `i `ui 372  ]
-[e :U 373 ]
+[e $ < _j -> -> 204 `i `ui 375  ]
+[e :U 376 ]
 }
-"70
+"75
 }
-"68
+"73
 [e ++ _i -> -> 1 `i `ui ]
-[e :U 371 ]
-[e $ < _i _delay_val 368  ]
-[e :U 369 ]
-"70
+[e :U 374 ]
+[e $ < _i _delay_val 371  ]
+[e :U 372 ]
+"75
 }
-[; ;blink.c: 70: }
-[; ;blink.c: 71: }
-"71
-[e :UE 367 ]
+[; ;blink.c: 75: }
+[; ;blink.c: 76: }
+"76
+[e :UE 370 ]
 }

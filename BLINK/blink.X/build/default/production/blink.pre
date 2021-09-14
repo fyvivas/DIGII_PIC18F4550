@@ -4804,18 +4804,30 @@ extern __nonreentrant void _delay3(unsigned char);
 void delay_ms(unsigned int delay_val);
 void blink(unsigned int val);
 
-# 37
+# 35
 void main(){
 OSCCON = 0x72;
 TRISB0 = 0;
+TRISD = 0;
 TRISB7 = 1;
+
+LATD = 0x03;
 
 while(1){
 unsigned char btn_val = PORTBbits.RB7;
-
-# 51
+if(btn_val){
 LATB0 = btn_val;
+LATD = 0x00;
+}
+else{
+LATB0 = 0;
+LATD = LATD << 2;
+if(LATD == 0x00){
+LATD = 0x03;
+}
 _delay((unsigned long)((500)*(8000000/4000.0)));
+}
+
 }
 
 }

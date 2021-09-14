@@ -32,24 +32,29 @@ void blink(unsigned int val);
 #define INPUT 1
 #define OUTPUT 0
 
-
-
 void main(){
     OSCCON = 0x72; //frec ( Mhz, oscilador interno)
     CFG_LED_POWER = OUTPUT;
+    TRISD = OUTPUT; //0x00
     CFG_BTN_BLINK = INPUT;
-       
+        
+    LATD = 0x03;//0b'00000001'
+        
     while(1){
         unsigned char btn_val = BTN_BLINK;
-        /*
-        for(int i=0;i<5;i++){
-            blink(500);
+        if(btn_val){
+            LED_POWER = btn_val;
+            LATD = 0x00;//0b'00000001'
         }
-        blink(1000);
-        blink(1000);
-        */
-        LED_POWER = btn_val;
-        __delay_ms(500);
+        else{
+            LED_POWER = OFF;
+           LATD = LATD << 2;
+           if(LATD == 0x00){
+                LATD = 0x03;
+            }
+           __delay_ms(500);
+        }
+        
     }
     
 }
