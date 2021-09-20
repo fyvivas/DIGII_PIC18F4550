@@ -3,12 +3,12 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
-"7 C:\Users\ASUS\Documents\GitHub\ARQCA\ADC\adc.X\adc_lib.c
-[v _adc_init adc_init `(v  1 e 1 0 ]
-"19
-[v _adc_read adc_read `(uc  1 e 1 0 ]
-"6 C:\Users\ASUS\Documents\GitHub\ARQCA\ADC\adc.X\adc_pot.c
+"12 C:\Users\ASUS\Documents\GitHub\ARQCA\ADC\adc.X\adc_lm35.c
 [v _main main `(v  1 e 1 0 ]
+"8 D:\mplab\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"8 D:\mplab\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 "62 D:\mplab\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 D:\mplab\sources\common\ftadd.c
@@ -19,6 +19,10 @@
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
 "20 D:\mplab\sources\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 D:\mplab\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"28 D:\mplab\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
 "10 D:\mplab\sources\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 3 0 ]
 "245
@@ -29,77 +33,85 @@
 [v ___flmul __flmul `(d  1 e 3 0 ]
 "15 D:\mplab\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
+"7 C:\Users\ASUS\Documents\GitHub\ARQCA\ADC\adc.X\adc_lm35.c
+[v _value_adc value_adc `ui  1 e 2 0 ]
+"9
+[v _temp temp `d  1 e 3 0 ]
+"10
+[v _lm35 lm35 `uc  1 e 1 0 ]
 "3221 D:\mplab\include\pic18f4550.h
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 "3383
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "3954
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S173 . 1 `uc 1 ADCS 1 0 :3:0 
+[s S158 . 1 `uc 1 ADCS 1 0 :3:0 
 `uc 1 ACQT 1 0 :3:3 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "6448
-[s S178 . 1 `uc 1 ADCS0 1 0 :1:0 
+[s S163 . 1 `uc 1 ADCS0 1 0 :1:0 
 `uc 1 ADCS1 1 0 :1:1 
 `uc 1 ADCS2 1 0 :1:2 
 `uc 1 ACQT0 1 0 :1:3 
 `uc 1 ACQT1 1 0 :1:4 
 `uc 1 ACQT2 1 0 :1:5 
 ]
-[u S185 . 1 `S173 1 . 1 0 `S178 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES185  1 e 1 @4032 ]
-[s S70 . 1 `uc 1 PCFG 1 0 :4:0 
+[u S170 . 1 `S158 1 . 1 0 `S163 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES170  1 e 1 @4032 ]
+[s S55 . 1 `uc 1 PCFG 1 0 :4:0 
 `uc 1 VCFG 1 0 :2:4 
 ]
 "6522
-[s S73 . 1 `uc 1 PCFG0 1 0 :1:0 
+[s S58 . 1 `uc 1 PCFG0 1 0 :1:0 
 `uc 1 PCFG1 1 0 :1:1 
 `uc 1 PCFG2 1 0 :1:2 
 `uc 1 PCFG3 1 0 :1:3 
 `uc 1 VCFG0 1 0 :1:4 
 `uc 1 VCFG1 1 0 :1:5 
 ]
-[s S80 . 1 `uc 1 . 1 0 :3:0 
+[s S65 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CHSN3 1 0 :1:3 
 `uc 1 VCFG01 1 0 :1:4 
 `uc 1 VCFG11 1 0 :1:5 
 ]
-[u S85 . 1 `S70 1 . 1 0 `S73 1 . 1 0 `S80 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES85  1 e 1 @4033 ]
-[s S105 . 1 `uc 1 . 1 0 :1:0 
+[u S70 . 1 `S55 1 . 1 0 `S58 1 . 1 0 `S65 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES70  1 e 1 @4033 ]
+[s S90 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "6625
-[s S108 . 1 `uc 1 ADON 1 0 :1:0 
+[s S93 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
-[s S112 . 1 `uc 1 . 1 0 :1:0 
+[s S97 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
 `uc 1 CHS3 1 0 :1:5 
 ]
-[s S119 . 1 `uc 1 . 1 0 :1:0 
+[s S104 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S122 . 1 `uc 1 . 1 0 :1:0 
+[s S107 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[s S125 . 1 `uc 1 . 1 0 :1:0 
+[s S110 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S128 . 1 `uc 1 . 1 0 :1:0 
+[s S113 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S131 . 1 `uc 1 . 1 0 :1:0 
+[s S116 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S134 . 1 `S105 1 . 1 0 `S108 1 . 1 0 `S112 1 . 1 0 `S119 1 . 1 0 `S122 1 . 1 0 `S125 1 . 1 0 `S128 1 . 1 0 `S131 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES134  1 e 1 @4034 ]
+[u S119 . 1 `S90 1 . 1 0 `S93 1 . 1 0 `S97 1 . 1 0 `S104 1 . 1 0 `S107 1 . 1 0 `S110 1 . 1 0 `S113 1 . 1 0 `S116 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES119  1 e 1 @4034 ]
+"6705
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "6711
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
 [s S23 . 1 `uc 1 SCS 1 0 :2:0 
@@ -119,18 +131,86 @@
 ]
 [u S37 . 1 `S23 1 . 1 0 `S29 1 . 1 0 ]
 [v _OSCCONbits OSCCONbits `VES37  1 e 1 @4051 ]
-"6 C:\Users\ASUS\Documents\GitHub\ARQCA\ADC\adc.X\adc_pot.c
+"12 C:\Users\ASUS\Documents\GitHub\ARQCA\ADC\adc.X\adc_lm35.c
 [v _main main `(v  1 e 1 0 ]
 {
-"29
+"55
 } 0
-"19 C:\Users\ASUS\Documents\GitHub\ARQCA\ADC\adc.X\adc_lib.c
-[v _adc_read adc_read `(uc  1 e 1 0 ]
+"28 D:\mplab\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
 {
-"23
+[v ___lwtoft@c c `ui  1 p 2 8 ]
+"31
 } 0
-"7
-[v _adc_init adc_init `(v  1 e 1 0 ]
+"44 D:\mplab\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
 {
-"15
+"47
+[v ___fttol@lval lval `ul  1 a 4 10 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 14 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 9 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 0 ]
+"73
+} 0
+"62 D:\mplab\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 18 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 22 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 21 ]
+[v ___ftmul@exp exp `uc  1 a 1 17 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 8 ]
+[v ___ftmul@f2 f2 `f  1 p 3 11 ]
+"157
+} 0
+"54 D:\mplab\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 33 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 37 ]
+[v ___ftdiv@exp exp `uc  1 a 1 36 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 32 ]
+"54
+[v ___ftdiv@f1 f1 `f  1 p 3 23 ]
+[v ___ftdiv@f2 f2 `f  1 p 3 26 ]
+"86
+} 0
+"62 D:\mplab\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"8 D:\mplab\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"8
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+"35
+} 0
+"8 D:\mplab\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"8
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"42
 } 0

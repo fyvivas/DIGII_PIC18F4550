@@ -4811,9 +4811,7 @@ void LCD_Clear();
 # 26 "keypad_lcd_main.c"
 unsigned char keyfind();
 
-
-
-
+# 36
 unsigned char col_loc,rowloc,temp_col;
 
 unsigned char keypad[4][4]= {'7','8','9','/',
@@ -4840,13 +4838,10 @@ while(1)
 do{
 key = keyfind();
 LCD_Char('*');
-pass_user[idx++];
+pass_user[idx++] = key;
 }while(idx < 5);
 
-
-LCD_Clear();
-
-
+# 69
 }
 
 }

@@ -25,8 +25,6 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "5 C:\Users\ASUS\Documents\GitHub\ARQCA\LCDKEYPAD\lcdkeypad.X\keypad.c
 [v _keypad_init keypad_init `(v  1 e 1 0 ]
-"12
-[v _keypad_getkey keypad_getkey `(uc  1 e 1 0 ]
 "11 C:\Users\ASUS\Documents\GitHub\ARQCA\LCDKEYPAD\lcdkeypad.X\LCD_20x4_C_file.c
 [v _LCD_Command LCD_Command `(v  1 e 1 0 ]
 "22
@@ -252,19 +250,6 @@
 [v _keypad_init keypad_init `(v  1 e 1 0 ]
 {
 "10
-} 0
-"12
-[v _keypad_getkey keypad_getkey `(uc  1 e 1 0 ]
-{
-"14
-[v keypad_getkey@letras letras `[4][4]uc  1 a 16 0 ]
-"18
-[v keypad_getkey@i i `i  1 a 2 17 ]
-"19
-[v keypad_getkey@valor valor `uc  1 a 1 16 ]
-"12
-[v keypad_getkey@F3814 F3814 `[4][4]uc  1 s 16 F3814 ]
-"62
 } 0
 "57 C:\Users\ASUS\Documents\GitHub\ARQCA\LCDKEYPAD\lcdkeypad.X\LCD_20x4_C_file.c
 [v _LCD_String_xy LCD_String_xy `(v  1 e 1 0 ]

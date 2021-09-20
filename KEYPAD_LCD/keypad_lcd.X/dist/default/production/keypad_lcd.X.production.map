@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=D:\mplab\dat\en_msgs.txt -cs \
   -h+dist/default/production\keypad_lcd.X.production.sym \
   --cmf=dist/default/production\keypad_lcd.X.production.cmf -z -Q18F4550 \
-  -oC:\Users\ASUS\AppData\Local\Temp\sbj0.2 \
+  -oC:\Users\ASUS\AppData\Local\Temp\s5t8.2 \
   -Mdist/default/production/keypad_lcd.X.production.map -E1 -ver=XC8 \
   -ASTACK=060h-07ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\ASUS\AppData\Local\Temp\sbj0.obj \
+  C:\Users\ASUS\AppData\Local\Temp\s5t8.obj \
   dist/default/production\keypad_lcd.X.production.obj 
 
 Object code version is 3.11
@@ -35,41 +35,39 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\ASUS\AppData\Local\Temp\sbj0.obj
+C:\Users\ASUS\AppData\Local\Temp\s5t8.obj
                 init                                  0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
 dist/default/production\keypad_lcd.X.production.obj
                 smallconst                          800      800       20      400       0
-                text7                               9E6      9E6       50      410       0
-                text6                               B58      B58        8      5AC       0
-                text5                               AE4      AE4       34      410       0
+                text6                               9E6      9E6       50      410       0
+                text5                               AEE      AEE       34      410       0
                 text4                               996      996       50      410       0
-                text3                               B18      B18       2A      410       0
-                text2                               AAC      AAC       38      410       0
+                text3                               B22      B22       2A      410       0
+                text2                               AB6      AB6       38      410       0
                 text1                               820      820      176      410       0
-                text0                               A36      A36       3C      410       0
+                text0                               A36      A36       46      410       0
                 cstackCOMRAM                         16       16        A        1       1
                 dataCOMRAM                            1        1       15        1       1
                 bssCOMRAM                            20       20        9        1       1
-                cinit                               A72      A72       3A      410       0
-                idataCOMRAM                         B42      B42       15      410       0
+                cinit                               A7C      A7C       3A      410       0
+                idataCOMRAM                         B4C      B4C       15      410       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 init                                  0        0        4         0
-                text7                               9E6      9E6       50         0
-                text6                               B58      B58        8         0
-                text5                               AE4      AE4       34         0
+                text6                               9E6      9E6       50         0
+                text5                               AEE      AEE       34         0
                 text4                               996      996       50         0
-                text3                               B18      B18       2A         0
-                text2                               AAC      AAC       38         0
+                text3                               B22      B22       2A         0
+                text2                               AB6      AB6       38         0
                 text1                               820      820      176         0
-                text0                               A36      A36       3C         0
-                cinit                               A72      A72       3A         0
-                idataCOMRAM                         B42      B42       15         0
+                text0                               A36      A36       46         0
+                cinit                               A7C      A7C       3A         0
+                idataCOMRAM                         B4C      B4C       15         0
 
         CLASS   CONST          
 
@@ -124,8 +122,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 dataCOMRAM                     000001  000028  000029         1       1  COMRAM  
                 smallconst                     000800  000020  000820       400       0  SMALLCON
-                text1                          000820  000337  000B57       410       0  CODE    
-                text6                          000B58  000008  000B60       5AC       0  CODE    
+                text1                          000820  000341  000B61       410       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -143,19 +140,15 @@ UNUSED ADDRESS RANGES
         BANK7            000700-0007FF              100
         BIGRAM           000029-0007FF              7D7
         CODE             000004-0007FF              7FC
-                         000B57-000B57                1
-                         000B60-007FFF             74A0
+                         000B61-007FFF             749F
         COMRAM           000029-00005F               37
         CONST            000004-0007FF              7FC
-                         000B57-000B57                1
-                         000B60-007FFF             74A0
+                         000B61-007FFF             749F
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000B57-000B57                1
-                         000B60-007FFF             74A0
+        MEDIUMCONST      000B61-007FFF             749F
         RAM              000060-0007FF              100
         SFR              000F60-000FFF               A0
-        SMALLCONST       000B57-000B57                1
-                         000B60-007FFF              100
+        SMALLCONST       000B61-007FFF              100
         STACK            000060-0007FF              7A0
 
                                   Symbol Table
@@ -173,11 +166,10 @@ _LATD                          (abs)        000F8C
 _LATD0                         (abs)        007C60
 _LATD1                         (abs)        007C61
 _LCD_Char                      text4        000996
-_LCD_Clear                     text6        000B58
-_LCD_Command                   text7        0009E6
-_LCD_Init                      text5        000AE4
-_LCD_String                    text3        000B18
-_LCD_String_xy                 text2        000AAC
+_LCD_Command                   text6        0009E6
+_LCD_Init                      text5        000AEE
+_LCD_String                    text3        000B22
+_LCD_String_xy                 text2        000AB6
 _OSCCON                        (abs)        000FD3
 _PORTB                         (abs)        000F81
 _PORTD                         (abs)        000F83
@@ -291,7 +283,6 @@ __Htext3                       text3        000000
 __Htext4                       text4        000000
 __Htext5                       text5        000000
 __Htext6                       text6        000000
-__Htext7                       text7        000000
 __LRAM                         (abs)        000001
 __Labs1                        abs1         000000
 __Lbank0                       bank0        000000
@@ -360,7 +351,6 @@ __Ltext3                       text3        000000
 __Ltext4                       text4        000000
 __Ltext5                       text5        000000
 __Ltext6                       text6        000000
-__Ltext7                       text7        000000
 __S0                           (abs)        30000E
 __S1                           (abs)        000029
 __S2                           (abs)        000000
@@ -373,33 +363,30 @@ __accesstop                    (abs)        000060
 __activetblptr                 (abs)        000001
 __end_ofKeypad_Key_Press@F3812 smallconst   000812
 __end_of_LCD_Char              text4        0009E6
-__end_of_LCD_Clear             text6        000B60
-__end_of_LCD_Command           text7        000A36
-__end_of_LCD_Init              text5        000B18
-__end_of_LCD_String            text3        000B42
-__end_of_LCD_String_xy         text2        000AE4
-__end_of__initialization       cinit        000A9E
+__end_of_LCD_Command           text6        000A36
+__end_of_LCD_Init              text5        000B22
+__end_of_LCD_String            text3        000B4C
+__end_of_LCD_String_xy         text2        000AEE
+__end_of__initialization       cinit        000AA8
 __end_of_keyfind               text1        000996
-__end_of_main                  text0        000A72
-__initialization               cinit        000A72
+__end_of_main                  text0        000A7C
+__initialization               cinit        000A7C
 __mediumconst                  mediumconst  000000
 __pbssCOMRAM                   bssCOMRAM    000020
-__pcinit                       cinit        000A72
+__pcinit                       cinit        000A7C
 __pcstackCOMRAM                cstackCOMRAM 000016
 __pdataCOMRAM                  dataCOMRAM   000001
-__pidataCOMRAM                 idataCOMRAM  000B42
+__pidataCOMRAM                 idataCOMRAM  000B4C
 __psmallconst                  smallconst   000800
 __ptext0                       text0        000A36
 __ptext1                       text1        000820
-__ptext2                       text2        000AAC
-__ptext3                       text3        000B18
+__ptext2                       text2        000AB6
+__ptext3                       text3        000B22
 __ptext4                       text4        000996
-__ptext5                       text5        000AE4
-__ptext6                       text6        000B58
-__ptext7                       text7        0009E6
+__ptext5                       text5        000AEE
+__ptext6                       text6        0009E6
 __ramtop                       ramtop       000800
 __size_of_LCD_Char             (abs)        000000
-__size_of_LCD_Clear            (abs)        000000
 __size_of_LCD_Command          (abs)        000000
 __size_of_LCD_Init             (abs)        000000
 __size_of_LCD_String           (abs)        000000
@@ -416,7 +403,7 @@ _pass_user                     bssCOMRAM    000020
 _password                      dataCOMRAM   000011
 _rowloc                        bssCOMRAM    000027
 _temp_col                      bssCOMRAM    000026
-end_of_initialization          cinit        000A9E
+end_of_initialization          cinit        000AA8
 intlevel0                      text         000000
 intlevel1                      text         000000
 intlevel2                      text         000000
@@ -425,14 +412,14 @@ main@key                       cstackCOMRAM 00001F
 stackhi                        (abs)        0007FF
 stacklo                        (abs)        000060
 start                          init         000000
-start_initialization           cinit        000A72
+start_initialization           cinit        000A7C
 
 
 FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 43 in file "keypad_lcd_main.c"
+		line 48 in file "keypad_lcd_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -454,7 +441,6 @@ Total ram usage:        1 bytes
  Hardware stack levels required when called:    3
  This function calls:
 		_LCD_Char
-		_LCD_Clear
 		_LCD_Command
 		_LCD_Init
 		_LCD_String_xy
@@ -466,7 +452,7 @@ Total ram usage:        1 bytes
 
  *************** function _keyfind *****************
  Defined at:
-		line 89 in file "keypad_lcd_main.c"
+		line 94 in file "keypad_lcd_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -619,36 +605,6 @@ Total ram usage:        1 bytes
  This function uses a non-reentrant model
 
 
- *************** function _LCD_Clear *****************
- Defined at:
-		line 99 in file "LCD.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    1
- This function calls:
-		_LCD_Command
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
  *************** function _LCD_Command *****************
  Defined at:
 		line 38 in file "LCD.c"
@@ -687,23 +643,22 @@ MODULE INFORMATION
 Module		Function		Class		Link	Load	Size
 keypad_lcd_main.c
 		_keyfind       		CODE           	0820	0000	375
-		_main          		CODE           	0A36	0000	61
+		_main          		CODE           	0A36	0000	71
 
-keypad_lcd_main.c estimated size: 436
+keypad_lcd_main.c estimated size: 446
 
 shared
 		Keypad_Key_Press@F3812		SMALLCONST     	0801	0000	18
-		__initialization		CODE           	0A72	0000	45
+		__initialization		CODE           	0A7C	0000	45
 
 shared estimated size: 63
 
 LCD.c
-		_LCD_String    		CODE           	0B18	0000	43
-		_LCD_Init      		CODE           	0AE4	0000	53
+		_LCD_String    		CODE           	0B22	0000	43
+		_LCD_Init      		CODE           	0AEE	0000	53
 		_LCD_Command   		CODE           	09E6	0000	81
-		_LCD_String_xy 		CODE           	0AAC	0000	57
+		_LCD_String_xy 		CODE           	0AB6	0000	57
 		_LCD_Char      		CODE           	0996	0000	81
-		_LCD_Clear     		CODE           	0B58	0000	9
 
-LCD.c estimated size: 324
+LCD.c estimated size: 315
 

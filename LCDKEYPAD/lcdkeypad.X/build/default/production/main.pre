@@ -4856,8 +4856,6 @@ TXREG = 'f';
 
 while (1) {
 
-key = keypad_getkey();
-
 # 60
 if (key) {
 LCD_String_xy(2,0,"KEY: ");

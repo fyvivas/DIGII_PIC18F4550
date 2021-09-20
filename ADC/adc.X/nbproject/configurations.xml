@@ -125,6 +125,7 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
       </HI-TECH-LINK>
       <Simulator>
+        <property key="W0222_ADC_OVERFLOW" value="report"/>
         <property key="W0223_ADC_UNDERFLOW" value="report"/>
         <property key="periphADC1.minTacq" value="5"/>
       </Simulator>
@@ -136,7 +137,15 @@
         <property key="stack-size-main" value="auto"/>
         <property key="stack-type" value="compiled"/>
       </XC8-config-global>
-      <item path="adc_lm35.c" ex="true" overriding="false">
+      <item path="adc_lm35.c" ex="false" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="adc_pot.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>

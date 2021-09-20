@@ -28,6 +28,11 @@ unsigned char keyfind();            /* function to find pressed key*/
 #define write_port LATB             /* latch register to write data on port */
 #define read_port PORTB             /* PORT register to read data of port */
 #define Direction_Port TRISB
+
+#define KEYPAD_WRITE LATB             /* latch register to write data on port */
+#define KEYPAD_READ PORTB             /* PORT register to read data of port */
+#define KEYPAD_PORT TRISB
+
 unsigned char col_loc,rowloc,temp_col;
 
 unsigned char keypad[4][4]= {'7','8','9','/',
@@ -35,7 +40,7 @@ unsigned char keypad[4][4]= {'7','8','9','/',
                              '1','2','3','-',
                              ' ','0','=','+'};
 
-unsigned char password[5] ={'2','0','2','1','\0'};
+unsigned char password[5] ={'2','0','2','1',0};
 
 unsigned char pass_user[5];
 unsigned char idx = 0;
@@ -54,11 +59,11 @@ void main()
         do{
             key = keyfind();              /* find a pressed key */
             LCD_Char('*');/* display pressed key on LCD16x2 */
-            pass_user[idx++];
+            pass_user[idx++] = key;
         }while(idx < 5);
-        
+        //__delay_ms(2000);
         //if(strncmp(&password, &pass_user,4)){
-        LCD_Clear();    
+        //LCD_String_xy(2,5,"P");
             
         
     }

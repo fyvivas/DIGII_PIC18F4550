@@ -89,8 +89,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
 "5340
 [v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
-"49 keypad.h
-[v _keypad_getkey `(uc ~T0 @X0 0 ef ]
 "23 LCD_20x4_H_file.h
 [v _LCD_String `(v ~T0 @X0 0 ef1`*Cuc ]
 [v F3779 `(v ~T0 @X0 1 tf1`ul ]
@@ -3769,9 +3767,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 "51
 [e :U 367 ]
 {
-[; ;main.c: 53: key = keypad_getkey();
-"53
-[e = _key ( _keypad_getkey ..  ]
 [; ;main.c: 60: if (key) {
 "60
 [e $ ! != -> _key `i -> -> -> 0 `i `uc `i 369  ]
