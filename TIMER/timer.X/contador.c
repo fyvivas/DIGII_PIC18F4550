@@ -26,14 +26,14 @@ unsigned char count = 0;
 
 int main(void) {
     INTCONbits.GIE = 0;
-    T0CONbits.T0CS = 1;
-    T0CONbits.T0SE = 1;
-    T0CONbits.T08BIT = 1;
-    T0CONbits.TMR0ON = 1;
+    T0CONbits.T0CS = 1;//mode contador
+    T0CONbits.T0SE = 1;//flanco de bajada Ra4
+    T0CONbits.T08BIT = 1;//mode 8 bits
+    T0CONbits.TMR0ON = 1;//enable Timer 0
     TMR0L = 0;
     TRISD = 0x00;
     LATD = 0x00;
-    TRISAbits.RA4 = 1;
+    TRISAbits.RA4 = 1;//input contador
     while (1) {
         if (TMR0L == 10) {
             TMR0L = 0;

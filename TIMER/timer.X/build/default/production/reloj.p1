@@ -14,25 +14,51 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S354 . . . . ]
 "8476
 [v _INTCONbits `VS354 ~T0 @X0 0 e@4082 ]
-"7970
-[s S342 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S342 . T0PS PSA T0SE T0CS T08BIT TMR0ON ]
-"7978
-[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S343 . T0PS0 T0PS1 T0PS2 ]
-"7969
-[u S341 `S342 1 `S343 1 ]
-[n S341 . . . ]
-"7984
-[v _T0CONbits `VS341 ~T0 @X0 0 e@4053 ]
-"8039
-[v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
-"8045
-[v _TMR0H `Vuc ~T0 @X0 0 e@4055 ]
+"7324
+[s S312 :2 `uc 1 :1 `uc 1 ]
+[n S312 . . NOT_T1SYNC ]
+"7328
+[s S313 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S313 . TMR1ON TMR1CS nT1SYNC T1OSCEN T1CKPS T1RUN RD16 ]
+"7337
+[s S314 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S314 . . T1SYNC . T1CKPS0 T1CKPS1 ]
+"7344
+[s S315 :3 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S315 . . SOSCEN . T1RD16 ]
+"7323
+[u S311 `S312 1 `S313 1 `S314 1 `S315 1 ]
+[n S311 . . . . . ]
+"7351
+[v _T1CONbits `VS311 ~T0 @X0 0 e@4045 ]
+"7432
+[v _TMR1H `Vuc ~T0 @X0 0 e@4047 ]
+"7426
+[v _TMR1L `Vuc ~T0 @X0 0 e@4046 ]
+"4423
+[s S173 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S173 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
+"4433
+[s S174 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S174 . . TX1IF RC1IF . PSPIF ]
+"4422
+[u S172 `S173 1 `S174 1 ]
+[n S172 . . . ]
+"4441
+[v _PIR1bits `VS172 ~T0 @X0 0 e@3998 ]
+"4340
+[s S170 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S170 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE SPPIE ]
+"4350
+[s S171 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S171 . . TX1IE RC1IE . PSPIE ]
+"4339
+[u S169 `S170 1 `S171 1 ]
+[n S169 . . . ]
+"4358
+[v _PIE1bits `VS169 ~T0 @X0 0 e@3997 ]
 "3954
 [v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"3221
-[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
 "3394
 [s S137 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S137 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 ]
@@ -44,11 +70,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S136 . . . ]
 "3413
 [v _TRISAbits `VS136 ~T0 @X0 0 e@3986 ]
-[v F3779 `(v ~T0 @X0 1 tf1`ul ]
-"161 D:\mplab\include\pic18.h
-[v __delay `JF3779 ~T0 @X0 0 e ]
-[p i __delay ]
-"2286 D:\mplab\include\pic18f4550.h
+"6497
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"5517
+[v _CMCON `Vuc ~T0 @X0 0 e@4020 ]
+"2286
 [s S96 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S96 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 ]
 "2295
@@ -68,6 +94,88 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S95 . . . . . . ]
 "2319
 [v _PORTAbits `VS95 ~T0 @X0 0 e@3968 ]
+[v F3779 `(v ~T0 @X0 1 tf1`ul ]
+"161 D:\mplab\include\pic18.h
+[v __delay `JF3779 ~T0 @X0 0 e ]
+[p i __delay ]
+"3221 D:\mplab\include\pic18f4550.h
+[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
+"16 fuses.h
+[p x PLLDIV=1 ]
+"17
+[p x CPUDIV=OSC1_PLL2 ]
+"18
+[p x USBDIV=1 ]
+"21
+[p x FOSC=HS ]
+"22
+[p x FCMEN=OFF ]
+"23
+[p x IESO=OFF ]
+"26
+[p x PWRT=ON ]
+"27
+[p x BOR=OFF ]
+"28
+[p x BORV=3 ]
+"29
+[p x VREGEN=OFF ]
+"32
+[p x WDT=OFF ]
+"33
+[p x WDTPS=32768 ]
+"36
+[p x CCP2MX=ON ]
+"37
+[p x PBADEN=OFF ]
+"38
+[p x LPT1OSC=OFF ]
+"39
+[p x MCLRE=OFF ]
+"44
+[p x STVREN=ON ]
+"45
+[p x LVP=OFF ]
+"46
+[p x ICPRT=OFF ]
+"47
+[p x XINST=OFF ]
+"50
+[p x CP0=OFF ]
+"51
+[p x CP1=OFF ]
+"52
+[p x CP2=OFF ]
+"53
+[p x CP3=OFF ]
+"56
+[p x CPB=OFF ]
+"57
+[p x CPD=OFF ]
+"60
+[p x WRT0=OFF ]
+"61
+[p x WRT1=OFF ]
+"62
+[p x WRT2=OFF ]
+"63
+[p x WRT3=OFF ]
+"66
+[p x WRTC=OFF ]
+"67
+[p x WRTB=OFF ]
+"68
+[p x WRTD=OFF ]
+"71
+[p x EBTR0=OFF ]
+"72
+[p x EBTR1=OFF ]
+"73
+[p x EBTR2=OFF ]
+"74
+[p x EBTR3=OFF ]
+"77
+[p x EBTRB=OFF ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3576,229 +3684,256 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 161: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 163: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 165: extern __nonreentrant void _delay3(unsigned char);
-"16 fuses.h
-[p x PLLDIV=1 ]
-"17
-[p x CPUDIV=OSC1_PLL2 ]
-"18
-[p x USBDIV=1 ]
-"21
-[p x FOSC=HS ]
-"22
-[p x FCMEN=OFF ]
-"23
-[p x IESO=OFF ]
-"26
-[p x PWRT=ON ]
-"27
-[p x BOR=OFF ]
-"28
-[p x BORV=3 ]
-"29
-[p x VREGEN=OFF ]
-"32
-[p x WDT=OFF ]
-"33
-[p x WDTPS=32768 ]
-"36
-[p x CCP2MX=ON ]
-"37
-[p x PBADEN=OFF ]
-"38
-[p x LPT1OSC=OFF ]
-"39
-[p x MCLRE=OFF ]
-"44
-[p x STVREN=ON ]
-"45
-[p x LVP=OFF ]
-"46
-[p x ICPRT=OFF ]
-"47
-[p x XINST=OFF ]
-"50
-[p x CP0=OFF ]
-"51
-[p x CP1=OFF ]
-"52
-[p x CP2=OFF ]
-"53
-[p x CP3=OFF ]
-"56
-[p x CPB=OFF ]
-"57
-[p x CPD=OFF ]
-"60
-[p x WRT0=OFF ]
-"61
-[p x WRT1=OFF ]
-"62
-[p x WRT2=OFF ]
-"63
-[p x WRT3=OFF ]
-"66
-[p x WRTC=OFF ]
-"67
-[p x WRTB=OFF ]
-"68
-[p x WRTD=OFF ]
-"71
-[p x EBTR0=OFF ]
-"72
-[p x EBTR1=OFF ]
-"73
-[p x EBTR2=OFF ]
-"74
-[p x EBTR3=OFF ]
-"77
-[p x EBTRB=OFF ]
-"27 temporizador.c
-[v _count `uc ~T0 @X0 1 e ]
-[i _count
+"29 reloj.c
+[v _flag_run `uc ~T0 @X0 1 e ]
+[i _flag_run
 -> -> 0 `i `uc
 ]
-[; ;temporizador.c: 27: unsigned char count = 0;
-"29
+[; ;reloj.c: 29: unsigned char flag_run = 0;
+"30
+[v _counter_digito `uc ~T0 @X0 1 e ]
+[i _counter_digito
+-> -> 0 `i `uc
+]
+[; ;reloj.c: 30: unsigned char counter_digito = 0;
+"31
+[v _counter_segundos `ui ~T0 @X0 1 e ]
+[i _counter_segundos
+-> -> 0 `i `ui
+]
+[; ;reloj.c: 31: unsigned int counter_segundos = 0;
+"32
+[v _counter_20ms `uc ~T0 @X0 1 e ]
+[i _counter_20ms
+-> -> 0 `i `uc
+]
+[; ;reloj.c: 32: unsigned char counter_20ms = 0;
+"34
 [v _main `(i ~T0 @X0 1 ef ]
 {
-[; ;temporizador.c: 29: int main(void) {
+[; ;reloj.c: 34: int main(void) {
 [e :U _main ]
 [f ]
-[; ;temporizador.c: 30: INTCONbits.GIE = 0;
-"30
-[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-[; ;temporizador.c: 31: T0CONbits.T0CS = 0;
-"31
-[e = . . _T0CONbits 0 3 -> -> 0 `i `uc ]
-[; ;temporizador.c: 32: T0CONbits.PSA = 0;
-"32
-[e = . . _T0CONbits 0 1 -> -> 0 `i `uc ]
-[; ;temporizador.c: 33: T0CONbits.T0PS = 0b001;
-"33
-[e = . . _T0CONbits 0 0 -> -> 1 `i `uc ]
-[; ;temporizador.c: 34: T0CONbits.T08BIT = 0;
-"34
-[e = . . _T0CONbits 0 4 -> -> 0 `i `uc ]
-[; ;temporizador.c: 35: TMR0L = 0xDA;
+[; ;reloj.c: 35: INTCONbits.GIE = 0;
 "35
-[e = _TMR0L -> -> 218 `i `uc ]
-[; ;temporizador.c: 36: TMR0H = 0x0B;
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
+[; ;reloj.c: 36: T1CONbits.RD16 = 1;
 "36
-[e = _TMR0H -> -> 11 `i `uc ]
-[; ;temporizador.c: 37: T0CONbits.TMR0ON = 1;
+[e = . . _T1CONbits 1 6 -> -> 1 `i `uc ]
+[; ;reloj.c: 37: T1CONbits.TMR1CS = 0;
 "37
-[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
-[; ;temporizador.c: 38: TRISD = 0x00;
+[e = . . _T1CONbits 1 1 -> -> 0 `i `uc ]
+[; ;reloj.c: 38: T1CONbits.T1CKPS = 0b01;
 "38
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;temporizador.c: 39: LATD = 0x00;
+[e = . . _T1CONbits 1 4 -> -> 1 `i `uc ]
+[; ;reloj.c: 39: TMR1H = 0xD8;
 "39
-[e = _LATD -> -> 0 `i `uc ]
-[; ;temporizador.c: 40: TRISAbits.RA4 = 1;
+[e = _TMR1H -> -> 216 `i `uc ]
+[; ;reloj.c: 40: TMR1L = 0xEF;
 "40
-[e = . . _TRISAbits 1 4 -> -> 1 `i `uc ]
-[; ;temporizador.c: 41: INTCONbits.TMR0IF = 0;
+[e = _TMR1L -> -> 239 `i `uc ]
+[; ;reloj.c: 41: T1CONbits.TMR1ON = 1;
 "41
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;temporizador.c: 42: INTCONbits.TMR0IE = 1;
+[e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
+[; ;reloj.c: 42: PIR1bits.TMR1IF = 0;
 "42
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-[; ;temporizador.c: 43: INTCONbits.PEIE = 1;
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+[; ;reloj.c: 43: PIE1bits.TMR1IE = 1;
 "43
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-[; ;temporizador.c: 44: INTCONbits.GIE = 1;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+[; ;reloj.c: 44: INTCONbits.PEIE = 1;
 "44
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;temporizador.c: 45: while (1) {
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+[; ;reloj.c: 45: INTCONbits.GIE = 1;
 "45
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;reloj.c: 46: TRISD = 0;
+"46
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;reloj.c: 47: TRISAbits.RA0 = 1;
+"47
+[e = . . _TRISAbits 1 0 -> -> 1 `i `uc ]
+[; ;reloj.c: 48: TRISAbits.RA1 = 1;
+"48
+[e = . . _TRISAbits 1 1 -> -> 1 `i `uc ]
+[; ;reloj.c: 49: ADCON1 = 0x0F;
+"49
+[e = _ADCON1 -> -> 15 `i `uc ]
+[; ;reloj.c: 50: CMCON = 0x07;
+"50
+[e = _CMCON -> -> 7 `i `uc ]
+[; ;reloj.c: 51: while (1) {
+"51
 [e :U 364 ]
 {
-[; ;temporizador.c: 47: LATD = (1 << 4) + (count % 10);
-"47
-[e = _LATD -> + << -> 1 `i -> 4 `i % -> _count `i -> 10 `i `uc ]
-[; ;temporizador.c: 48: _delay((unsigned long)((20)*(1000000L/4000.0)));
-"48
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-[; ;temporizador.c: 49: LATD = (1 << 5) + (count / 10);
-"49
-[e = _LATD -> + << -> 1 `i -> 5 `i / -> _count `i -> 10 `i `uc ]
-[; ;temporizador.c: 50: _delay((unsigned long)((20)*(1000000L/4000.0)));
-"50
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-[; ;temporizador.c: 53: if (!PORTAbits.RA4) {
-"53
-[e $ ! ! != -> . . _PORTAbits 0 4 `i -> -> -> 0 `i `Vuc `i 366  ]
+[; ;reloj.c: 52: if (!PORTAbits.RA0) {
+"52
+[e $ ! ! != -> . . _PORTAbits 0 0 `i -> -> -> 0 `i `Vuc `i 366  ]
 {
-[; ;temporizador.c: 54: _delay((unsigned long)((50)*(1000000L/4000.0)));
+[; ;reloj.c: 53: _delay((unsigned long)((50)*(8000000L/4000.0)));
+"53
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;reloj.c: 54: flag_run = !flag_run;
 "54
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-[; ;temporizador.c: 55: count = 0;
+[e = _flag_run -> -> ! != -> _flag_run `i -> -> -> 0 `i `uc `i `i `uc ]
+[; ;reloj.c: 55: while (!PORTAbits.RA0);
 "55
-[e = _count -> -> 0 `i `uc ]
-[; ;temporizador.c: 56: TMR0L = 0xDA;
+[e $U 367  ]
+[e :U 368 ]
+[e :U 367 ]
+[e $ ! != -> . . _PORTAbits 0 0 `i -> -> -> 0 `i `Vuc `i 368  ]
+[e :U 369 ]
+[; ;reloj.c: 56: _delay((unsigned long)((50)*(8000000L/4000.0)));
 "56
-[e = _TMR0L -> -> 218 `i `uc ]
-[; ;temporizador.c: 57: TMR0H = 0x0B;
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "57
-[e = _TMR0H -> -> 11 `i `uc ]
-[; ;temporizador.c: 58: INTCONbits.TMR0IF = 0;
-"58
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"59
 }
 [e :U 366 ]
+[; ;reloj.c: 57: }
+[; ;reloj.c: 58: if (!PORTAbits.RA1) {
+"58
+[e $ ! ! != -> . . _PORTAbits 0 1 `i -> -> -> 0 `i `Vuc `i 370  ]
+{
+[; ;reloj.c: 59: _delay((unsigned long)((50)*(8000000L/4000.0)));
+"59
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;reloj.c: 60: counter_segundos = 0;
 "60
+[e = _counter_segundos -> -> 0 `i `ui ]
+[; ;reloj.c: 61: flag_run = 0;
+"61
+[e = _flag_run -> -> 0 `i `uc ]
+"62
+}
+[e :U 370 ]
+"63
 }
 [e :U 363 ]
-"45
+"51
 [e $U 364  ]
 [e :U 365 ]
-[; ;temporizador.c: 59: }
-[; ;temporizador.c: 60: }
-[; ;temporizador.c: 61: return 1;
-"61
+[; ;reloj.c: 62: }
+[; ;reloj.c: 63: }
+[; ;reloj.c: 64: return 1;
+"64
 [e ) -> 1 `i ]
 [e $UE 362  ]
-[; ;temporizador.c: 62: }
-"62
+[; ;reloj.c: 65: }
+"65
 [e :UE 362 ]
 }
-[v F3794 `(v ~T0 @X0 1 tf ]
-"64
-[v _ISR_TIMER_0 `IF3794 ~T0 @X0 1 e ]
-{
-[; ;temporizador.c: 64: void interrupt ISR_TIMER_0(void) {
-[e :U _ISR_TIMER_0 ]
-[f ]
-[; ;temporizador.c: 65: if (INTCONbits.TMR0IE && INTCONbits.TMR0IF) {
-"65
-[e $ ! && != -> . . _INTCONbits 0 5 `i -> -> -> 0 `i `Vuc `i != -> . . _INTCONbits 0 2 `i -> -> -> 0 `i `Vuc `i 368  ]
-{
-[; ;temporizador.c: 66: if (++count == 100) {
-"66
-[e $ ! == -> =+ _count -> -> 1 `i `uc `i -> 100 `i 369  ]
-{
-[; ;temporizador.c: 67: count = 0;
+[v F3797 `(v ~T0 @X0 1 tf ]
 "67
-[e = _count -> -> 0 `i `uc ]
+[v _ISR_TIMER_1 `IF3797 ~T0 @X0 1 e ]
+{
+[; ;reloj.c: 67: void interrupt ISR_TIMER_1(void) {
+[e :U _ISR_TIMER_1 ]
+[f ]
+[; ;reloj.c: 68: if (PIE1bits.TMR1IE && PIR1bits.TMR1IF) {
 "68
-}
-[e :U 369 ]
-[; ;temporizador.c: 68: }
-[; ;temporizador.c: 69: TMR0L = 0xDA;
+[e $ ! && != -> . . _PIE1bits 0 0 `i -> -> -> 0 `i `Vuc `i != -> . . _PIR1bits 0 0 `i -> -> -> 0 `i `Vuc `i 372  ]
+{
+[; ;reloj.c: 69: TMR1H = 0xD8;
 "69
-[e = _TMR0L -> -> 218 `i `uc ]
-[; ;temporizador.c: 70: TMR0H = 0x0B;
+[e = _TMR1H -> -> 216 `i `uc ]
+[; ;reloj.c: 70: TMR1L = 0xEF;
 "70
-[e = _TMR0H -> -> 11 `i `uc ]
-[; ;temporizador.c: 71: INTCONbits.TMR0IF = 0;
-"71
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[e = _TMR1L -> -> 239 `i `uc ]
+[; ;reloj.c: 72: if (++counter_20ms == 100 && flag_run) {
 "72
-}
-[e :U 368 ]
-[; ;temporizador.c: 72: }
-[; ;temporizador.c: 73: }
+[e $ ! && == -> =+ _counter_20ms -> -> 1 `i `uc `i -> 100 `i != -> _flag_run `i -> -> -> 0 `i `uc `i 373  ]
+{
+[; ;reloj.c: 73: counter_20ms = 0;
 "73
-[e :UE 367 ]
+[e = _counter_20ms -> -> 0 `i `uc ]
+[; ;reloj.c: 74: if (++counter_segundos == 3600) {
+"74
+[e $ ! == =+ _counter_segundos -> -> 1 `i `ui -> -> 3600 `i `ui 374  ]
+{
+[; ;reloj.c: 75: counter_segundos = 0;
+"75
+[e = _counter_segundos -> -> 0 `i `ui ]
+"76
+}
+[e :U 374 ]
+"77
+}
+[e :U 373 ]
+[; ;reloj.c: 76: }
+[; ;reloj.c: 77: }
+[; ;reloj.c: 79: switch (counter_digito) {
+"79
+[e $U 376  ]
+{
+[; ;reloj.c: 80: case 0:
+"80
+[e :U 377 ]
+[; ;reloj.c: 81: LATD = (counter_digito << 4) + (counter_segundos / 60) / 10;
+"81
+[e = _LATD -> + -> << -> _counter_digito `i -> 4 `i `ui / / _counter_segundos -> -> 60 `i `ui -> -> 10 `i `ui `uc ]
+[; ;reloj.c: 82: counter_digito = 1;
+"82
+[e = _counter_digito -> -> 1 `i `uc ]
+[; ;reloj.c: 83: break;
+"83
+[e $U 375  ]
+[; ;reloj.c: 84: case 1:
+"84
+[e :U 378 ]
+[; ;reloj.c: 85: LATD = (counter_digito << 4) + (counter_segundos / 60) % 10;
+"85
+[e = _LATD -> + -> << -> _counter_digito `i -> 4 `i `ui % / _counter_segundos -> -> 60 `i `ui -> -> 10 `i `ui `uc ]
+[; ;reloj.c: 86: counter_digito = 2;
+"86
+[e = _counter_digito -> -> 2 `i `uc ]
+[; ;reloj.c: 87: break;
+"87
+[e $U 375  ]
+[; ;reloj.c: 88: case 2:
+"88
+[e :U 379 ]
+[; ;reloj.c: 89: LATD = (counter_digito << 4) + (counter_segundos % 60) / 10;
+"89
+[e = _LATD -> + -> << -> _counter_digito `i -> 4 `i `ui / % _counter_segundos -> -> 60 `i `ui -> -> 10 `i `ui `uc ]
+[; ;reloj.c: 90: counter_digito = 3;
+"90
+[e = _counter_digito -> -> 3 `i `uc ]
+[; ;reloj.c: 91: break;
+"91
+[e $U 375  ]
+[; ;reloj.c: 92: case 3:
+"92
+[e :U 380 ]
+[; ;reloj.c: 93: LATD = (counter_digito << 4) + (counter_segundos % 60) % 10;
+"93
+[e = _LATD -> + -> << -> _counter_digito `i -> 4 `i `ui % % _counter_segundos -> -> 60 `i `ui -> -> 10 `i `ui `uc ]
+[; ;reloj.c: 94: counter_digito = 0;
+"94
+[e = _counter_digito -> -> 0 `i `uc ]
+[; ;reloj.c: 95: break;
+"95
+[e $U 375  ]
+"96
+}
+[; ;reloj.c: 96: }
+[e $U 375  ]
+"79
+[e :U 376 ]
+[e [\ _counter_digito , $ -> -> 0 `i `uc 377
+ , $ -> -> 1 `i `uc 378
+ , $ -> -> 2 `i `uc 379
+ , $ -> -> 3 `i `uc 380
+ 375 ]
+"96
+[e :U 375 ]
+[; ;reloj.c: 98: PIR1bits.TMR1IF = 0;
+"98
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"99
+}
+[e :U 372 ]
+[; ;reloj.c: 99: }
+[; ;reloj.c: 100: }
+"100
+[e :UE 371 ]
 }

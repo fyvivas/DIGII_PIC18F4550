@@ -25,7 +25,7 @@ intended publication of this material.
 #define _XTAL_FREQ  8000000L
 #define     BAUD        9600
 
-unsigned char var = '0';
+unsigned char var = 12; //0x30 en hexadecimal, 48 en decimal
 
 void main(void) {
     //Configura Fosc = 8Mhz interno
@@ -51,7 +51,7 @@ void main(void) {
         TXREG = var;
         /*
         LATCbits.LATC0 = !PORTCbits.RC0;
-        if (++var > 122) { //  0,1,2,3,4.......
+        if (++var > 122) { //  0,1,2,3,4.......122 (z))
             while (!TXSTAbits.TRMT) {
             }
             TXREG = 13;
