@@ -13,6 +13,7 @@
 
 void ADC_Init();
 int ADC_Read(int);
+
 unsigned long int get_gpstime();
 float get_latitude(unsigned char);
 float get_longitude(unsigned char);

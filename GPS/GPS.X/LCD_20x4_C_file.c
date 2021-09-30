@@ -67,6 +67,9 @@ void LCD_String_xy (char row, char pos,const char *str)	/* Send string to LCD fu
 	LCD_String(str);								/* Call LCD string function */
 }
 
+
+
+
 void LCD_Clear (void)								/* LCD clear function */
 {
 	LCD_Command (0x01);								/* Clear LCD command */

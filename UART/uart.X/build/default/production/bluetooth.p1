@@ -1,150 +1,39 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"7888 D:\mplab\include\pic18f4550.h
-[s S339 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
-[n S339 . SCS IOFS OSTS IRCF IDLEN ]
-"7895
-[s S340 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S340 . SCS0 SCS1 FLTS . IRCF0 IRCF1 IRCF2 ]
-"7887
-[u S338 `S339 1 `S340 1 ]
-[n S338 . . . ]
-"7905
-[v _OSCCONbits `VS338 ~T0 @X0 0 e@4051 ]
-"3812
-[s S149 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S149 . TRISC0 TRISC1 TRISC2 . TRISC6 TRISC7 ]
-"3820
-[s S150 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S150 . RC0 RC1 RC2 . RC6 RC7 ]
-"3811
-[u S148 `S149 1 `S150 1 ]
-[n S148 . . . ]
-"3829
-[v _TRISCbits `VS148 ~T0 @X0 0 e@3988 ]
-"5096
-[s S205 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S205 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
-"5106
-[s S206 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S206 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
-"5116
-[s S207 :6 `uc 1 :1 `uc 1 ]
-[n S207 . . TX8_9 ]
-"5120
-[s S208 :1 `uc 1 ]
-[n S208 . TXD8 ]
-"5095
-[u S204 `S205 1 `S206 1 `S207 1 `S208 1 ]
-[n S204 . . . . . ]
-"5124
-[v _TXSTAbits `VS204 ~T0 @X0 0 e@4012 ]
-"5999
-[s S242 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S242 . ABDEN WUE . BRG16 TXCKP RXDTP RCIDL ABDOVF ]
-"6009
-[s S243 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S243 . . SCKP . RCMT ]
-"6015
-[s S244 :5 `uc 1 :1 `uc 1 ]
-[n S244 . . RXCKP ]
-"6019
-[s S245 :1 `uc 1 :1 `uc 1 ]
-[n S245 . . W4E ]
-"5998
-[u S241 `S242 1 `S243 1 `S244 1 `S245 1 ]
-[n S241 . . . . . ]
-"6024
-[v _BAUDCONbits `VS241 ~T0 @X0 0 e@4024 ]
-"4887
-[s S191 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S191 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
-"4897
-[s S192 :3 `uc 1 :1 `uc 1 ]
-[n S192 . . ADEN ]
-"4901
-[s S193 :5 `uc 1 :1 `uc 1 ]
-[n S193 . . SRENA ]
-"4905
-[s S194 :6 `uc 1 :1 `uc 1 ]
-[n S194 . . RC8_9 ]
-"4909
-[s S195 :6 `uc 1 :1 `uc 1 ]
-[n S195 . . RC9 ]
-"4913
-[s S196 :1 `uc 1 ]
-[n S196 . RCD8 ]
-"4886
-[u S190 `S191 1 `S192 1 `S193 1 `S194 1 `S195 1 `S196 1 ]
-[n S190 . . . . . . . ]
-"4917
-[v _RCSTAbits `VS190 ~T0 @X0 0 e@4011 ]
-"5362
-[v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
-"6503
-[s S264 :4 `uc 1 :2 `uc 1 ]
-[n S264 . PCFG VCFG ]
-"6507
-[s S265 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S265 . PCFG0 PCFG1 PCFG2 PCFG3 VCFG0 VCFG1 ]
-"6515
-[s S266 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S266 . . CHSN3 VCFG01 VCFG11 ]
-"6502
-[u S263 `S264 1 `S265 1 `S266 1 ]
-[n S263 . . . . ]
-"6522
-[v _ADCON1bits `VS263 ~T0 @X0 0 e@4033 ]
-"6587
-[s S268 :1 `uc 1 :1 `uc 1 ]
-[n S268 . . GO_NOT_DONE ]
-"6591
-[s S269 :1 `uc 1 :1 `uc 1 :4 `uc 1 ]
-[n S269 . ADON GO_nDONE CHS ]
-"6596
-[s S270 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S270 . . GO_DONE CHS0 CHS1 CHS2 CHS3 ]
-"6604
-[s S271 :1 `uc 1 :1 `uc 1 ]
-[n S271 . . DONE ]
-"6608
-[s S272 :1 `uc 1 :1 `uc 1 ]
-[n S272 . . GO ]
-"6612
-[s S273 :1 `uc 1 :1 `uc 1 ]
-[n S273 . . NOT_DONE ]
-"6616
-[s S274 :1 `uc 1 :1 `uc 1 ]
-[n S274 . . nDONE ]
-"6620
-[s S275 :1 `uc 1 :1 `uc 1 ]
-[n S275 . . GODONE ]
-"6586
-[u S267 `S268 1 `S269 1 `S270 1 `S271 1 `S272 1 `S273 1 `S274 1 `S275 1 ]
-[n S267 . . . . . . . . . ]
-"6625
-[v _ADCON0bits `VS267 ~T0 @X0 0 e@4034 ]
-"6433
-[s S261 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S261 . ADCS ACQT . ADFM ]
-"6439
-[s S262 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S262 . ADCS0 ADCS1 ADCS2 ACQT0 ACQT1 ACQT2 ]
-"6432
-[u S260 `S261 1 `S262 1 ]
-[n S260 . . . ]
-"6448
-[v _ADCON2bits `VS260 ~T0 @X0 0 e@4032 ]
-"6711
-[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
-"6705
-[v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
-"5340
-[v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
+"7882 D:\mplab\include\pic18f4550.h
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"3954
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
+"25 bluetooth.c
+[v _USART_Init `(v ~T0 @X0 0 ef1`l ]
 [v F3779 `(v ~T0 @X0 1 tf1`ul ]
 "161 D:\mplab\include\pic18.h
 [v __delay `JF3779 ~T0 @X0 0 e ]
 [p i __delay ]
+"27 bluetooth.c
+[v _USART_SendString `(v ~T0 @X0 0 ef1`*Cuc ]
+"28
+[v _USART_ReceiveChar `(uc ~T0 @X0 0 ef ]
+"9470 D:\mplab\include\pic18f4550.h
+[v _LATD0 `Vb ~T0 @X0 0 e@31840 ]
+"10102
+[v _TRISC6 `Vb ~T0 @X0 0 e@31910 ]
+"10104
+[v _TRISC7 `Vb ~T0 @X0 0 e@31911 ]
+"5362
+[v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
+"5085
+[v _TXSTA `Vuc ~T0 @X0 0 e@4012 ]
+"4876
+[v _RCSTA `Vuc ~T0 @X0 0 e@4011 ]
+"10174
+[v _TXIF `Vb ~T0 @X0 0 e@31988 ]
+"5340
+[v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
+"9774
+[v _RCIF `Vb ~T0 @X0 0 e@31989 ]
+"5351
+[v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3729,179 +3618,226 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "77
 [p x EBTRB=OFF ]
-"27 uart_lm35.c
-[v _buffer_TX `uc ~T0 @X0 -> 0 `x e ]
-[i _buffer_TX
-:U ..
--> 84 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 58 `c
--> 32 `c
--> 120 `c
--> 120 `c
--> 120 `c
--> 32 `c
--> 103 `c
--> 114 `c
--> 97 `c
--> 100 `c
--> 111 `c
--> 115 `c
--> 13 `c
--> 0 `c
-..
-]
-[; ;uart_lm35.c: 27: char buffer_TX[] = "Temp: xxx grados\r";
-"28
-[v _value_adc `i ~T0 @X0 1 e ]
-[; ;uart_lm35.c: 28: int value_adc;
-"29
-[v _temp `d ~T0 @X0 1 e ]
-[; ;uart_lm35.c: 29: double temp;
-"30
-[v _lm35 `uc ~T0 @X0 1 e ]
-[; ;uart_lm35.c: 30: char lm35;
-"32
+[; ;bluetooth.c: 25: void USART_Init(long);
+[; ;bluetooth.c: 26: void USART_TransmitChar(char);
+[; ;bluetooth.c: 27: void USART_SendString(const char *);
+[; ;bluetooth.c: 28: char USART_ReceiveChar();
+"37 bluetooth.c
 [v _main `(v ~T0 @X0 1 ef ]
+"38
 {
-[; ;uart_lm35.c: 32: void main(void) {
+[; ;bluetooth.c: 37: void main()
+[; ;bluetooth.c: 38: {
 [e :U _main ]
 [f ]
-[; ;uart_lm35.c: 34: OSCCONbits.IRCF = 0b111;
-"34
-[e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
-[; ;uart_lm35.c: 35: OSCCONbits.SCS = 0b10;
-"35
-[e = . . _OSCCONbits 0 0 -> -> 2 `i `uc ]
-[; ;uart_lm35.c: 38: TRISCbits.RC6 = 0;
-"38
-[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
-[; ;uart_lm35.c: 39: TXSTAbits.TX9 = 0;
+[; ;bluetooth.c: 39: OSCCON=0x72;
 "39
-[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
-[; ;uart_lm35.c: 40: TXSTAbits.TXEN = 1;
-"40
-[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-[; ;uart_lm35.c: 41: TXSTAbits.SYNC = 0;
+[e = _OSCCON -> -> 114 `i `uc ]
 "41
-[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
-[; ;uart_lm35.c: 42: TXSTAbits.BRGH = 0;
+[v _data_in `uc ~T0 @X0 1 a ]
+[; ;bluetooth.c: 41: char data_in;
+[; ;bluetooth.c: 42: TRISD = 0;
 "42
-[e = . . _TXSTAbits 0 2 -> -> 0 `i `uc ]
-[; ;uart_lm35.c: 43: BAUDCONbits.BRG16 = 0;
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;bluetooth.c: 43: USART_Init(9600);
 "43
-[e = . . _BAUDCONbits 0 3 -> -> 0 `i `uc ]
-[; ;uart_lm35.c: 44: RCSTAbits.SPEN = 1;
+[e ( _USART_Init (1 -> -> 9600 `i `l ]
+[; ;bluetooth.c: 44: _delay((unsigned long)((50)*(8000000L/4000.0)));
 "44
-[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-[; ;uart_lm35.c: 45: SPBRG = (unsigned char) (((8000000L / 9600) / 64) - 1);
-"45
-[e = _SPBRG -> - / / -> 8000000 `l -> -> 9600 `i `l -> -> 64 `i `l -> -> 1 `i `l `uc ]
-[; ;uart_lm35.c: 49: ADCON1bits.PCFG = 0b1110;
-"49
-[e = . . _ADCON1bits 0 0 -> -> 14 `i `uc ]
-[; ;uart_lm35.c: 50: ADCON1bits.VCFG = 0b00;
-"50
-[e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
-[; ;uart_lm35.c: 51: ADCON0bits.CHS = 0b0000;
-"51
-[e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
-[; ;uart_lm35.c: 52: ADCON2bits.ACQT = 0b010;
-"52
-[e = . . _ADCON2bits 0 1 -> -> 2 `i `uc ]
-[; ;uart_lm35.c: 53: ADCON2bits.ADCS = 0b001;
-"53
-[e = . . _ADCON2bits 0 0 -> -> 1 `i `uc ]
-[; ;uart_lm35.c: 54: ADCON2bits.ADFM = 1;
-"54
-[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
-[; ;uart_lm35.c: 55: ADCON0bits.ADON = 1;
-"55
-[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-[; ;uart_lm35.c: 57: while (1) {
-"57
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;bluetooth.c: 46: USART_SendString("BIENVENIDO\r\n");
+"46
+[e ( _USART_SendString (1 :s 1C ]
+[; ;bluetooth.c: 48: while(1)
+"48
 [e :U 364 ]
+[; ;bluetooth.c: 49: {
+"49
 {
-[; ;uart_lm35.c: 59: ADCON0bits.GO_DONE = 1;
-"59
-[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-[; ;uart_lm35.c: 60: while (ADCON0bits.GO_DONE);
-"60
-[e $U 366  ]
-[e :U 367 ]
+[; ;bluetooth.c: 50: data_in=USART_ReceiveChar();
+"50
+[e = _data_in ( _USART_ReceiveChar ..  ]
+[; ;bluetooth.c: 51: if(data_in=='1')
+"51
+[e $ ! == -> _data_in `ui -> 49 `ui 366  ]
+[; ;bluetooth.c: 52: {
+"52
+{
+[; ;bluetooth.c: 53: LATD0 = 1;
+"53
+[e = _LATD0 -> -> 1 `i `b ]
+[; ;bluetooth.c: 54: USART_SendString("LED_ON\r\n");
+"54
+[e ( _USART_SendString (1 :s 2C ]
+"55
+}
+[; ;bluetooth.c: 55: }
+[e $U 367  ]
+"56
 [e :U 366 ]
-[e $ != -> . . _ADCON0bits 2 1 `i -> -> -> 0 `i `Vuc `i 367  ]
-[e :U 368 ]
-[; ;uart_lm35.c: 61: value_adc = ADRESH;
+[; ;bluetooth.c: 56: else if(data_in=='2')
+[e $ ! == -> _data_in `ui -> 50 `ui 368  ]
+[; ;bluetooth.c: 58: {
+"58
+{
+[; ;bluetooth.c: 59: LATD0 = 0;
+"59
+[e = _LATD0 -> -> 0 `i `b ]
+[; ;bluetooth.c: 60: USART_SendString("LED_OFF\r\n");
+"60
+[e ( _USART_SendString (1 :s 3C ]
 "61
-[e = _value_adc -> _ADRESH `i ]
-[; ;uart_lm35.c: 62: value_adc = (value_adc << 8) + ADRESL;
+}
+[; ;bluetooth.c: 61: }
+[e $U 369  ]
 "62
-[e = _value_adc + << _value_adc -> 8 `i -> _ADRESL `i ]
-[; ;uart_lm35.c: 63: temp = value_adc;
+[e :U 368 ]
+[; ;bluetooth.c: 62: else
+[; ;bluetooth.c: 63: {
 "63
-[e = _temp -> _value_adc `d ]
-[; ;uart_lm35.c: 64: temp = (temp * 500.0) / 1023.0;
+{
+[; ;bluetooth.c: 64: USART_SendString(" select 1 or 2\r\n");
 "64
-[e = _temp / * _temp .500.0 .1023.0 ]
-[; ;uart_lm35.c: 65: lm35 = (char) temp;
+[e ( _USART_SendString (1 :s 4C ]
 "65
-[e = _lm35 -> _temp `uc ]
-[; ;uart_lm35.c: 66: buffer_TX[6] = (lm35 / 100) + '0';
-"66
-[e = *U + &U _buffer_TX * -> -> -> 6 `i `ui `ux -> -> # *U &U _buffer_TX `ui `ux -> + -> / -> _lm35 `i -> 100 `i `ui -> 48 `ui `uc ]
-[; ;uart_lm35.c: 67: buffer_TX[7] = (lm35 % 100) / 10 + '0';
-"67
-[e = *U + &U _buffer_TX * -> -> -> 7 `i `ui `ux -> -> # *U &U _buffer_TX `ui `ux -> + -> / % -> _lm35 `i -> 100 `i -> 10 `i `ui -> 48 `ui `uc ]
-[; ;uart_lm35.c: 68: buffer_TX[8] = (lm35 % 100) % 10 + '0';
-"68
-[e = *U + &U _buffer_TX * -> -> -> 8 `i `ui `ux -> -> # *U &U _buffer_TX `ui `ux -> + -> % % -> _lm35 `i -> 100 `i -> 10 `i `ui -> 48 `ui `uc ]
-[; ;uart_lm35.c: 70: for (int i = 0; i < 17; i++) {
-"70
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 17 `i 369  ]
-[e $U 370  ]
+}
 [e :U 369 ]
-{
-[; ;uart_lm35.c: 72: while (!TXSTAbits.TRMT) {
-"72
-[e $U 372  ]
-[e :U 373 ]
-{
-"73
-}
-[e :U 372 ]
-"72
-[e $ ! != -> . . _TXSTAbits 0 1 `i -> -> -> 0 `i `Vuc `i 373  ]
-[e :U 374 ]
-[; ;uart_lm35.c: 73: }
-[; ;uart_lm35.c: 75: TXREG = buffer_TX[i];
-"75
-[e = _TXREG *U + &U _buffer_TX * -> -> _i `ui `ux -> -> # *U &U _buffer_TX `ui `ux ]
-"76
-}
-"70
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 17 `i 369  ]
-[e :U 370 ]
-"76
-}
-[; ;uart_lm35.c: 76: }
-[; ;uart_lm35.c: 77: _delay((unsigned long)((100)*(8000000L/4000.0)));
-"77
+[e :U 367 ]
+[; ;bluetooth.c: 65: }
+[; ;bluetooth.c: 66: _delay((unsigned long)((100)*(8000000L/4000.0)));
+"66
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"78
+"68
 }
 [e :U 363 ]
-"57
+"48
 [e $U 364  ]
 [e :U 365 ]
-[; ;uart_lm35.c: 78: }
-[; ;uart_lm35.c: 79: }
-"79
+[; ;bluetooth.c: 68: }
+[; ;bluetooth.c: 70: }
+"70
 [e :UE 362 ]
 }
+"74
+[v _USART_Init `(v ~T0 @X0 1 ef1`l ]
+"75
+{
+[; ;bluetooth.c: 74: void USART_Init(long baud_rate)
+[; ;bluetooth.c: 75: {
+[e :U _USART_Init ]
+"74
+[v _baud_rate `l ~T0 @X0 1 r1 ]
+"75
+[f ]
+"76
+[v _temp `f ~T0 @X0 1 a ]
+[; ;bluetooth.c: 76: float temp;
+[; ;bluetooth.c: 77: TRISC6=0;
+"77
+[e = _TRISC6 -> -> 0 `i `b ]
+[; ;bluetooth.c: 78: TRISC7=1;
+"78
+[e = _TRISC7 -> -> 1 `i `b ]
+[; ;bluetooth.c: 79: temp=(((float)(8000000/64)/(float)baud_rate)-1);
+"79
+[e = _temp - / -> / -> 8000000 `l -> -> 64 `i `l `f -> _baud_rate `f -> -> 1 `i `f ]
+[; ;bluetooth.c: 80: SPBRG=(int)temp;
+"80
+[e = _SPBRG -> -> _temp `i `uc ]
+[; ;bluetooth.c: 81: TXSTA=0x20;
+"81
+[e = _TXSTA -> -> 32 `i `uc ]
+[; ;bluetooth.c: 82: RCSTA=0x90;
+"82
+[e = _RCSTA -> -> 144 `i `uc ]
+[; ;bluetooth.c: 83: }
+"83
+[e :UE 370 ]
+}
+"85
+[v _USART_TransmitChar `(v ~T0 @X0 1 ef1`uc ]
+"86
+{
+[; ;bluetooth.c: 85: void USART_TransmitChar(char out)
+[; ;bluetooth.c: 86: {
+[e :U _USART_TransmitChar ]
+"85
+[v _out `uc ~T0 @X0 1 r1 ]
+"86
+[f ]
+[; ;bluetooth.c: 87: while(TXIF==0);
+"87
+[e $U 372  ]
+[e :U 373 ]
+[e :U 372 ]
+[e $ == -> _TXIF `i -> 0 `i 373  ]
+[e :U 374 ]
+[; ;bluetooth.c: 88: TXREG=out;
+"88
+[e = _TXREG _out ]
+[; ;bluetooth.c: 90: }
+"90
+[e :UE 371 ]
+}
+"92
+[v _USART_ReceiveChar `(uc ~T0 @X0 1 ef ]
+"93
+{
+[; ;bluetooth.c: 92: char USART_ReceiveChar()
+[; ;bluetooth.c: 93: {
+[e :U _USART_ReceiveChar ]
+[f ]
+[; ;bluetooth.c: 95: while(RCIF==0);
+"95
+[e $U 376  ]
+[e :U 377 ]
+[e :U 376 ]
+[e $ == -> _RCIF `i -> 0 `i 377  ]
+[e :U 378 ]
+[; ;bluetooth.c: 96: return(RCREG);
+"96
+[e ) _RCREG ]
+[e $UE 375  ]
+[; ;bluetooth.c: 97: }
+"97
+[e :UE 375 ]
+}
+"99
+[v _USART_SendString `(v ~T0 @X0 1 ef1`*Cuc ]
+"100
+{
+[; ;bluetooth.c: 99: void USART_SendString(const char *out)
+[; ;bluetooth.c: 100: {
+[e :U _USART_SendString ]
+"99
+[v _out `*Cuc ~T0 @X0 1 r1 ]
+"100
+[f ]
+[; ;bluetooth.c: 101: while(*out!='\0')
+"101
+[e $U 380  ]
+[e :U 381 ]
+[; ;bluetooth.c: 102: {
+"102
+{
+[; ;bluetooth.c: 103: USART_TransmitChar(*out);
+"103
+[e ( _USART_TransmitChar (1 *U _out ]
+[; ;bluetooth.c: 104: out++;
+"104
+[e ++ _out * -> -> 1 `i `x -> -> # *U _out `i `x ]
+"105
+}
+[e :U 380 ]
+"101
+[e $ != -> *U _out `ui -> 0 `ui 381  ]
+[e :U 382 ]
+[; ;bluetooth.c: 105: }
+[; ;bluetooth.c: 106: }
+"106
+[e :UE 379 ]
+}
+[a 1C 66 73 69 78 86 69 78 73 68 79 13 10 0 ]
+[a 2C 76 69 68 95 79 78 13 10 0 ]
+[a 3C 76 69 68 95 79 70 70 13 10 0 ]
+[a 4C 32 115 101 108 101 99 116 32 49 32 111 114 32 50 13 10 0 ]

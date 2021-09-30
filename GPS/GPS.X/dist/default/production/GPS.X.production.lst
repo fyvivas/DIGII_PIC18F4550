@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.41 build -162212810 
-                                                                                               Tue Oct 13 07:07:10 2020
+                                                                                               Fri Sep 24 16:32:35 2021
 
 Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
      1                           	processor	18F4550
@@ -1120,7 +1120,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1106 ;;
   1107 ;; *************** function _main *****************
   1108 ;; Defined at:
-  1109 ;;		line 42 in file "GPS.c"
+  1109 ;;		line 43 in file "GPS.c"
   1110 ;; Parameters:    Size  Location     Type
   1111 ;;		None
   1112 ;; Auto vars:     Size  Location     Type
@@ -1177,28 +1177,28 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1163  001A36                     _main:
   1164                           	opt stack 25
   1165                           
-  1166                           ;GPS.c: 43: unsigned long int Time;
-  1167                           ;GPS.c: 44: float Latitude,Longitude,Altitude;
-  1168                           ;GPS.c: 45: char GPS_Buffer[15];
-  1169                           ;GPS.c: 47: OSCCON = 0x72;
+  1166                           ;GPS.c: 44: unsigned long int Time;
+  1167                           ;GPS.c: 45: float Latitude,Longitude,Altitude;
+  1168                           ;GPS.c: 46: char GPS_Buffer[15];
+  1169                           ;GPS.c: 48: OSCCON = 0x72;
   1170                           
   1171                           ;incstack = 0
   1172  001A36  0E72               	movlw	114
   1173  001A38  6ED3               	movwf	4051,c	;volatile
   1174                           
-  1175                           ;GPS.c: 48: LCD_Init();
+  1175                           ;GPS.c: 49: LCD_Init();
   1176  001A3A  EC3C  F01A         	call	_LCD_Init	;wreg free
   1177                           
-  1178                           ;GPS.c: 49: INTCONbits.GIE=1;
+  1178                           ;GPS.c: 50: INTCONbits.GIE=1;
   1179  001A3E  8EF2               	bsf	intcon,7,c	;volatile
   1180                           
-  1181                           ;GPS.c: 50: INTCONbits.PEIE=1;
+  1181                           ;GPS.c: 51: INTCONbits.PEIE=1;
   1182  001A40  8CF2               	bsf	intcon,6,c	;volatile
   1183                           
-  1184                           ;GPS.c: 51: PIE1bits.RCIE=1;
+  1184                           ;GPS.c: 52: PIE1bits.RCIE=1;
   1185  001A42  8A9D               	bsf	3997,5,c	;volatile
   1186                           
-  1187                           ;GPS.c: 52: USART_Init(9600);
+  1187                           ;GPS.c: 53: USART_Init(9600);
   1188  001A44  0E80               	movlw	128
   1189  001A46  0100               	movlb	0	; () banked
   1190  001A48  6F66               	movwf	USART_Init@baud_rate& (0+255),b
@@ -1210,11 +1210,11 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1196  001A54  6F69               	movwf	(USART_Init@baud_rate+3)& (0+255),b
   1197  001A56  ECE0  F017         	call	_USART_Init	;wreg free
   1198                           
-  1199                           ;GPS.c: 53: ADC_Init();
+  1199                           ;GPS.c: 54: ADC_Init();
   1200  001A5A  EC61  F01B         	call	_ADC_Init	;wreg free
   1201  001A5E                     l5009:
   1202                           
-  1203                           ;GPS.c: 104: celsius = (ADC_Read(0)*4.88);
+  1203                           ;GPS.c: 105: celsius = (ADC_Read(0)*4.88);
   1204  001A5E  0E00               	movlw	0
   1205  001A60  6E11               	movwf	ADC_Read@channel+1,c
   1206  001A62  0E00               	movlw	0
@@ -1237,7 +1237,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1223  001A96  C025  F0D5         	movff	?___ftmul+1,_celsius+1
   1224  001A9A  C026  F0D6         	movff	?___ftmul+2,_celsius+2
   1225                           
-  1226                           ;GPS.c: 105: celsius = (celsius/10.00);
+  1226                           ;GPS.c: 106: celsius = (celsius/10.00);
   1227  001A9E  C0D4  F022         	movff	_celsius,___ftdiv@f1
   1228  001AA2  C0D5  F023         	movff	_celsius+1,___ftdiv@f1+1
   1229  001AA6  C0D6  F024         	movff	_celsius+2,___ftdiv@f1+2
@@ -1252,7 +1252,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1238  001ABE  C023  F0D5         	movff	?___ftdiv+1,_celsius+1
   1239  001AC2  C024  F0D6         	movff	?___ftdiv+2,_celsius+2
   1240                           
-  1241                           ;GPS.c: 107: sprintf(Temperature,"%d%cC  ",(int)celsius,0xdf);
+  1241                           ;GPS.c: 108: sprintf(Temperature,"%d%cC  ",(int)celsius,0xdf);
   1242  001AC6  C0D4  F03A         	movff	_celsius,___fttol@f1
   1243  001ACA  C0D5  F03B         	movff	_celsius+1,___fttol@f1+1
   1244  001ACE  C0D6  F03C         	movff	_celsius+2,___fttol@f1+2
@@ -1260,7 +1260,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1246  001AD6  C03A  F0B8         	movff	?___fttol,_main$1183
   1247  001ADA  C03B  F0B9         	movff	?___fttol+1,_main$1183+1
   1248                           
-  1249                           ;GPS.c: 107: sprintf(Temperature,"%d%cC  ",(int)celsius,0xdf);
+  1249                           ;GPS.c: 108: sprintf(Temperature,"%d%cC  ",(int)celsius,0xdf);
   1250  001ADE  0EE7               	movlw	low _Temperature
   1251  001AE0  0100               	movlb	0	; () banked
   1252  001AE2  6F69               	movwf	sprintf@sp& (0+255),b
@@ -1282,20 +1282,20 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1268  001B06  6F6F               	movwf	(?_sprintf+6)& (0+255),b
   1269  001B08  EC5C  F004         	call	_sprintf	;wreg free
   1270                           
-  1271                           ;GPS.c: 109: if(IsItGGAString == 0){
+  1271                           ;GPS.c: 110: if(IsItGGAString == 0){
   1272  001B0C  0100               	movlb	0	; () banked
   1273  001B0E  51D7               	movf	_IsItGGAString& (0+255),w,b	;volatile
   1274  001B10  B4D8               	btfsc	status,2,c
   1275  001B12  D7A5               	goto	l5009
   1276                           
   1277                           ; BSR set to: 0
-  1278                           ;GPS.c: 114: else{
-  1279                           ;GPS.c: 116: memset(GPS_Buffer,0,15);
+  1278                           ;GPS.c: 115: else{
+  1279                           ;GPS.c: 117: memset(GPS_Buffer,0,15);
   1280                           
   1281                           ; BSR set to: 0
   1282                           
   1283                           ; BSR set to: 0
-  1284                           ;GPS.c: 113: }
+  1284                           ;GPS.c: 114: }
   1285  001B14  0EA2               	movlw	low main@GPS_Buffer
   1286  001B16  6E10               	movwf	memset@p1,c
   1287  001B18  0E00               	movlw	high main@GPS_Buffer
@@ -1310,7 +1310,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1296  001B2A  6E14               	movwf	memset@n,c
   1297  001B2C  ECC3  F01A         	call	_memset	;wreg free
   1298                           
-  1299                           ;GPS.c: 117: LCD_String_xy(1,0,"UTC Time: ");
+  1299                           ;GPS.c: 118: LCD_String_xy(1,0,"UTC Time: ");
   1300  001B30  0E00               	movlw	0
   1301  001B32  6E19               	movwf	LCD_String_xy@pos,c
   1302  001B34  0E77               	movlw	low STR_2
@@ -1320,35 +1320,35 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1306  001B3C  0E01               	movlw	1
   1307  001B3E  EC68  F019         	call	_LCD_String_xy
   1308                           
-  1309                           ;GPS.c: 118: Time = get_gpstime();
+  1309                           ;GPS.c: 119: Time = get_gpstime();
   1310  001B42  EC96  F018         	call	_get_gpstime	;wreg free
   1311  001B46  C02A  F0B1         	movff	?_get_gpstime,main@Time
   1312  001B4A  C02B  F0B2         	movff	?_get_gpstime+1,main@Time+1
   1313  001B4E  C02C  F0B3         	movff	?_get_gpstime+2,main@Time+2
   1314  001B52  C02D  F0B4         	movff	?_get_gpstime+3,main@Time+3
   1315                           
-  1316                           ;GPS.c: 119: convert_time_to_UTC(Time);
+  1316                           ;GPS.c: 120: convert_time_to_UTC(Time);
   1317  001B56  C0B1  F094         	movff	main@Time,convert_time_to_UTC@UTC_Time
   1318  001B5A  C0B2  F095         	movff	main@Time+1,convert_time_to_UTC@UTC_Time+1
   1319  001B5E  C0B3  F096         	movff	main@Time+2,convert_time_to_UTC@UTC_Time+2
   1320  001B62  C0B4  F097         	movff	main@Time+3,convert_time_to_UTC@UTC_Time+3
   1321  001B66  ECEC  F013         	call	_convert_time_to_UTC	;wreg free
   1322                           
-  1323                           ;GPS.c: 120: LCD_String(Data_Buffer);
+  1323                           ;GPS.c: 121: LCD_String(Data_Buffer);
   1324  001B6A  0ED8               	movlw	low _Data_Buffer
   1325  001B6C  6E17               	movwf	LCD_String@str,c
   1326  001B6E  0E00               	movlw	high _Data_Buffer
   1327  001B70  6E18               	movwf	LCD_String@str+1,c
   1328  001B72  ECED  F019         	call	_LCD_String	;wreg free
   1329                           
-  1330                           ;GPS.c: 121: LCD_String("  ");
+  1330                           ;GPS.c: 122: LCD_String("  ");
   1331  001B76  0E90               	movlw	low (STR_1+5)
   1332  001B78  6E17               	movwf	LCD_String@str,c
   1333  001B7A  0E08               	movlw	high (STR_1+5)
   1334  001B7C  6E18               	movwf	LCD_String@str+1,c
   1335  001B7E  ECED  F019         	call	_LCD_String	;wreg free
   1336                           
-  1337                           ;GPS.c: 123: strcpy(stringBT, Data_Buffer);
+  1337                           ;GPS.c: 124: strcpy(stringBT, Data_Buffer);
   1338  001B82  0E50               	movlw	low _stringBT
   1339  001B84  6E10               	movwf	strcpy@to,c
   1340  001B86  0E01               	movlw	high _stringBT
@@ -1359,7 +1359,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1345  001B90  6E13               	movwf	strcpy@from+1,c
   1346  001B92  ECAC  F01A         	call	_strcpy	;wreg free
   1347                           
-  1348                           ;GPS.c: 124: strcat(stringBT, ",");
+  1348                           ;GPS.c: 125: strcat(stringBT, ",");
   1349  001B96  0E50               	movlw	low _stringBT
   1350  001B98  6E10               	movwf	strcat@to,c
   1351  001B9A  0E01               	movlw	high _stringBT
@@ -1370,7 +1370,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1356  001BA4  6E13               	movwf	strcat@from+1,c
   1357  001BA6  EC96  F019         	call	_strcat	;wreg free
   1358                           
-  1359                           ;GPS.c: 126: LCD_String_xy(2,0,"Lat: ");
+  1359                           ;GPS.c: 127: LCD_String_xy(2,0,"Lat: ");
   1360  001BAA  0E00               	movlw	0
   1361  001BAC  6E19               	movwf	LCD_String_xy@pos,c
   1362  001BAE  0E9A               	movlw	low STR_5
@@ -1380,7 +1380,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1366  001BB6  0E02               	movlw	2
   1367  001BB8  EC68  F019         	call	_LCD_String_xy
   1368                           
-  1369                           ;GPS.c: 127: Latitude = get_latitude(GGA_Pointers[0]);
+  1369                           ;GPS.c: 128: Latitude = get_latitude(GGA_Pointers[0]);
   1370  001BBC  0100               	movlb	0	; () banked
   1371  001BBE  51C0               	movf	_GGA_Pointers& (0+255),w,b
   1372  001BC0  EC84  F016         	call	_get_latitude
@@ -1388,7 +1388,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1374  001BC8  C061  F0BB         	movff	?_get_latitude+1,main@Latitude+1
   1375  001BCC  C062  F0BC         	movff	?_get_latitude+2,main@Latitude+2
   1376                           
-  1377                           ;GPS.c: 128: Latitude = convert_to_degrees(Latitude);
+  1377                           ;GPS.c: 129: Latitude = convert_to_degrees(Latitude);
   1378  001BD0  C0BA  F066         	movff	main@Latitude,convert_to_degrees@NMEA_lat_long
   1379  001BD4  C0BB  F067         	movff	main@Latitude+1,convert_to_degrees@NMEA_lat_long+1
   1380  001BD8  C0BC  F068         	movff	main@Latitude+2,convert_to_degrees@NMEA_lat_long+2
@@ -1397,7 +1397,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1383  001BE4  C067  F0BB         	movff	?_convert_to_degrees+1,main@Latitude+1
   1384  001BE8  C068  F0BC         	movff	?_convert_to_degrees+2,main@Latitude+2
   1385                           
-  1386                           ;GPS.c: 129: sprintf(GPS_Buffer,"%.05f",Latitude);
+  1386                           ;GPS.c: 130: sprintf(GPS_Buffer,"%.05f",Latitude);
   1387  001BEC  0EA2               	movlw	low main@GPS_Buffer
   1388  001BEE  0100               	movlb	0	; () banked
   1389  001BF0  6F69               	movwf	sprintf@sp& (0+255),b
@@ -1415,14 +1415,14 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1401  001C0C  C0BC  F06F         	movff	main@Latitude+2,?_sprintf+6
   1402  001C10  EC5C  F004         	call	_sprintf	;wreg free
   1403                           
-  1404                           ;GPS.c: 130: LCD_String(GPS_Buffer);
+  1404                           ;GPS.c: 131: LCD_String(GPS_Buffer);
   1405  001C14  0EA2               	movlw	low main@GPS_Buffer
   1406  001C16  6E17               	movwf	LCD_String@str,c
   1407  001C18  0E00               	movlw	high main@GPS_Buffer
   1408  001C1A  6E18               	movwf	LCD_String@str+1,c
   1409  001C1C  ECED  F019         	call	_LCD_String	;wreg free
   1410                           
-  1411                           ;GPS.c: 131: strcat(stringBT, GPS_Buffer);
+  1411                           ;GPS.c: 132: strcat(stringBT, GPS_Buffer);
   1412  001C20  0E50               	movlw	low _stringBT
   1413  001C22  6E10               	movwf	strcat@to,c
   1414  001C24  0E01               	movlw	high _stringBT
@@ -1433,7 +1433,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1419  001C2E  6E13               	movwf	strcat@from+1,c
   1420  001C30  EC96  F019         	call	_strcat	;wreg free
   1421                           
-  1422                           ;GPS.c: 132: strcat(stringBT, ",");
+  1422                           ;GPS.c: 133: strcat(stringBT, ",");
   1423  001C34  0E50               	movlw	low _stringBT
   1424  001C36  6E10               	movwf	strcat@to,c
   1425  001C38  0E01               	movlw	high _stringBT
@@ -1444,7 +1444,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1430  001C42  6E13               	movwf	strcat@from+1,c
   1431  001C44  EC96  F019         	call	_strcat	;wreg free
   1432                           
-  1433                           ;GPS.c: 134: memset(GPS_Buffer,0,15);
+  1433                           ;GPS.c: 135: memset(GPS_Buffer,0,15);
   1434  001C48  0EA2               	movlw	low main@GPS_Buffer
   1435  001C4A  6E10               	movwf	memset@p1,c
   1436  001C4C  0E00               	movlw	high main@GPS_Buffer
@@ -1459,7 +1459,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1445  001C5E  6E14               	movwf	memset@n,c
   1446  001C60  ECC3  F01A         	call	_memset	;wreg free
   1447                           
-  1448                           ;GPS.c: 135: LCD_String_xy(3,0,"Long: ");
+  1448                           ;GPS.c: 136: LCD_String_xy(3,0,"Long: ");
   1449  001C64  0E00               	movlw	0
   1450  001C66  6E19               	movwf	LCD_String_xy@pos,c
   1451  001C68  0E93               	movlw	low STR_8
@@ -1469,7 +1469,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1455  001C70  0E03               	movlw	3
   1456  001C72  EC68  F019         	call	_LCD_String_xy
   1457                           
-  1458                           ;GPS.c: 136: Longitude = get_longitude(GGA_Pointers[2]);
+  1458                           ;GPS.c: 137: Longitude = get_longitude(GGA_Pointers[2]);
   1459  001C76  0100               	movlb	0	; () banked
   1460  001C78  51C2               	movf	(_GGA_Pointers+2)& (0+255),w,b
   1461  001C7A  EC35  F016         	call	_get_longitude
@@ -1477,7 +1477,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1463  001C82  C061  F0BE         	movff	?_get_longitude+1,main@Longitude+1
   1464  001C86  C062  F0BF         	movff	?_get_longitude+2,main@Longitude+2
   1465                           
-  1466                           ;GPS.c: 137: Longitude = convert_to_degrees(Longitude);
+  1466                           ;GPS.c: 138: Longitude = convert_to_degrees(Longitude);
   1467  001C8A  C0BD  F066         	movff	main@Longitude,convert_to_degrees@NMEA_lat_long
   1468  001C8E  C0BE  F067         	movff	main@Longitude+1,convert_to_degrees@NMEA_lat_long+1
   1469  001C92  C0BF  F068         	movff	main@Longitude+2,convert_to_degrees@NMEA_lat_long+2
@@ -1486,7 +1486,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1472  001C9E  C067  F0BE         	movff	?_convert_to_degrees+1,main@Longitude+1
   1473  001CA2  C068  F0BF         	movff	?_convert_to_degrees+2,main@Longitude+2
   1474                           
-  1475                           ;GPS.c: 138: sprintf(GPS_Buffer,"%.05f",Longitude);
+  1475                           ;GPS.c: 139: sprintf(GPS_Buffer,"%.05f",Longitude);
   1476  001CA6  0EA2               	movlw	low main@GPS_Buffer
   1477  001CA8  0100               	movlb	0	; () banked
   1478  001CAA  6F69               	movwf	sprintf@sp& (0+255),b
@@ -1504,14 +1504,14 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1490  001CC6  C0BF  F06F         	movff	main@Longitude+2,?_sprintf+6
   1491  001CCA  EC5C  F004         	call	_sprintf	;wreg free
   1492                           
-  1493                           ;GPS.c: 139: LCD_String(GPS_Buffer);
+  1493                           ;GPS.c: 140: LCD_String(GPS_Buffer);
   1494  001CCE  0EA2               	movlw	low main@GPS_Buffer
   1495  001CD0  6E17               	movwf	LCD_String@str,c
   1496  001CD2  0E00               	movlw	high main@GPS_Buffer
   1497  001CD4  6E18               	movwf	LCD_String@str+1,c
   1498  001CD6  ECED  F019         	call	_LCD_String	;wreg free
   1499                           
-  1500                           ;GPS.c: 140: strcat(stringBT, GPS_Buffer);
+  1500                           ;GPS.c: 141: strcat(stringBT, GPS_Buffer);
   1501  001CDA  0E50               	movlw	low _stringBT
   1502  001CDC  6E10               	movwf	strcat@to,c
   1503  001CDE  0E01               	movlw	high _stringBT
@@ -1522,7 +1522,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1508  001CE8  6E13               	movwf	strcat@from+1,c
   1509  001CEA  EC96  F019         	call	_strcat	;wreg free
   1510                           
-  1511                           ;GPS.c: 141: strcat(stringBT, ",");
+  1511                           ;GPS.c: 142: strcat(stringBT, ",");
   1512  001CEE  0E50               	movlw	low _stringBT
   1513  001CF0  6E10               	movwf	strcat@to,c
   1514  001CF2  0E01               	movlw	high _stringBT
@@ -1533,7 +1533,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1519  001CFC  6E13               	movwf	strcat@from+1,c
   1520  001CFE  EC96  F019         	call	_strcat	;wreg free
   1521                           
-  1522                           ;GPS.c: 143: memset(GPS_Buffer,0,15);
+  1522                           ;GPS.c: 144: memset(GPS_Buffer,0,15);
   1523  001D02  0EA2               	movlw	low main@GPS_Buffer
   1524  001D04  6E10               	movwf	memset@p1,c
   1525  001D06  0E00               	movlw	high main@GPS_Buffer
@@ -1548,7 +1548,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1534  001D18  6E14               	movwf	memset@n,c
   1535  001D1A  ECC3  F01A         	call	_memset	;wreg free
   1536                           
-  1537                           ;GPS.c: 144: LCD_String_xy(4,0,"Alt: ");
+  1537                           ;GPS.c: 145: LCD_String_xy(4,0,"Alt: ");
   1538  001D1E  0E00               	movlw	0
   1539  001D20  6E19               	movwf	LCD_String_xy@pos,c
   1540  001D22  0EA0               	movlw	low STR_11
@@ -1558,7 +1558,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1544  001D2A  0E04               	movlw	4
   1545  001D2C  EC68  F019         	call	_LCD_String_xy
   1546                           
-  1547                           ;GPS.c: 145: Altitude = get_altitude(GGA_Pointers[7]);
+  1547                           ;GPS.c: 146: Altitude = get_altitude(GGA_Pointers[7]);
   1548  001D30  0100               	movlb	0	; () banked
   1549  001D32  51C7               	movf	(_GGA_Pointers+7)& (0+255),w,b
   1550  001D34  EC1B  F017         	call	_get_altitude
@@ -1566,7 +1566,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1552  001D3C  C061  F0B6         	movff	?_get_altitude+1,main@Altitude+1
   1553  001D40  C062  F0B7         	movff	?_get_altitude+2,main@Altitude+2
   1554                           
-  1555                           ;GPS.c: 146: sprintf(GPS_Buffer,"%.2f",Altitude);
+  1555                           ;GPS.c: 147: sprintf(GPS_Buffer,"%.2f",Altitude);
   1556  001D44  0EA2               	movlw	low main@GPS_Buffer
   1557  001D46  0100               	movlb	0	; () banked
   1558  001D48  6F69               	movwf	sprintf@sp& (0+255),b
@@ -1584,14 +1584,14 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1570  001D64  C0B7  F06F         	movff	main@Altitude+2,?_sprintf+6
   1571  001D68  EC5C  F004         	call	_sprintf	;wreg free
   1572                           
-  1573                           ;GPS.c: 147: LCD_String(GPS_Buffer);
+  1573                           ;GPS.c: 148: LCD_String(GPS_Buffer);
   1574  001D6C  0EA2               	movlw	low main@GPS_Buffer
   1575  001D6E  6E17               	movwf	LCD_String@str,c
   1576  001D70  0E00               	movlw	high main@GPS_Buffer
   1577  001D72  6E18               	movwf	LCD_String@str+1,c
   1578  001D74  ECED  F019         	call	_LCD_String	;wreg free
   1579                           
-  1580                           ;GPS.c: 149: strcat(stringBT, Temperature);
+  1580                           ;GPS.c: 150: strcat(stringBT, Temperature);
   1581  001D78  0E50               	movlw	low _stringBT
   1582  001D7A  6E10               	movwf	strcat@to,c
   1583  001D7C  0E01               	movlw	high _stringBT
@@ -1602,7 +1602,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1588  001D86  6E13               	movwf	strcat@from+1,c
   1589  001D88  EC96  F019         	call	_strcat	;wreg free
   1590                           
-  1591                           ;GPS.c: 150: strcat(stringBT, "\r\n");
+  1591                           ;GPS.c: 151: strcat(stringBT, "\r\n");
   1592  001D8C  0E50               	movlw	low _stringBT
   1593  001D8E  6E10               	movwf	strcat@to,c
   1594  001D90  0E01               	movlw	high _stringBT
@@ -1613,7 +1613,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1599  001D9A  6E13               	movwf	strcat@from+1,c
   1600  001D9C  EC96  F019         	call	_strcat	;wreg free
   1601                           
-  1602                           ;GPS.c: 151: USART_SendString(stringBT);
+  1602                           ;GPS.c: 152: USART_SendString(stringBT);
   1603  001DA0  0E50               	movlw	low _stringBT
   1604  001DA2  6E11               	movwf	USART_SendString@out,c
   1605  001DA4  0E01               	movlw	high _stringBT
@@ -1879,7 +1879,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1865                           
   1866 ;; *************** function _get_longitude *****************
   1867 ;; Defined at:
-  1868 ;;		line 215 in file "GPS.c"
+  1868 ;;		line 216 in file "GPS.c"
   1869 ;; Parameters:    Size  Location     Type
   1870 ;;  long_pointer    1    wreg     unsigned char 
   1871 ;; Auto vars:     Size  Location     Type
@@ -1922,27 +1922,27 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1908  002C6A  0100               	movlb	0	; () banked
   1909  002C6C  6F75               	movwf	get_longitude@long_pointer& (0+255),b
   1910                           
-  1911                           ;GPS.c: 216: unsigned char long_index;
-  1912                           ;GPS.c: 217: unsigned char index = long_pointer+1;
+  1911                           ;GPS.c: 217: unsigned char long_index;
+  1912                           ;GPS.c: 218: unsigned char index = long_pointer+1;
   1913  002C6E  0100               	movlb	0	; () banked
   1914  002C70  2975               	incf	get_longitude@long_pointer& (0+255),w,b
   1915  002C72  0100               	movlb	0	; () banked
   1916  002C74  6F76               	movwf	get_longitude@index& (0+255),b
   1917                           
   1918                           ; BSR set to: 0
-  1919                           ;GPS.c: 218: char Long_Buffer[15];
-  1920                           ;GPS.c: 219: float _longitude;
-  1921                           ;GPS.c: 220: long_index=0;
+  1919                           ;GPS.c: 219: char Long_Buffer[15];
+  1920                           ;GPS.c: 220: float _longitude;
+  1921                           ;GPS.c: 221: long_index=0;
   1922  002C76  0E00               	movlw	0
   1923  002C78  0100               	movlb	0	; () banked
   1924  002C7A  6F77               	movwf	get_longitude@long_index& (0+255),b
   1925                           
-  1926                           ;GPS.c: 223: for( ; GGA_Buffer[index]!=','; index++){
+  1926                           ;GPS.c: 224: for( ; GGA_Buffer[index]!=','; index++){
   1927  002C7C  D018               	goto	l4965
   1928  002C7E                     l4959:
   1929                           
   1930                           ; BSR set to: 0
-  1931                           ;GPS.c: 224: Long_Buffer[long_index]= GGA_Buffer[index];
+  1931                           ;GPS.c: 225: Long_Buffer[long_index]= GGA_Buffer[index];
   1932  002C7E  0100               	movlb	0	; () banked
   1933  002C80  5176               	movf	get_longitude@index& (0+255),w,b
   1934  002C82  0D01               	mullw	1
@@ -1964,7 +1964,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1950  002CA2  CFDF FFE7          	movff	indf2,indf1
   1951                           
   1952                           ; BSR set to: 0
-  1953                           ;GPS.c: 225: long_index++;
+  1953                           ;GPS.c: 226: long_index++;
   1954  002CA6  0100               	movlb	0	; () banked
   1955  002CA8  2B77               	incf	get_longitude@long_index& (0+255),f,b
   1956                           
@@ -1989,15 +1989,15 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1975  002CC6  D7DB               	goto	l4959
   1976                           
   1977                           ; BSR set to: 0
-  1978                           ;GPS.c: 226: }
-  1979                           ;GPS.c: 227: long_index++;
+  1978                           ;GPS.c: 227: }
+  1979                           ;GPS.c: 228: long_index++;
   1980                           
   1981                           ; BSR set to: 0
   1982  002CC8  0100               	movlb	0	; () banked
   1983  002CCA  2B77               	incf	get_longitude@long_index& (0+255),f,b
   1984                           
   1985                           ; BSR set to: 0
-  1986                           ;GPS.c: 228: E_W = GGA_Buffer[long_index];
+  1986                           ;GPS.c: 229: E_W = GGA_Buffer[long_index];
   1987  002CCC  0100               	movlb	0	; () banked
   1988  002CCE  5177               	movf	get_longitude@long_index& (0+255),w,b
   1989  002CD0  0D01               	mullw	1
@@ -2011,7 +2011,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1997  002CE0  6E4E               	movwf	_E_W,c
   1998                           
   1999                           ; BSR set to: 0
-  2000                           ;GPS.c: 229: _longitude = atof(Long_Buffer);
+  2000                           ;GPS.c: 230: _longitude = atof(Long_Buffer);
   2001  002CE2  0E63               	movlw	low get_longitude@Long_Buffer
   2002  002CE4  6E42               	movwf	atof@s,c
   2003  002CE6  0E00               	movlw	high get_longitude@Long_Buffer
@@ -2021,7 +2021,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2007  002CF2  C043  F073         	movff	?_atof+1,get_longitude@_longitude+1
   2008  002CF6  C044  F074         	movff	?_atof+2,get_longitude@_longitude+2
   2009                           
-  2010                           ;GPS.c: 230: return _longitude;
+  2010                           ;GPS.c: 231: return _longitude;
   2011  002CFA  C072  F060         	movff	get_longitude@_longitude,?_get_longitude
   2012  002CFE  C073  F061         	movff	get_longitude@_longitude+1,?_get_longitude+1
   2013  002D02  C074  F062         	movff	get_longitude@_longitude+2,?_get_longitude+2
@@ -2048,7 +2048,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2034                           
   2035 ;; *************** function _get_latitude *****************
   2036 ;; Defined at:
-  2037 ;;		line 198 in file "GPS.c"
+  2037 ;;		line 199 in file "GPS.c"
   2038 ;; Parameters:    Size  Location     Type
   2039 ;;  lat_pointer     1    wreg     unsigned char 
   2040 ;; Auto vars:     Size  Location     Type
@@ -2091,26 +2091,26 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2077  002D08  0100               	movlb	0	; () banked
   2078  002D0A  6F75               	movwf	get_latitude@lat_pointer& (0+255),b
   2079                           
-  2080                           ;GPS.c: 199: unsigned char lat_index = lat_pointer+1;
+  2080                           ;GPS.c: 200: unsigned char lat_index = lat_pointer+1;
   2081  002D0C  0100               	movlb	0	; () banked
   2082  002D0E  2975               	incf	get_latitude@lat_pointer& (0+255),w,b
   2083  002D10  0100               	movlb	0	; () banked
   2084  002D12  6F77               	movwf	get_latitude@lat_index& (0+255),b
   2085                           
   2086                           ; BSR set to: 0
-  2087                           ;GPS.c: 200: unsigned char index = 0;
+  2087                           ;GPS.c: 201: unsigned char index = 0;
   2088  002D14  0E00               	movlw	0
   2089  002D16  0100               	movlb	0	; () banked
   2090  002D18  6F76               	movwf	get_latitude@index& (0+255),b
   2091                           
-  2092                           ;GPS.c: 201: char Lat_Buffer[15];
-  2093                           ;GPS.c: 202: float _latitude;
-  2094                           ;GPS.c: 205: for(;GGA_Buffer[lat_index]!=',';lat_index++){
+  2092                           ;GPS.c: 202: char Lat_Buffer[15];
+  2093                           ;GPS.c: 203: float _latitude;
+  2094                           ;GPS.c: 206: for(;GGA_Buffer[lat_index]!=',';lat_index++){
   2095  002D1A  D018               	goto	l4931
   2096  002D1C                     l4925:
   2097                           
   2098                           ; BSR set to: 0
-  2099                           ;GPS.c: 206: Lat_Buffer[index]= GGA_Buffer[lat_index];
+  2099                           ;GPS.c: 207: Lat_Buffer[index]= GGA_Buffer[lat_index];
   2100  002D1C  0100               	movlb	0	; () banked
   2101  002D1E  5177               	movf	get_latitude@lat_index& (0+255),w,b
   2102  002D20  0D01               	mullw	1
@@ -2132,7 +2132,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2118  002D40  CFDF FFE7          	movff	indf2,indf1
   2119                           
   2120                           ; BSR set to: 0
-  2121                           ;GPS.c: 207: index++;
+  2121                           ;GPS.c: 208: index++;
   2122  002D44  0100               	movlb	0	; () banked
   2123  002D46  2B76               	incf	get_latitude@index& (0+255),f,b
   2124                           
@@ -2157,15 +2157,15 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2143  002D64  D7DB               	goto	l4925
   2144                           
   2145                           ; BSR set to: 0
-  2146                           ;GPS.c: 208: }
-  2147                           ;GPS.c: 209: lat_index++;
+  2146                           ;GPS.c: 209: }
+  2147                           ;GPS.c: 210: lat_index++;
   2148                           
   2149                           ; BSR set to: 0
   2150  002D66  0100               	movlb	0	; () banked
   2151  002D68  2B77               	incf	get_latitude@lat_index& (0+255),f,b
   2152                           
   2153                           ; BSR set to: 0
-  2154                           ;GPS.c: 210: N_S = GGA_Buffer[lat_index];
+  2154                           ;GPS.c: 211: N_S = GGA_Buffer[lat_index];
   2155  002D6A  0100               	movlb	0	; () banked
   2156  002D6C  5177               	movf	get_latitude@lat_index& (0+255),w,b
   2157  002D6E  0D01               	mullw	1
@@ -2179,7 +2179,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2165  002D7E  6E4F               	movwf	_N_S,c
   2166                           
   2167                           ; BSR set to: 0
-  2168                           ;GPS.c: 211: _latitude = atof(Lat_Buffer);
+  2168                           ;GPS.c: 212: _latitude = atof(Lat_Buffer);
   2169  002D80  0E63               	movlw	low get_latitude@Lat_Buffer
   2170  002D82  6E42               	movwf	atof@s,c
   2171  002D84  0E00               	movlw	high get_latitude@Lat_Buffer
@@ -2189,7 +2189,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2175  002D90  C043  F073         	movff	?_atof+1,get_latitude@_latitude+1
   2176  002D94  C044  F074         	movff	?_atof+2,get_latitude@_latitude+2
   2177                           
-  2178                           ;GPS.c: 212: return _latitude;
+  2178                           ;GPS.c: 213: return _latitude;
   2179  002D98  C072  F060         	movff	get_latitude@_latitude,?_get_latitude
   2180  002D9C  C073  F061         	movff	get_latitude@_latitude+1,?_get_latitude+1
   2181  002DA0  C074  F062         	movff	get_latitude@_latitude+2,?_get_latitude+2
@@ -2216,7 +2216,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2202                           
   2203 ;; *************** function _get_gpstime *****************
   2204 ;; Defined at:
-  2205 ;;		line 183 in file "GPS.c"
+  2205 ;;		line 184 in file "GPS.c"
   2206 ;; Parameters:    Size  Location     Type
   2207 ;;		None
   2208 ;; Auto vars:     Size  Location     Type
@@ -2252,10 +2252,10 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2238  00312C                     _get_gpstime:
   2239                           	opt stack 27
   2240                           
-  2241                           ;GPS.c: 184: unsigned char index;
-  2242                           ;GPS.c: 185: unsigned char Time_Buffer[15];
-  2243                           ;GPS.c: 186: unsigned long int _Time;
-  2244                           ;GPS.c: 189: for(index = 0;GGA_Buffer[index]!=','; index++){
+  2241                           ;GPS.c: 185: unsigned char index;
+  2242                           ;GPS.c: 186: unsigned char Time_Buffer[15];
+  2243                           ;GPS.c: 187: unsigned long int _Time;
+  2244                           ;GPS.c: 190: for(index = 0;GGA_Buffer[index]!=','; index++){
   2245                           
   2246                           ;incstack = 0
   2247  00312C  0E00               	movlw	0
@@ -2263,7 +2263,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2249  003130  D013               	goto	l3893
   2250  003132                     l3889:
   2251                           
-  2252                           ;GPS.c: 190: Time_Buffer[index] = GGA_Buffer[index];
+  2252                           ;GPS.c: 191: Time_Buffer[index] = GGA_Buffer[index];
   2253  003132  5042               	movf	get_gpstime@index,w,c
   2254  003134  0D01               	mullw	1
   2255  003136  0E00               	movlw	low _GGA_Buffer
@@ -2296,8 +2296,8 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2282  00316C  A4D8               	btfss	status,2,c
   2283  00316E  D7E1               	goto	l3889
   2284                           
-  2285                           ;GPS.c: 191: }
-  2286                           ;GPS.c: 192: _Time= atol(Time_Buffer);
+  2285                           ;GPS.c: 192: }
+  2286                           ;GPS.c: 193: _Time= atol(Time_Buffer);
   2287  003170  0E2F               	movlw	low get_gpstime@Time_Buffer
   2288  003172  6E1C               	movwf	atol@s,c
   2289  003174  0E00               	movlw	high get_gpstime@Time_Buffer
@@ -2308,7 +2308,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2294  003184  C01E  F040         	movff	?_atol+2,get_gpstime@_Time+2
   2295  003188  C01F  F041         	movff	?_atol+3,get_gpstime@_Time+3
   2296                           
-  2297                           ;GPS.c: 193: return _Time;
+  2297                           ;GPS.c: 194: return _Time;
   2298  00318C  C03E  F02A         	movff	get_gpstime@_Time,?_get_gpstime
   2299  003190  C03F  F02B         	movff	get_gpstime@_Time+1,?_get_gpstime+1
   2300  003194  C040  F02C         	movff	get_gpstime@_Time+2,?_get_gpstime+2
@@ -2502,7 +2502,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2488                           
   2489 ;; *************** function _get_altitude *****************
   2490 ;; Defined at:
-  2491 ;;		line 233 in file "GPS.c"
+  2491 ;;		line 234 in file "GPS.c"
   2492 ;; Parameters:    Size  Location     Type
   2493 ;;  alt_pointer     1    wreg     unsigned char 
   2494 ;; Auto vars:     Size  Location     Type
@@ -2545,27 +2545,27 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2531  002E36  0100               	movlb	0	; () banked
   2532  002E38  6F72               	movwf	get_altitude@alt_pointer& (0+255),b
   2533                           
-  2534                           ;GPS.c: 234: unsigned char alt_index;
-  2535                           ;GPS.c: 235: unsigned char index = alt_pointer+1;
+  2534                           ;GPS.c: 235: unsigned char alt_index;
+  2535                           ;GPS.c: 236: unsigned char index = alt_pointer+1;
   2536  002E3A  0100               	movlb	0	; () banked
   2537  002E3C  2972               	incf	get_altitude@alt_pointer& (0+255),w,b
   2538  002E3E  0100               	movlb	0	; () banked
   2539  002E40  6F74               	movwf	get_altitude@index& (0+255),b
   2540                           
   2541                           ; BSR set to: 0
-  2542                           ;GPS.c: 236: char Alt_Buffer[12];
-  2543                           ;GPS.c: 237: float _Altitude;
-  2544                           ;GPS.c: 238: alt_index=0;
+  2542                           ;GPS.c: 237: char Alt_Buffer[12];
+  2543                           ;GPS.c: 238: float _Altitude;
+  2544                           ;GPS.c: 239: alt_index=0;
   2545  002E42  0E00               	movlw	0
   2546  002E44  0100               	movlb	0	; () banked
   2547  002E46  6F73               	movwf	get_altitude@alt_index& (0+255),b
   2548                           
-  2549                           ;GPS.c: 241: for( ; GGA_Buffer[index]!=','; index++){
+  2549                           ;GPS.c: 242: for( ; GGA_Buffer[index]!=','; index++){
   2550  002E48  D018               	goto	l4987
   2551  002E4A                     l4981:
   2552                           
   2553                           ; BSR set to: 0
-  2554                           ;GPS.c: 242: Alt_Buffer[alt_index]= GGA_Buffer[index];
+  2554                           ;GPS.c: 243: Alt_Buffer[alt_index]= GGA_Buffer[index];
   2555  002E4A  0100               	movlb	0	; () banked
   2556  002E4C  5174               	movf	get_altitude@index& (0+255),w,b
   2557  002E4E  0D01               	mullw	1
@@ -2587,7 +2587,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2573  002E6E  CFDF FFE7          	movff	indf2,indf1
   2574                           
   2575                           ; BSR set to: 0
-  2576                           ;GPS.c: 243: alt_index++;
+  2576                           ;GPS.c: 244: alt_index++;
   2577  002E72  0100               	movlb	0	; () banked
   2578  002E74  2B73               	incf	get_altitude@alt_index& (0+255),f,b
   2579                           
@@ -2612,8 +2612,8 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2598  002E92  D7DB               	goto	l4981
   2599                           
   2600                           ; BSR set to: 0
-  2601                           ;GPS.c: 244: }
-  2602                           ;GPS.c: 245: _Altitude = atof(Alt_Buffer);
+  2601                           ;GPS.c: 245: }
+  2602                           ;GPS.c: 246: _Altitude = atof(Alt_Buffer);
   2603                           
   2604                           ; BSR set to: 0
   2605  002E94  0E63               	movlw	low get_altitude@Alt_Buffer
@@ -2625,7 +2625,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2611  002EA4  C043  F070         	movff	?_atof+1,get_altitude@_Altitude+1
   2612  002EA8  C044  F071         	movff	?_atof+2,get_altitude@_Altitude+2
   2613                           
-  2614                           ;GPS.c: 246: return _Altitude;
+  2614                           ;GPS.c: 247: return _Altitude;
   2615  002EAC  C06F  F060         	movff	get_altitude@_Altitude,?_get_altitude
   2616  002EB0  C070  F061         	movff	get_altitude@_Altitude+1,?_get_altitude+1
   2617  002EB4  C071  F062         	movff	get_altitude@_Altitude+2,?_get_altitude+2
@@ -3374,7 +3374,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3360                           
   3361 ;; *************** function _convert_to_degrees *****************
   3362 ;; Defined at:
-  3363 ;;		line 261 in file "GPS.c"
+  3363 ;;		line 262 in file "GPS.c"
   3364 ;; Parameters:    Size  Location     Type
   3365 ;;  NMEA_lat_lon    3    6[BANK0 ] float 
   3366 ;; Auto vars:     Size  Location     Type
@@ -3417,10 +3417,10 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3403  00232C                     _convert_to_degrees:
   3404                           	opt stack 27
   3405                           
-  3406                           ;GPS.c: 264: float minutes, dec_deg, decimal;
-  3407                           ;GPS.c: 266: int degrees;
-  3408                           ;GPS.c: 268: float position;
-  3409                           ;GPS.c: 270: degrees = (int)(NMEA_lat_long/100.00);
+  3406                           ;GPS.c: 265: float minutes, dec_deg, decimal;
+  3407                           ;GPS.c: 267: int degrees;
+  3408                           ;GPS.c: 269: float position;
+  3409                           ;GPS.c: 271: degrees = (int)(NMEA_lat_long/100.00);
   3410                           
   3411                           ;incstack = 0
   3412  00232C  0E00               	movlw	0
@@ -3440,7 +3440,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3426  002358  C03A  F06F         	movff	?___fttol,convert_to_degrees@degrees
   3427  00235C  C03B  F070         	movff	?___fttol+1,convert_to_degrees@degrees+1
   3428                           
-  3429                           ;GPS.c: 271: minutes = NMEA_lat_long - degrees*100.00;
+  3429                           ;GPS.c: 272: minutes = NMEA_lat_long - degrees*100.00;
   3430  002360  0E00               	movlw	0
   3431  002362  6E27               	movwf	___ftmul@f2,c
   3432  002364  0EC8               	movlw	200
@@ -3469,7 +3469,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3455  0023B8  C03E  F06A         	movff	?___ftadd+1,convert_to_degrees@minutes+1
   3456  0023BC  C03F  F06B         	movff	?___ftadd+2,convert_to_degrees@minutes+2
   3457                           
-  3458                           ;GPS.c: 272: dec_deg = minutes / 60.00;
+  3458                           ;GPS.c: 273: dec_deg = minutes / 60.00;
   3459  0023C0  C069  F022         	movff	convert_to_degrees@minutes,___ftdiv@f1
   3460  0023C4  C06A  F023         	movff	convert_to_degrees@minutes+1,___ftdiv@f1+1
   3461  0023C8  C06B  F024         	movff	convert_to_degrees@minutes+2,___ftdiv@f1+2
@@ -3484,7 +3484,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3470  0023E0  C023  F06D         	movff	?___ftdiv+1,convert_to_degrees@dec_deg+1
   3471  0023E4  C024  F06E         	movff	?___ftdiv+2,convert_to_degrees@dec_deg+2
   3472                           
-  3473                           ;GPS.c: 273: decimal = degrees + dec_deg;
+  3473                           ;GPS.c: 274: decimal = degrees + dec_deg;
   3474  0023E8  C06F  F018         	movff	convert_to_degrees@degrees,___awtoft@c
   3475  0023EC  C070  F019         	movff	convert_to_degrees@degrees+1,___awtoft@c+1
   3476  0023F0  EC5C  F01A         	call	___awtoft	;wreg free
@@ -3499,7 +3499,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3485  002414  C03E  F072         	movff	?___ftadd+1,convert_to_degrees@decimal+1
   3486  002418  C03F  F073         	movff	?___ftadd+2,convert_to_degrees@decimal+2
   3487                           
-  3488                           ;GPS.c: 274: if (N_S == 'S' || E_W == 'W') {
+  3488                           ;GPS.c: 275: if (N_S == 'S' || E_W == 'W') {
   3489  00241C  0E53               	movlw	83
   3490  00241E  184F               	xorwf	_N_S,w,c
   3491  002420  B4D8               	btfsc	status,2,c
@@ -3510,7 +3510,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3496  00242A  D014               	goto	l4951
   3497  00242C                     l4949:
   3498                           
-  3499                           ;GPS.c: 275: decimal *= -1;
+  3499                           ;GPS.c: 276: decimal *= -1;
   3500  00242C  C071  F024         	movff	convert_to_degrees@decimal,___ftmul@f1
   3501  002430  C072  F025         	movff	convert_to_degrees@decimal+1,___ftmul@f1+1
   3502  002434  C073  F026         	movff	convert_to_degrees@decimal+2,___ftmul@f1+2
@@ -3526,8 +3526,8 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3512  002450  C026  F073         	movff	?___ftmul+2,convert_to_degrees@decimal+2
   3513  002454                     l4951:
   3514                           
-  3515                           ;GPS.c: 276: }
-  3516                           ;GPS.c: 278: return decimal;
+  3515                           ;GPS.c: 277: }
+  3516                           ;GPS.c: 279: return decimal;
   3517  002454  C071  F066         	movff	convert_to_degrees@decimal,?_convert_to_degrees
   3518  002458  C072  F067         	movff	convert_to_degrees@decimal+1,?_convert_to_degrees+1
   3519  00245C  C073  F068         	movff	convert_to_degrees@decimal+2,?_convert_to_degrees+2
@@ -3636,7 +3636,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3622                           
   3623 ;; *************** function _convert_time_to_UTC *****************
   3624 ;; Defined at:
-  3625 ;;		line 249 in file "GPS.c"
+  3625 ;;		line 250 in file "GPS.c"
   3626 ;; Parameters:    Size  Location     Type
   3627 ;;  UTC_Time        4   52[BANK0 ] unsigned long 
   3628 ;; Auto vars:     Size  Location     Type
@@ -3674,8 +3674,8 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3660  0027D8                     _convert_time_to_UTC:
   3661                           	opt stack 25
   3662                           
-  3663                           ;GPS.c: 251: unsigned int hour, min, sec;
-  3664                           ;GPS.c: 253: hour = (UTC_Time / 10000);
+  3663                           ;GPS.c: 252: unsigned int hour, min, sec;
+  3664                           ;GPS.c: 254: hour = (UTC_Time / 10000);
   3665                           
   3666                           ;incstack = 0
   3667  0027D8  C094  F019         	movff	convert_time_to_UTC@UTC_Time,___lldiv@dividend
@@ -3694,7 +3694,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3680  0027FC  C019  F09C         	movff	?___lldiv,convert_time_to_UTC@hour
   3681  002800  C01A  F09D         	movff	?___lldiv+1,convert_time_to_UTC@hour+1
   3682                           
-  3683                           ;GPS.c: 254: min = (UTC_Time % 10000) / 100;
+  3683                           ;GPS.c: 255: min = (UTC_Time % 10000) / 100;
   3684  002804  0E10               	movlw	16
   3685  002806  6E14               	movwf	___llmod@divisor,c
   3686  002808  0E27               	movlw	39
@@ -3724,7 +3724,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3710  00284C  C019  F09E         	movff	?___lldiv,convert_time_to_UTC@min
   3711  002850  C01A  F09F         	movff	?___lldiv+1,convert_time_to_UTC@min+1
   3712                           
-  3713                           ;GPS.c: 255: sec = (UTC_Time % 10000) % 100;
+  3713                           ;GPS.c: 256: sec = (UTC_Time % 10000) % 100;
   3714  002854  0E10               	movlw	16
   3715  002856  6E14               	movwf	___llmod@divisor,c
   3716  002858  0E27               	movlw	39
@@ -3743,7 +3743,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3729  002880  C012  F09A         	movff	?___llmod+2,_convert_time_to_UTC$1184+2
   3730  002884  C013  F09B         	movff	?___llmod+3,_convert_time_to_UTC$1184+3
   3731                           
-  3732                           ;GPS.c: 255: sec = (UTC_Time % 10000) % 100;
+  3732                           ;GPS.c: 256: sec = (UTC_Time % 10000) % 100;
   3733  002888  C098  F010         	movff	_convert_time_to_UTC$1184,___llmod@dividend
   3734  00288C  C099  F011         	movff	_convert_time_to_UTC$1184+1,___llmod@dividend+1
   3735  002890  C09A  F012         	movff	_convert_time_to_UTC$1184+2,___llmod@dividend+2
@@ -3760,7 +3760,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3746  0028AC  C010  F0A0         	movff	?___llmod,convert_time_to_UTC@sec
   3747  0028B0  C011  F0A1         	movff	?___llmod+1,convert_time_to_UTC@sec+1
   3748                           
-  3749                           ;GPS.c: 257: sprintf(Data_Buffer, "%d:%d:%d", hour,min,sec);
+  3749                           ;GPS.c: 258: sprintf(Data_Buffer, "%d:%d:%d", hour,min,sec);
   3750  0028B4  0ED8               	movlw	low _Data_Buffer
   3751  0028B6  0100               	movlb	0	; () banked
   3752  0028B8  6F69               	movwf	sprintf@sp& (0+255),b
@@ -9857,7 +9857,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   9835                           
   9836 ;; *************** function _ADC_Read *****************
   9837 ;; Defined at:
-  9838 ;;		line 166 in file "GPS.c"
+  9838 ;;		line 167 in file "GPS.c"
   9839 ;; Parameters:    Size  Location     Type
   9840 ;;  channel         2   15[COMRAM] int 
   9841 ;; Auto vars:     Size  Location     Type
@@ -9891,8 +9891,8 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   9869  00303A                     _ADC_Read:
   9870                           	opt stack 29
   9871                           
-  9872                           ;GPS.c: 168: int digital;
-  9873                           ;GPS.c: 171: ADCON0 =(ADCON0 & 0b11000011)|((channel<<2) & 0b00111100);
+  9872                           ;GPS.c: 169: int digital;
+  9873                           ;GPS.c: 172: ADCON0 =(ADCON0 & 0b11000011)|((channel<<2) & 0b00111100);
   9874                           
   9875                           ;incstack = 0
   9876  00303A  C010  F012         	movff	ADC_Read@channel,??_ADC_Read
@@ -9907,7 +9907,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   9885  00304E  1012               	iorwf	??_ADC_Read,w,c
   9886  003050  6EC2               	movwf	4034,c	;volatile
   9887                           
-  9888                           ;GPS.c: 173: ADCON0 |= ((1<<ADON)|(1<<GO));
+  9888                           ;GPS.c: 174: ADCON0 |= ((1<<ADON)|(1<<GO));
   9889  003052  A2C2               	btfss	4034,1,c	;volatile
   9890  003054  D003               	goto	u4210
   9891  003056  6A12               	clrf	??_ADC_Read& (0+255),c
@@ -9951,7 +9951,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   9929  003090  B2C2               	btfsc	4034,1,c	;volatile
   9930  003092  D7FE               	goto	l116
   9931                           
-  9932                           ;GPS.c: 178: digital = (ADRESH*256) | (ADRESL);
+  9932                           ;GPS.c: 179: digital = (ADRESH*256) | (ADRESL);
   9933  003094  50C3               	movf	4035,w,c	;volatile
   9934  003096  CFC4 F012          	movff	4036,??_ADC_Read	;volatile
   9935  00309A  6A13               	clrf	(??_ADC_Read+1)& (0+255),c
@@ -9962,7 +9962,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   9940  0030A6  5013               	movf	??_ADC_Read+1,w,c
   9941  0030A8  6E17               	movwf	ADC_Read@digital+1,c
   9942                           
-  9943                           ;GPS.c: 179: return(digital);
+  9943                           ;GPS.c: 180: return(digital);
   9944  0030AA  C016  F010         	movff	ADC_Read@digital,?_ADC_Read
   9945  0030AE  C017  F011         	movff	ADC_Read@digital+1,?_ADC_Read+1
   9946  0030B2  0012               	return	
@@ -9989,7 +9989,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   9967                           
   9968 ;; *************** function _ADC_Init *****************
   9969 ;; Defined at:
-  9970 ;;		line 157 in file "GPS.c"
+  9970 ;;		line 158 in file "GPS.c"
   9971 ;; Parameters:    Size  Location     Type
   9972 ;;		None
   9973 ;; Auto vars:     Size  Location     Type
@@ -10023,24 +10023,24 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
  10001  0036C2                     _ADC_Init:
  10002                           	opt stack 29
  10003                           
- 10004                           ;GPS.c: 159: TRISA = 0xFF;
+ 10004                           ;GPS.c: 160: TRISA = 0xFF;
  10005                           
  10006                           ;incstack = 0
  10007  0036C2  6892               	setf	3986,c	;volatile
  10008                           
- 10009                           ;GPS.c: 160: ADCON1 = 0x0E;
+ 10009                           ;GPS.c: 161: ADCON1 = 0x0E;
  10010  0036C4  0E0E               	movlw	14
  10011  0036C6  6EC1               	movwf	4033,c	;volatile
  10012                           
- 10013                           ;GPS.c: 161: ADCON2 = 0x92;
+ 10013                           ;GPS.c: 162: ADCON2 = 0x92;
  10014  0036C8  0E92               	movlw	146
  10015  0036CA  6EC0               	movwf	4032,c	;volatile
  10016                           
- 10017                           ;GPS.c: 162: ADRESH=0;
+ 10017                           ;GPS.c: 163: ADRESH=0;
  10018  0036CC  0E00               	movlw	0
  10019  0036CE  6EC4               	movwf	4036,c	;volatile
  10020                           
- 10021                           ;GPS.c: 163: ADRESL=0;
+ 10021                           ;GPS.c: 164: ADRESL=0;
  10022  0036D0  0E00               	movlw	0
  10023  0036D2  6EC3               	movwf	4035,c	;volatile
  10024  0036D4  0012               	return		;funcret
@@ -10067,7 +10067,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
  10045                           
  10046 ;; *************** function _Serial_ISR *****************
  10047 ;; Defined at:
- 10048 ;;		line 282 in file "GPS.c"
+ 10048 ;;		line 283 in file "GPS.c"
  10049 ;; Parameters:    Size  Location     Type
  10050 ;;		None
  10051 ;; Auto vars:     Size  Location     Type
@@ -10143,69 +10143,69 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
  10121  002224  CFF8 F00D          	movff	tblptru,??_Serial_ISR+12
  10122  002228  CFF5 F00E          	movff	tablat,??_Serial_ISR+13
  10123                           
- 10124                           ;GPS.c: 287: if(RCIF){
+ 10124                           ;GPS.c: 288: if(RCIF){
  10125  00222C  AA9E               	btfss	3998,5,c	;volatile
  10126  00222E  D060               	goto	i2l167
  10127                           
- 10128                           ;GPS.c: 288: GIE = 0;
+ 10128                           ;GPS.c: 289: GIE = 0;
  10129  002230  9EF2               	bcf	intcon,7,c	;volatile
  10130                           
- 10131                           ;GPS.c: 289: unsigned char received_char = RCREG;
+ 10131                           ;GPS.c: 290: unsigned char received_char = RCREG;
  10132  002232  CFAE F00F          	movff	4014,Serial_ISR@received_char	;volatile
  10133                           
- 10134                           ;GPS.c: 290: if(RCSTAbits.OERR){
+ 10134                           ;GPS.c: 291: if(RCSTAbits.OERR){
  10135  002236  A2AB               	btfss	4011,1,c	;volatile
  10136  002238  D003               	goto	i2l4095
  10137                           
- 10138                           ;GPS.c: 291: CREN = 0;
+ 10138                           ;GPS.c: 292: CREN = 0;
  10139  00223A  98AB               	bcf	4011,4,c	;volatile
  10140                           
- 10141                           ;GPS.c: 292: __nop();
+ 10141                           ;GPS.c: 293: __nop();
  10142  00223C  F000               	nop	
  10143                           
- 10144                           ;GPS.c: 293: CREN=1;
+ 10144                           ;GPS.c: 294: CREN=1;
  10145  00223E  88AB               	bsf	4011,4,c	;volatile
  10146  002240                     i2l4095:
  10147                           
- 10148                           ;GPS.c: 294: }
- 10149                           ;GPS.c: 296: if(received_char =='$'){
+ 10148                           ;GPS.c: 295: }
+ 10149                           ;GPS.c: 297: if(received_char =='$'){
  10150  002240  0E24               	movlw	36
  10151  002242  180F               	xorwf	Serial_ISR@received_char,w,c
  10152  002244  A4D8               	btfss	status,2,c
  10153  002246  D00D               	goto	i2l4099
  10154                           
- 10155                           ;GPS.c: 297: GGA_Index = 0;
+ 10155                           ;GPS.c: 298: GGA_Index = 0;
  10156  002248  0E00               	movlw	0
  10157  00224A  6E4A               	movwf	_GGA_Index+1,c	;volatile
  10158  00224C  0E00               	movlw	0
  10159  00224E  6E49               	movwf	_GGA_Index,c	;volatile
  10160                           
- 10161                           ;GPS.c: 298: IsItGGAString = 0;
+ 10161                           ;GPS.c: 299: IsItGGAString = 0;
  10162  002250  0E00               	movlw	0
  10163  002252  0100               	movlb	0	; () banked
  10164  002254  6FD7               	movwf	_IsItGGAString& (0+255),b	;volatile
  10165                           
- 10166                           ;GPS.c: 299: IsLastEndGGA = 0;
+ 10166                           ;GPS.c: 300: IsLastEndGGA = 0;
  10167  002256  0E00               	movlw	0
  10168  002258  6E4B               	movwf	_IsLastEndGGA,c	;volatile
  10169                           
- 10170                           ;GPS.c: 300: CommaCounter = 0;
+ 10170                           ;GPS.c: 301: CommaCounter = 0;
  10171  00225A  0E00               	movlw	0
  10172  00225C  6E4D               	movwf	_CommaCounter,c
  10173                           
- 10174                           ;GPS.c: 301: IsEndGGA = 0;
+ 10174                           ;GPS.c: 302: IsEndGGA = 0;
  10175  00225E  0E00               	movlw	0
  10176  002260  D026               	goto	L6
  10177  002262                     i2l4099:
  10178                           
- 10179                           ;GPS.c: 303: else if(IsItGGAString == 1){
+ 10179                           ;GPS.c: 304: else if(IsItGGAString == 1){
  10180  002262  0100               	movlb	0	; () banked
  10181  002264  05D7               	decf	_IsItGGAString& (0+255),w,b	;volatile
  10182  002266  A4D8               	btfss	status,2,c
  10183  002268  D027               	goto	i2l4117
  10184                           
  10185                           ; BSR set to: 0
- 10186                           ;GPS.c: 304: if(received_char == ',' ) GGA_Pointers[CommaCounter++] = GGA_Index;
+ 10186                           ;GPS.c: 305: if(received_char == ',' ) GGA_Pointers[CommaCounter++] = GGA_Index;
  10187  00226A  0E2C               	movlw	44
  10188  00226C  180F               	xorwf	Serial_ISR@received_char,w,c
  10189  00226E  A4D8               	btfss	status,2,c
@@ -10227,7 +10227,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
  10205  002288                     i2l4107:
  10206                           
  10207                           ; BSR set to: 0
- 10208                           ;GPS.c: 305: GGA_Buffer[GGA_Index++] = received_char;
+ 10208                           ;GPS.c: 306: GGA_Buffer[GGA_Index++] = received_char;
  10209  002288  0E00               	movlw	low _GGA_Buffer
  10210  00228A  2449               	addwf	_GGA_Index,w,c	;volatile
  10211  00228C  6ED9               	movwf	fsr2l,c
@@ -10241,44 +10241,44 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
  10219  00229A  2A4A               	incf	_GGA_Index+1,f,c	;volatile
  10220                           
  10221                           ; BSR set to: 0
- 10222                           ;GPS.c: 306: if(received_char == '\n'){
+ 10222                           ;GPS.c: 307: if(received_char == '\n'){
  10223  00229C  0E0A               	movlw	10
  10224  00229E  180F               	xorwf	Serial_ISR@received_char,w,c
  10225  0022A0  A4D8               	btfss	status,2,c
  10226  0022A2  D007               	goto	i2l161
  10227                           
  10228                           ; BSR set to: 0
- 10229                           ;GPS.c: 307: if (IsLastEndGGA == '\r'){
+ 10229                           ;GPS.c: 308: if (IsLastEndGGA == '\r'){
  10230  0022A4  0E0D               	movlw	13
  10231  0022A6  184B               	xorwf	_IsLastEndGGA,w,c	;volatile
  10232  0022A8  A4D8               	btfss	status,2,c
  10233  0022AA  D022               	goto	i2l167
  10234                           
  10235                           ; BSR set to: 0
- 10236                           ;GPS.c: 308: IsEndGGA = 1;
+ 10236                           ;GPS.c: 309: IsEndGGA = 1;
  10237  0022AC  0E01               	movlw	1
  10238  0022AE                     L6:
  10239  0022AE  6E4C               	movwf	_IsEndGGA,c	;volatile
  10240                           
  10241                           ; BSR set to: 0
- 10242                           ;GPS.c: 309: }
- 10243                           ;GPS.c: 310: }
+ 10242                           ;GPS.c: 310: }
+ 10243                           ;GPS.c: 311: }
  10244  0022B0  D01F               	goto	i2l167
  10245  0022B2                     i2l161:
  10246                           
  10247                           ; BSR set to: 0
- 10248                           ;GPS.c: 311: else{
- 10249                           ;GPS.c: 312: IsLastEndGGA = received_char;
+ 10248                           ;GPS.c: 312: else{
+ 10249                           ;GPS.c: 313: IsLastEndGGA = received_char;
  10250  0022B2  C00F  F04B         	movff	Serial_ISR@received_char,_IsLastEndGGA	;volatile
  10251                           
  10252                           ; BSR set to: 0
- 10253                           ;GPS.c: 313: }
- 10254                           ;GPS.c: 314: }
+ 10253                           ;GPS.c: 314: }
+ 10254                           ;GPS.c: 315: }
  10255  0022B6  D01C               	goto	i2l167
  10256  0022B8                     i2l4117:
  10257                           
  10258                           ; BSR set to: 0
- 10259                           ;GPS.c: 315: else if(GGA_CODE[0] == 'G' && GGA_CODE[1] == 'G' && GGA_CODE[2] == 'A'){
+ 10259                           ;GPS.c: 316: else if(GGA_CODE[0] == 'G' && GGA_CODE[1] == 'G' && GGA_CODE[2] == 'A'){
  10260  0022B8  0E47               	movlw	71
  10261  0022BA  1846               	xorwf	_GGA_CODE,w,c
  10262  0022BC  A4D8               	btfss	status,2,c
@@ -10297,12 +10297,12 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
  10275  0022CE  D00A               	goto	i2l165
  10276                           
  10277                           ; BSR set to: 0
- 10278                           ;GPS.c: 316: IsItGGAString = 1;
+ 10278                           ;GPS.c: 317: IsItGGAString = 1;
  10279  0022D0  0E01               	movlw	1
  10280  0022D2  0100               	movlb	0	; () banked
  10281  0022D4  6FD7               	movwf	_IsItGGAString& (0+255),b	;volatile
  10282                           
- 10283                           ;GPS.c: 317: GGA_CODE[0] = 0; GGA_CODE[1] = 0; GGA_CODE[2] = 0;
+ 10283                           ;GPS.c: 318: GGA_CODE[0] = 0; GGA_CODE[1] = 0; GGA_CODE[2] = 0;
  10284  0022D6  0E00               	movlw	0
  10285  0022D8  6E46               	movwf	_GGA_CODE,c
  10286  0022DA  0E00               	movlw	0
@@ -10310,13 +10310,13 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
  10288  0022DE  0E00               	movlw	0
  10289  0022E0  6E48               	movwf	_GGA_CODE+2,c
  10290                           
- 10291                           ;GPS.c: 318: }
+ 10291                           ;GPS.c: 319: }
  10292  0022E2  D006               	goto	i2l167
  10293  0022E4                     i2l165:
  10294                           
  10295                           ; BSR set to: 0
- 10296                           ;GPS.c: 319: else{
- 10297                           ;GPS.c: 320: GGA_CODE[0] = GGA_CODE[1]; GGA_CODE[1] = GGA_CODE[2]; GGA_CODE[2] = receive
+ 10296                           ;GPS.c: 320: else{
+ 10297                           ;GPS.c: 321: GGA_CODE[0] = GGA_CODE[1]; GGA_CODE[1] = GGA_CODE[2]; GGA_CODE[2] = receive
       +                          d_char;
  10298  0022E4  C047  F046         	movff	_GGA_CODE+1,_GGA_CODE
  10299  0022E8  C048  F047         	movff	_GGA_CODE+2,_GGA_CODE+1
@@ -11922,7 +11922,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.41 build -162212810 
-Symbol Table                                                                                   Tue Oct 13 07:07:10 2020
+Symbol Table                                                                                   Fri Sep 24 16:32:35 2021
 
                    ___altoft@exp 0020                   ?_get_longitude 0060  
                    ?_LCD_Command 0001                    ___altoft@sign 0021  

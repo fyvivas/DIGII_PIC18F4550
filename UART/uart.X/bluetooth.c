@@ -27,9 +27,14 @@ void USART_TransmitChar(char);
 void USART_SendString(const char *);
 char USART_ReceiveChar();
 
+#define _XTAL_FREQ  8000000L
+
 #define F_CPU 8000000/64
 //#define Baud_value(baud_rate) (((float)(F_CPU)/(float)baud_rate)-1)
 #define Baud_value (((float)(F_CPU)/(float)baud_rate)-1)
+
+char buff_rx[20];
+int i = 0;
 
 #define LED LATD0             
 void main()
@@ -40,23 +45,37 @@ void main()
     TRISD = 0;                /* set PORT as output port */
     USART_Init(9600);         /* initialize USART operation with 9600 baud rate */ 
     __delay_ms(50);
+    
+    USART_SendString("BIENVENIDO\r\n");
+    
     while(1)
     {
-        data_in=USART_ReceiveChar();
+        while(data_in != '\n'){
+            data_in=USART_ReceiveChar();
+            buff_rx[i++] = data_in;
+        }
+        
+        /*
+        strlen
+        strcpy
+        strcat
+        strcmp
+        */
+        
         if(data_in=='1')
         {   
-            LED = 0;                    /* turn ON LED */
-            USART_SendString("LED_ON"); /* send LED ON status to terminal */
+            LED = 1;                    /* turn ON LED */
+            USART_SendString("LED_ON\r\n"); /* send LED ON status to terminal */
         }
         else if(data_in=='2')
                 
         {
-            LED = 1;                    /* turn OFF LED */
-            USART_SendString("LED_OFF");/* send LED ON status to terminal */
+            LED = 0;                    /* turn OFF LED */
+            USART_SendString("LED_OFF\r\n");/* send LED ON status to terminal */
         }
         else
         {
-            USART_SendString(" select 1 or 2");/* send msg to select proper option */
+            USART_SendString(" select 1 or 2\r\n");/* send msg to select proper option */
         }
         __delay_ms(100);
     
