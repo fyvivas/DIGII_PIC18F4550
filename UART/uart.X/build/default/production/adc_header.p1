@@ -1,36 +1,49 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"7882 D:\mplab\include\pic18f4550.h
-[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"3383 D:\mplab\include\pic18f4550.h
+[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
 "6497
 [v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
-"10088
-[v _TRISB4 `Vb ~T0 @X0 0 e@31900 ]
-"10114
-[v _TRISD4 `Vb ~T0 @X0 0 e@31916 ]
-"9478
-[v _LATD4 `Vb ~T0 @X0 0 e@31844 ]
-"2424
-[s S102 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S102 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"2434
-[s S103 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S103 . INT0 INT1 INT2 . PGM PGC PGD ]
-"2443
-[s S104 :3 `uc 1 :1 `uc 1 ]
-[n S104 . . CCP2_PA2 ]
-"2423
-[u S101 `S102 1 `S103 1 `S104 1 ]
-[n S101 . . . . ]
-"2448
-[v _PORTBbits `VS101 ~T0 @X0 0 e@3969 ]
-[v F3779 `(v ~T0 @X0 1 tf1`ul ]
-"161 D:\mplab\include\pic18.h
-[v __delay `JF3779 ~T0 @X0 0 e ]
-[p i __delay ]
-[; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
-[; ;htc.h: 28: extern double __fpnormalize(double);
-[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
+"6427
+[v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
+"6711
+[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
+"6705
+[v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
+"6581
+[v _ADCON0 `Vuc ~T0 @X0 0 e@4034 ]
+"8800
+[v _ADON `Vb ~T0 @X0 0 e@32272 ]
+"9314
+[v _GO `Vb ~T0 @X0 0 e@32273 ]
+"6587
+[s S268 :1 `uc 1 :1 `uc 1 ]
+[n S268 . . GO_NOT_DONE ]
+"6591
+[s S269 :1 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S269 . ADON GO_nDONE CHS ]
+"6596
+[s S270 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S270 . . GO_DONE CHS0 CHS1 CHS2 CHS3 ]
+"6604
+[s S271 :1 `uc 1 :1 `uc 1 ]
+[n S271 . . DONE ]
+"6608
+[s S272 :1 `uc 1 :1 `uc 1 ]
+[n S272 . . GO ]
+"6612
+[s S273 :1 `uc 1 :1 `uc 1 ]
+[n S273 . . NOT_DONE ]
+"6616
+[s S274 :1 `uc 1 :1 `uc 1 ]
+[n S274 . . nDONE ]
+"6620
+[s S275 :1 `uc 1 :1 `uc 1 ]
+[n S275 . . GODONE ]
+"6586
+[u S267 `S268 1 `S269 1 `S270 1 `S271 1 `S272 1 `S273 1 `S274 1 `S275 1 ]
+[n S267 . . . . . . . . . ]
+"6625
+[v _ADCON0bits `VS267 ~T0 @X0 0 e@4034 ]
 [; ;pic18f4550.h: 49: extern volatile unsigned char SPPDATA @ 0xF62;
 "51 D:\mplab\include\pic18f4550.h
 [; ;pic18f4550.h: 51: asm("SPPDATA equ 0F62h");
@@ -3527,6 +3540,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18f4550.h: 10280: extern volatile __bit nTO @ (((unsigned) &RCON)*8) + 3;
 [; ;pic18f4550.h: 10282: extern volatile __bit nW @ (((unsigned) &SSPSTAT)*8) + 2;
 [; ;pic18f4550.h: 10284: extern volatile __bit nWRITE @ (((unsigned) &SSPSTAT)*8) + 2;
+[; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
+[; ;htc.h: 28: extern double __fpnormalize(double);
+[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18.h: 18: __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
 [; ;pic18.h: 19: __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
 [; ;pic18.h: 43: extern void __nop(void);
@@ -3536,208 +3552,70 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 161: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 163: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 165: extern __nonreentrant void _delay3(unsigned char);
-"33 fuses.h
-[p x PLLDIV=1 ]
-"34
-[p x CPUDIV=OSC1_PLL2 ]
-"35
-[p x USBDIV=1 ]
-"38
-[p x FOSC=INTOSC_XT ]
-"39
-[p x FCMEN=OFF ]
-"40
-[p x IESO=OFF ]
-"43
-[p x PWRT=OFF ]
-"44
-[p x BOR=ON ]
-"45
-[p x BORV=3 ]
-"46
-[p x VREGEN=OFF ]
-"49
-[p x WDT=OFF ]
-"50
-[p x WDTPS=32768 ]
-"53
-[p x CCP2MX=ON ]
-"54
-[p x PBADEN=ON ]
-"55
-[p x LPT1OSC=OFF ]
-"56
-[p x MCLRE=ON ]
-"59
-[p x STVREN=ON ]
-"60
-[p x LVP=ON ]
-"61
-[p x ICPRT=OFF ]
-"62
-[p x XINST=OFF ]
-"65
-[p x CP0=OFF ]
-"66
-[p x CP1=OFF ]
-"67
-[p x CP2=OFF ]
-"68
-[p x CP3=OFF ]
-"71
-[p x CPB=OFF ]
-"72
-[p x CPD=OFF ]
-"75
-[p x WRT0=OFF ]
-"76
-[p x WRT1=OFF ]
-"77
-[p x WRT2=OFF ]
-"78
-[p x WRT3=OFF ]
-"81
-[p x WRTC=OFF ]
-"82
-[p x WRTB=OFF ]
-"83
-[p x WRTD=OFF ]
-"86
-[p x EBTR0=OFF ]
-"87
-[p x EBTR1=OFF ]
-"88
-[p x EBTR2=OFF ]
-"89
-[p x EBTR3=OFF ]
-"92
-[p x EBTRB=OFF ]
-[; ;blinktest.c: 42: void delay(unsigned int val);
-[; ;blinktest.c: 43: void blink (unsigned int val_delay);
-"45 blinktest.c
-[v _main `(v ~T0 @X0 1 ef ]
+[; ;adc_header.h: 18: void ADC_Init();
+[; ;adc_header.h: 19: int ADC_Read(int);
+"4 adc_header.c
+[v _ADC_Init `(v ~T0 @X0 1 ef ]
+"5
 {
-[; ;blinktest.c: 45: void main(void){
-[e :U _main ]
+[; ;adc_header.c: 4: void ADC_Init()
+[; ;adc_header.c: 5: {
+[e :U _ADC_Init ]
 [f ]
-[; ;blinktest.c: 47: OSCCON = 0b01110010;
-"47
-[e = _OSCCON -> -> 114 `i `uc ]
-[; ;blinktest.c: 49: ADCON1 = 0x0F;
-"49
-[e = _ADCON1 -> -> 15 `i `uc ]
-[; ;blinktest.c: 51: TRISB4 = 1;
-"51
-[e = _TRISB4 -> -> 1 `i `b ]
-[; ;blinktest.c: 52: TRISD4 = 0;
-"52
-[e = _TRISD4 -> -> 0 `i `b ]
-[; ;blinktest.c: 53: LATD4 = 0;
-"53
-[e = _LATD4 -> -> 0 `i `b ]
-[; ;blinktest.c: 57: while(1){
-"57
-[e :U 364 ]
-{
-[; ;blinktest.c: 59: if(PORTBbits.RB4 == 1){
-"59
-[e $ ! == -> . . _PORTBbits 0 4 `i -> 1 `i 366  ]
-{
-[; ;blinktest.c: 60: LATD4 = 1;
-"60
-[e = _LATD4 -> -> 1 `i `b ]
-"61
-}
-[; ;blinktest.c: 61: }
-[e $U 367  ]
-"62
-[e :U 366 ]
-[; ;blinktest.c: 62: else{
-{
-[; ;blinktest.c: 63: LATD4 = 0;
-"63
-[e = _LATD4 -> -> 0 `i `b ]
-"64
-}
-[e :U 367 ]
-[; ;blinktest.c: 64: }
-[; ;blinktest.c: 65: _delay((unsigned long)((500)*(8000000/4000.0)));
-"65
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"66
-}
-[e :U 363 ]
-"57
-[e $U 364  ]
-[e :U 365 ]
-[; ;blinktest.c: 66: }
-[; ;blinktest.c: 67: }
-"67
+[; ;adc_header.c: 6: TRISA = 0xFF;
+"6
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;adc_header.c: 7: ADCON1 = 0x0E;
+"7
+[e = _ADCON1 -> -> 14 `i `uc ]
+[; ;adc_header.c: 8: ADCON2 = 0x92;
+"8
+[e = _ADCON2 -> -> 146 `i `uc ]
+[; ;adc_header.c: 9: ADRESH=0;
+"9
+[e = _ADRESH -> -> 0 `i `uc ]
+[; ;adc_header.c: 10: ADRESL=0;
+"10
+[e = _ADRESL -> -> 0 `i `uc ]
+[; ;adc_header.c: 11: }
+"11
 [e :UE 362 ]
 }
-"82
-[v _blink `(v ~T0 @X0 1 ef1`ui ]
+"13
+[v _ADC_Read `(i ~T0 @X0 1 ef1`i ]
+"14
 {
-[; ;blinktest.c: 82: void blink (unsigned int val_delay){
-[e :U _blink ]
-[v _val_delay `ui ~T0 @X0 1 r1 ]
+[; ;adc_header.c: 13: int ADC_Read(int channel)
+[; ;adc_header.c: 14: {
+[e :U _ADC_Read ]
+"13
+[v _channel `i ~T0 @X0 1 r1 ]
+"14
 [f ]
-[; ;blinktest.c: 84: LATD4 = 1;
-"84
-[e = _LATD4 -> -> 1 `i `b ]
-[; ;blinktest.c: 85: _delay((unsigned long)((val_delay)*(8000000/4000.0)));
-"85
-[e ( __delay (1 -> * -> _val_delay `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;blinktest.c: 86: LATD4 = 0;
-"86
-[e = _LATD4 -> -> 0 `i `b ]
-[; ;blinktest.c: 87: _delay((unsigned long)((val_delay)*(8000000/4000.0)));
-"87
-[e ( __delay (1 -> * -> _val_delay `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;blinktest.c: 88: }
-"88
-[e :UE 368 ]
-}
-"104
-[v _delay `(v ~T0 @X0 1 ef1`ui ]
-{
-[; ;blinktest.c: 104: void delay(unsigned int val){
-[e :U _delay ]
-[v _val `ui ~T0 @X0 1 r1 ]
-[f ]
-"105
-[v _i `ui ~T0 @X0 1 a ]
-[v _j `ui ~T0 @X0 1 a ]
-[; ;blinktest.c: 105: unsigned int i, j;
-[; ;blinktest.c: 106: for(i=0;i<val;i++){
-"106
-{
-[e = _i -> -> 0 `i `ui ]
-[e $U 373  ]
-[e :U 370 ]
-{
-[; ;blinktest.c: 107: for(j=0;j<204;j++);
-"107
-{
-[e = _j -> -> 0 `i `ui ]
-[e $ < _j -> -> 204 `i `ui 374  ]
-[e $U 375  ]
-[e :U 374 ]
-[e ++ _j -> -> 1 `i `ui ]
-[e $ < _j -> -> 204 `i `ui 374  ]
-[e :U 375 ]
-}
-"108
-}
-"106
-[e ++ _i -> -> 1 `i `ui ]
-[e :U 373 ]
-[e $ < _i _val 370  ]
-[e :U 371 ]
-"108
-}
-[; ;blinktest.c: 108: }
-[; ;blinktest.c: 109: }
-"109
-[e :UE 369 ]
+"15
+[v _digital `i ~T0 @X0 1 a ]
+[; ;adc_header.c: 15: int digital;
+[; ;adc_header.c: 18: ADCON0 =(ADCON0 & 0b11000011)|((channel<<2) & 0b00111100);
+"18
+[e = _ADCON0 -> | & -> _ADCON0 `i -> 195 `i & << _channel -> 2 `i -> 60 `i `uc ]
+[; ;adc_header.c: 20: ADCON0 |= ((1<<ADON)|(1<<GO));
+"20
+[e =| _ADCON0 -> | << -> 1 `i -> _ADON `i << -> 1 `i -> _GO `i `uc ]
+[; ;adc_header.c: 23: while(ADCON0bits.GO_nDONE==1);
+"23
+[e $U 364  ]
+[e :U 365 ]
+[e :U 364 ]
+[e $ == -> . . _ADCON0bits 1 1 `i -> 1 `i 365  ]
+[e :U 366 ]
+[; ;adc_header.c: 25: digital = (ADRESH*256) | (ADRESL);
+"25
+[e = _digital | * -> _ADRESH `i -> 256 `i -> _ADRESL `i ]
+[; ;adc_header.c: 26: return(digital);
+"26
+[e ) _digital ]
+[e $UE 363  ]
+[; ;adc_header.c: 27: }
+"27
+[e :UE 363 ]
 }

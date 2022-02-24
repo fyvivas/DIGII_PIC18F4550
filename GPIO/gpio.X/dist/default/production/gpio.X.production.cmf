@@ -21,7 +21,7 @@ text4 CODE 0 7B44 7B44 110 1
 idataCOMRAM CODE 0 7AB1 7AB1 5 1
 cstackCOMRAM COMRAM 1 1 1 A 1
 dataCOMRAM COMRAM 1 B B 5 1
-$C:\Users\ASUS\AppData\Local\Temp\s51g.obj
+$C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 0 0 4 1
 config CONFIG 0 300000 300000 E 1
@@ -63,99 +63,99 @@ MEDIUMCONST 800-7AB0 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\gpio.X.production.obj
-7B44 text4 CODE >60:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B44 text4 CODE >61:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B60 text4 CODE >62:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B78 text4 CODE >63:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B94 text4 CODE >64:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7BBC text4 CODE >65:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7BE2 text4 CODE >66:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7C08 text4 CODE >68:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7C0C text4 CODE >69:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7C1A text4 CODE >70:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7C44 text4 CODE >61:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7C52 text4 CODE >73:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7D64 text3 CODE >75:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7D64 text3 CODE >76:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7D88 text3 CODE >77:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7DB6 text3 CODE >78:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7DD2 text3 CODE >79:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7DFA text3 CODE >80:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7E20 text3 CODE >81:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7E46 text3 CODE >83:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7E4A text3 CODE >84:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7E58 text3 CODE >85:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7E82 text3 CODE >76:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7E96 text3 CODE >88:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7C54 text2 CODE >90:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7C54 text2 CODE >91:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7C70 text2 CODE >92:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7C88 text2 CODE >93:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7CA4 text2 CODE >94:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7CCC text2 CODE >95:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7CF2 text2 CODE >96:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7D18 text2 CODE >98:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7D1C text2 CODE >99:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7D2A text2 CODE >100:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7D54 text2 CODE >91:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7D62 text2 CODE >103:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7E98 text1 CODE >105:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7E98 text1 CODE >106:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7EA8 text1 CODE >107:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7EC4 text1 CODE >108:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7ECA text1 CODE >109:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7EF4 text1 CODE >110:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7F24 text1 CODE >111:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7F40 text1 CODE >112:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7F68 text1 CODE >113:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7F8E text1 CODE >114:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7FB4 text1 CODE >116:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7FB8 text1 CODE >117:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7FC6 text1 CODE >118:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7FF0 text1 CODE >107:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7FFE text1 CODE >121:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7AE0 text0 CODE >33:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7AE0 text0 CODE >34:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7AE4 text0 CODE >35:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7AE8 text0 CODE >36:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7AEA text0 CODE >37:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7AEC text0 CODE >38:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7AEE text0 CODE >41:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7AF2 text0 CODE >42:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B00 text0 CODE >43:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B0E text0 CODE >46:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B10 text0 CODE >47:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B14 text0 CODE >48:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B16 text0 CODE >49:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B1A text0 CODE >50:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B1C text0 CODE >51:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B20 text0 CODE >52:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B22 text0 CODE >53:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B26 text0 CODE >55:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B28 text0 CODE >46:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7B42 text0 CODE >39:C:\Users\ASUS\Documents\GitHub\ARQCB\GPIO\gpio.X\secuencia_main.c
-7AB6 cinit CODE >490:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AB6 cinit CODE >492:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AB6 cinit CODE >495:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AB6 cinit CODE >516:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AB8 cinit CODE >517:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7ABA cinit CODE >518:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7ABC cinit CODE >519:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7ABE cinit CODE >520:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AC0 cinit CODE >521:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AC2 cinit CODE >522:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AC6 cinit CODE >523:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7ACA cinit CODE >524:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7ACA cinit CODE >525:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7ACC cinit CODE >526:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AD0 cinit CODE >527:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AD2 cinit CODE >528:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AD4 cinit CODE >529:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AD6 cinit CODE >535:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AD6 cinit CODE >538:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7AD8 cinit CODE >539:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7ADA cinit CODE >540:C:\Users\ASUS\AppData\Local\Temp\s51g.
-7ADC cinit CODE >541:C:\Users\ASUS\AppData\Local\Temp\s51g.
+7B44 text4 CODE >60:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B44 text4 CODE >61:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B60 text4 CODE >62:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B78 text4 CODE >63:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B94 text4 CODE >64:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7BBC text4 CODE >65:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7BE2 text4 CODE >66:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7C08 text4 CODE >68:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7C0C text4 CODE >69:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7C1A text4 CODE >70:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7C44 text4 CODE >61:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7C52 text4 CODE >73:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7D64 text3 CODE >75:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7D64 text3 CODE >76:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7D88 text3 CODE >77:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7DB6 text3 CODE >78:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7DD2 text3 CODE >79:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7DFA text3 CODE >80:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7E20 text3 CODE >81:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7E46 text3 CODE >83:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7E4A text3 CODE >84:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7E58 text3 CODE >85:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7E82 text3 CODE >76:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7E96 text3 CODE >88:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7C54 text2 CODE >90:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7C54 text2 CODE >91:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7C70 text2 CODE >92:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7C88 text2 CODE >93:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7CA4 text2 CODE >94:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7CCC text2 CODE >95:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7CF2 text2 CODE >96:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7D18 text2 CODE >98:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7D1C text2 CODE >99:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7D2A text2 CODE >100:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7D54 text2 CODE >91:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7D62 text2 CODE >103:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7E98 text1 CODE >105:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7E98 text1 CODE >106:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7EA8 text1 CODE >107:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7EC4 text1 CODE >108:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7ECA text1 CODE >109:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7EF4 text1 CODE >110:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7F24 text1 CODE >111:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7F40 text1 CODE >112:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7F68 text1 CODE >113:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7F8E text1 CODE >114:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7FB4 text1 CODE >116:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7FB8 text1 CODE >117:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7FC6 text1 CODE >118:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7FF0 text1 CODE >107:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7FFE text1 CODE >121:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7AE0 text0 CODE >33:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7AE0 text0 CODE >34:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7AE4 text0 CODE >35:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7AE8 text0 CODE >36:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7AEA text0 CODE >37:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7AEC text0 CODE >38:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7AEE text0 CODE >41:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7AF2 text0 CODE >42:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B00 text0 CODE >43:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B0E text0 CODE >46:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B10 text0 CODE >47:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B14 text0 CODE >48:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B16 text0 CODE >49:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B1A text0 CODE >50:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B1C text0 CODE >51:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B20 text0 CODE >52:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B22 text0 CODE >53:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B26 text0 CODE >55:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B28 text0 CODE >46:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7B42 text0 CODE >39:C:\Users\ASUS\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+7AB6 cinit CODE >490:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AB6 cinit CODE >492:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AB6 cinit CODE >495:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AB6 cinit CODE >516:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AB8 cinit CODE >517:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7ABA cinit CODE >518:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7ABC cinit CODE >519:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7ABE cinit CODE >520:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AC0 cinit CODE >521:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AC2 cinit CODE >522:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AC6 cinit CODE >523:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7ACA cinit CODE >524:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7ACA cinit CODE >525:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7ACC cinit CODE >526:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AD0 cinit CODE >527:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AD2 cinit CODE >528:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AD4 cinit CODE >529:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AD6 cinit CODE >535:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AD6 cinit CODE >538:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7AD8 cinit CODE >539:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7ADA cinit CODE >540:C:\Users\ASUS\AppData\Local\Temp\s9k8.
+7ADC cinit CODE >541:C:\Users\ASUS\AppData\Local\Temp\s9k8.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -174,23 +174,23 @@ __Hspace_1 10 0 ABS 0 - dist/default/production\gpio.X.production.obj
 __Hspace_2 0 0 ABS 0 - dist/default/production\gpio.X.production.obj
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\gpio.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\gpio.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\ASUS\AppData\Local\Temp\s51g.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\gpio.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\gpio.X.production.obj
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\gpio.X.production.obj
 _LATD F8C 0 ABS 0 - dist/default/production\gpio.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\ASUS\AppData\Local\Temp\s51g.obj
+___sp 0 0 STACK 2 stack C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
 _main 7AE0 0 CODE 0 text0 dist/default/production\gpio.X.production.obj
-start 0 0 CODE 0 init C:\Users\ASUS\AppData\Local\Temp\s51g.obj
+start 0 0 CODE 0 init C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\gpio.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\gpio.X.production.obj
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\gpio.X.production.obj
 _velocidad B 0 COMRAM 1 dataCOMRAM dist/default/production\gpio.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\ASUS\AppData\Local\Temp\s51g.obj
-intlevel0 0 0 CODE 0 text C:\Users\ASUS\AppData\Local\Temp\s51g.obj
-intlevel1 0 0 CODE 0 text C:\Users\ASUS\AppData\Local\Temp\s51g.obj
-intlevel2 0 0 CODE 0 text C:\Users\ASUS\AppData\Local\Temp\s51g.obj
-intlevel3 0 0 CODE 0 text C:\Users\ASUS\AppData\Local\Temp\s51g.obj
+__accesstop 60 0 ABS 0 - C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
+intlevel0 0 0 CODE 0 text C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
+intlevel1 0 0 CODE 0 text C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
+intlevel2 0 0 CODE 0 text C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
+intlevel3 0 0 CODE 0 text C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
 __end_of_secuencial_Efecto1 7C54 0 CODE 0 text4 dist/default/production\gpio.X.production.obj
 __end_of_secuencial_Efecto2 7E98 0 CODE 0 text3 dist/default/production\gpio.X.production.obj
 __end_of_secuencial_Efecto3 7D64 0 CODE 0 text2 dist/default/production\gpio.X.production.obj
@@ -204,8 +204,8 @@ __CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\gpio.X.production.obj
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\gpio.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\gpio.X.production.obj
 __pidataCOMRAM 7AB1 0 CODE 0 idataCOMRAM dist/default/production\gpio.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\ASUS\AppData\Local\Temp\s51g.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\ASUS\AppData\Local\Temp\s51g.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\gpio.X.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\gpio.X.production.obj
 _secuencial_Efecto1 7B44 0 CODE 0 text4 dist/default/production\gpio.X.production.obj
@@ -247,7 +247,7 @@ __Htext3 0 0 ABS 0 text3 dist/default/production\gpio.X.production.obj
 __Htext4 0 0 ABS 0 text4 dist/default/production\gpio.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\gpio.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\gpio.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\ASUS\AppData\Local\Temp\s51g.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production\gpio.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\gpio.X.production.obj
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\gpio.X.production.obj
@@ -320,8 +320,8 @@ __Lconfig 300000 0 CONFIG 0 config dist/default/production\gpio.X.production.obj
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\gpio.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\gpio.X.production.obj
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\gpio.X.production.obj
-stackhi 7FF 0 ABS 0 - C:\Users\ASUS\AppData\Local\Temp\s51g.obj
-stacklo 60 0 ABS 0 - C:\Users\ASUS\AppData\Local\Temp\s51g.obj
+stackhi 7FF 0 ABS 0 - C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
+stacklo 60 0 ABS 0 - C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
 __Lintcode 0 0 CODE 0 intcode dist/default/production\gpio.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production\gpio.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production\gpio.X.production.obj
@@ -346,7 +346,7 @@ __ptext2 7C54 0 CODE 0 text2 dist/default/production\gpio.X.production.obj
 __ptext3 7D64 0 CODE 0 text3 dist/default/production\gpio.X.production.obj
 __ptext4 7B44 0 CODE 0 text4 dist/default/production\gpio.X.production.obj
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\gpio.X.production.obj
-__ramtop 800 0 RAM 0 ramtop C:\Users\ASUS\AppData\Local\Temp\s51g.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\ASUS\AppData\Local\Temp\s9k8.obj
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\gpio.X.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\gpio.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\gpio.X.production.obj

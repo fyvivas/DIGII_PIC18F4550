@@ -1,15 +1,5 @@
 
-# 1 "bluetooth.c"
-
-# 26 "D:\mplab\include\htc.h"
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-# 13 "D:\mplab\include\xc8debug.h"
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
+# 1 "adc_header.c"
 
 # 49 "D:\mplab\include\pic18f4550.h"
 extern volatile unsigned char SPPDATA @ 0xF62;
@@ -4714,6 +4704,16 @@ extern volatile __bit nW @ (((unsigned) &SSPSTAT)*8) + 2;
 
 extern volatile __bit nWRITE @ (((unsigned) &SSPSTAT)*8) + 2;
 
+# 26 "D:\mplab\include\htc.h"
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+# 13 "D:\mplab\include\xc8debug.h"
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+
 # 18 "D:\mplab\include\pic18.h"
 __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
 __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
@@ -4737,147 +4737,32 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
+# 18 "adc_header.h"
+void ADC_Init();
+int ADC_Read(int);
 
-# 16 "fuses.h"
-#pragma config PLLDIV = 1
-#pragma config CPUDIV = OSC1_PLL2
-#pragma config USBDIV = 1
-
-
-#pragma config FOSC = INTOSCIO_EC
-#pragma config FCMEN = OFF
-#pragma config IESO = OFF
-
-
-#pragma config PWRT = ON
-#pragma config BOR = OFF
-#pragma config BORV = 3
-#pragma config VREGEN = OFF
-
-
-#pragma config WDT = OFF
-#pragma config WDTPS = 32768
-
-
-#pragma config CCP2MX = ON
-#pragma config PBADEN = OFF
-#pragma config LPT1OSC = OFF
-#pragma config MCLRE = OFF
-
-
-
-
-#pragma config STVREN = ON
-#pragma config LVP = OFF
-#pragma config ICPRT = OFF
-#pragma config XINST = OFF
-
-
-#pragma config CP0 = OFF
-#pragma config CP1 = OFF
-#pragma config CP2 = OFF
-#pragma config CP3 = OFF
-
-
-#pragma config CPB = OFF
-#pragma config CPD = OFF
-
-
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-#pragma config WRT2 = OFF
-#pragma config WRT3 = OFF
-
-
-#pragma config WRTC = OFF
-#pragma config WRTB = OFF
-#pragma config WRTD = OFF
-
-
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-#pragma config EBTR2 = OFF
-#pragma config EBTR3 = OFF
-
-
-#pragma config EBTRB = OFF
-
-# 25 "bluetooth.c"
-void USART_Init(long);
-void USART_TransmitChar(char);
-void USART_SendString(const char *);
-char USART_ReceiveChar();
-
-# 37
-void main()
+# 4 "adc_header.c"
+void ADC_Init()
 {
-OSCCON=0x72;
-
-# 41
-char data_in;
-TRISD = 0;
-USART_Init(9600);
-_delay((unsigned long)((50)*(8000000L/4000.0)));
-
-USART_SendString("BIENVENIDO\r\n");
-
-while(1)
-{
-data_in=USART_ReceiveChar();
-if(data_in=='1')
-{
-LATD0 = 1;
-USART_SendString("LED_ON\r\n");
-}
-else if(data_in=='2')
-
-{
-LATD0 = 0;
-USART_SendString("LED_OFF\r\n");
-}
-else
-{
-USART_SendString(" select 1 or 2\r\n");
-}
-_delay((unsigned long)((100)*(8000000L/4000.0)));
-
+TRISA = 0xFF;
+ADCON1 = 0x0E;
+ADCON2 = 0x92;
+ADRESH=0;
+ADRESL=0;
 }
 
-}
-
-
-
-void USART_Init(long baud_rate)
+int ADC_Read(int channel)
 {
-float temp;
-TRISC6=0;
-TRISC7=1;
-temp=(((float)(8000000/64)/(float)baud_rate)-1);
-SPBRG=(int)temp;
-TXSTA=0x20;
-RCSTA=0x90;
-}
+int digital;
 
-void USART_TransmitChar(char out)
-{
-while(TXIF==0);
-TXREG=out;
 
-# 90
-}
+ADCON0 =(ADCON0 & 0b11000011)|((channel<<2) & 0b00111100);
 
-char USART_ReceiveChar()
-{
+ADCON0 |= ((1<<ADON)|(1<<GO));
 
-while(RCIF==0);
-return(RCREG);
-}
 
-void USART_SendString(const char *out)
-{
-while(*out!='\0')
-{
-USART_TransmitChar(*out);
-out++;
-}
+while(ADCON0bits.GO_nDONE==1);
+
+digital = (ADRESH*256) | (ADRESL);
+return(digital);
 }

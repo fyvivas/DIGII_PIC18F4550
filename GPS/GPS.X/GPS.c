@@ -24,6 +24,8 @@ float convert_to_degrees(float);
 #define GGA_Buffer_Size 80
 #define GGA_Pointers_Size 20
 
+char GGA_Buffer[5][GGA_Buffer_Size]; 
+
 char GGA_Buffer[GGA_Buffer_Size];              /* to store GGA string */
 char GGA_CODE[3];
 
@@ -98,8 +100,17 @@ void main(void) {
 //        LCD_String("  "); 
 //    
 //    }
-    
+    LCD_Init();
+	USART_Init(9600);
+	ADC_Init();
+    timer_init(120);
     while(1){
+        temp = read_temp(),
+        display_Temp(temp);
+        enviar_temp(temp);
+        wait_time();
+        
+        
         
     /* convert digital value to temperature */
     celsius = (ADC_Read(0)*4.88);
@@ -294,6 +305,13 @@ void __interrupt () Serial_ISR (void) {
             CREN=1;
         }
         
+        30
+        //st\r\nprueba\r\narquitectura\r\nte         
+        idxhead=4
+        //        si llega a 30 reinicie a 0
+        idxtail=13
+        
+        
 		if(received_char =='$'){                                                    /* check for '$' */
 			GGA_Index = 0;
 			IsItGGAString = 0;
@@ -321,4 +339,13 @@ void __interrupt () Serial_ISR (void) {
 			GGA_CODE[0] = GGA_CODE[1];  GGA_CODE[1] = GGA_CODE[2]; GGA_CODE[2] = received_char; 
 		}	
 	}
+    if (TMR1IF){
+        TMR1=0xF856;
+        //Pulse = ~Pulse;    /* Toggle Value at PortB to generate waveform of 500 Hz */   
+        PIR1bits.TMR1IF=0; 
+    }
+    if(INT2IF){
+        
+        
+    }
 }
