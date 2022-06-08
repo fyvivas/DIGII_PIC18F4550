@@ -4806,6 +4806,9 @@ LCD_Command((pos & 0x0F)|0xD4);
 LCD_String(str);
 }
 
+
+
+
 void LCD_Clear (void)
 {
 LCD_Command (0x01);

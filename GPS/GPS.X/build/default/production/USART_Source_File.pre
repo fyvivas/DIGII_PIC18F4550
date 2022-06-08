@@ -4766,7 +4766,6 @@ TXREG=out;
 char USART_RxChar()
 {
 
-
 while(RCIF==0);
 if(RCSTAbits.OERR)
 {

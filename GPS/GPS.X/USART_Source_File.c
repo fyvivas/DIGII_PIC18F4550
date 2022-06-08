@@ -25,7 +25,6 @@ void USART_TxChar(char out)
 /*******************RECEIVE FUNCTION*****************************************/
 char USART_RxChar()
 {
-   
     
     while(RCIF==0);                 /*wait for receive interrupt flag*/
     if(RCSTAbits.OERR)

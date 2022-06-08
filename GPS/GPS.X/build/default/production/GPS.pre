@@ -4930,6 +4930,8 @@ float convert_to_degrees(float);
 
 
 
+char GGA_Buffer[5][80];
+
 char GGA_Buffer[80];
 char GGA_CODE[3];
 
@@ -4959,8 +4961,18 @@ PIE1bits.RCIE=1;
 USART_Init(9600);
 ADC_Init();
 
-# 102
+# 103
+LCD_Init();
+USART_Init(9600);
+ADC_Init();
+timer_init(120);
 while(1){
+temp = read_temp(),
+display_Temp(temp);
+enviar_temp(temp);
+wait_time();
+
+
 
 
 celsius = (ADC_Read(0)*4.88);
@@ -5155,6 +5167,13 @@ __nop();
 CREN=1;
 }
 
+30
+
+idxhead=4
+
+idxtail=13
+
+
 if(received_char =='$'){
 GGA_Index = 0;
 IsItGGAString = 0;
@@ -5181,5 +5200,14 @@ GGA_CODE[0] = 0; GGA_CODE[1] = 0; GGA_CODE[2] = 0;
 else{
 GGA_CODE[0] = GGA_CODE[1]; GGA_CODE[1] = GGA_CODE[2]; GGA_CODE[2] = received_char;
 }
+}
+if (TMR1IF){
+TMR1=0xF856;
+
+PIR1bits.TMR1IF=0;
+}
+if(INT2IF){
+
+
 }
 }
