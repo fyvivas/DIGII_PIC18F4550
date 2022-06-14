@@ -1,5 +1,5 @@
 
-# 1 "adc_lm35.c"
+# 1 "adc_pot.c"
 
 # 26 "D:\mplab\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -4738,18 +4738,17 @@ extern __nonreentrant void _delaywdt(unsigned long);
 extern __nonreentrant void _delay3(unsigned char);
 
 
-# 16 "fuses.h"
+# 29 "config.h"
 #pragma config PLLDIV = 1
 #pragma config CPUDIV = OSC1_PLL2
 #pragma config USBDIV = 1
 
-
 #pragma config FOSC = INTOSCIO_EC
 #pragma config FCMEN = OFF
-#pragma config IESO = ON
+#pragma config IESO = OFF
 
 
-#pragma config PWRT = ON
+#pragma config PWRT = OFF
 #pragma config BOR = OFF
 #pragma config BORV = 3
 #pragma config VREGEN = OFF
@@ -4800,42 +4799,29 @@ extern __nonreentrant void _delay3(unsigned char);
 
 #pragma config EBTRB = OFF
 
-# 7 "adc_lm35.c"
-unsigned int value_adc = 0;
-unsigned char counter_digito = 0;
-double temp = 0.0;
-unsigned char lm35 = 0;
+# 18 "adc_lib.h"
+void adc_init ();
+unsigned char adc_read();
 
+# 8 "adc_pot.c"
 void main(void) {
-
-TRISD = 0x00;
-TRISA = 0xFF;
 
 OSCCONbits.IRCF = 0b111;
 OSCCONbits.SCS = 0b10;
 
+TRISD = 0x00;
+TRISA = 0xFF;
 
-ADCON1bits.PCFG = 0b1110;
-ADCON1bits.VCFG = 0b00;
-ADCON0bits.CHS = 0b0000;
-ADCON2bits.ACQT = 0b010;
-ADCON2bits.ADCS = 0b001;
-ADCON2bits.ADFM = 1;
-ADCON0bits.ADON = 1;
 
-# 42
+adc_init();
+
+# 28
 while (1) {
-ADCON0bits.GO_DONE = 1;
-while (ADCON0bits.GO_DONE);
-value_adc = ADRESH;
-value_adc = (value_adc << 8) + ADRESL;
-temp = value_adc;
-temp = (temp * 500.0) / 1023.0;
-lm35 = (char) temp;
-LATD = (1 << 4) + (lm35 % 10);
-_delay((unsigned long)((50)*(8000000L/4000.0)));
-LATD = (1 << 5) + (lm35 / 10);
-_delay((unsigned long)((50)*(8000000L/4000.0)));
+
+
+LATD = adc_read();
+
+# 37
 }
 }
 

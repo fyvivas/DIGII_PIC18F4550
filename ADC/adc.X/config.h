@@ -1,29 +1,41 @@
-/* 
- * File:   fuses.h
- * Author: ASUS
- *
- * Created on 20 de noviembre de 2020, 09:23 AM
- */
+/*!
+\file   CONFIG.h
+\date   2022-06-08
+\author Fulvio Vivas <fyvivas@unicauca.edu.co>
+\brief  Configuration bits.
 
-#ifndef FUSES_H
-#define	FUSES_H
+\par Copyright
+Information contained herein is proprietary to and constitutes valuable
+confidential trade secrets of unicauca, and
+is subject to restrictions on use and disclosure.
+
+\par
+Copyright (c) unicauca 2022. All rights reserved.
+
+\par
+The copyright notices above do not evidence any actual or
+intended publication of this material.
+******************************************************************************
+*/
+
+#ifndef CONFIG_H
+#define	CONFIG_H
 
 #ifdef	__cplusplus
 extern "C" {
 #endif
 
-    // CONFIG1L
+// CONFIG1L
 #pragma config PLLDIV = 1       // PLL Prescaler Selection bits (No prescale (4 MHz oscillator input drives PLL directly))
 #pragma config CPUDIV = OSC1_PLL2// System Clock Postscaler Selection bits ([Primary Oscillator Src: /1][96 MHz PLL Src: /2])
 #pragma config USBDIV = 1       // USB Clock Selection bit (used in Full-Speed USB mode only; UCFG:FSEN = 1) (USB clock source comes directly from the primary oscillator block with no postscale)
 
-// CONFIG1H
-#pragma config FOSC = INTOSCIO_EC// Oscillator Selection bits (Internal oscillator, port function on RA6, EC used by USB (INTIO))
+#pragma config FOSC = INTOSCIO_EC // Oscillator Selection bits (Internal oscillator, CLKO function on RA6, EC used by USB (INTCKO))
 #pragma config FCMEN = OFF      // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor disabled)
-#pragma config IESO = ON        // Internal/External Oscillator Switchover bit (Oscillator Switchover mode enabled)
-
+#pragma config IESO = OFF       // Internal/External Oscillator Switchover bit (Oscillator Switchover mode disabled)
+    
 // CONFIG2L
-#pragma config PWRT = ON        // Power-up Timer Enable bit (PWRT enabled)
+#pragma config PWRT = OFF        // Power-up Timer Enable bit (PWRT enabled)
 #pragma config BOR = OFF        // Brown-out Reset Enable bits (Brown-out Reset disabled in hardware and software)
 #pragma config BORV = 3         // Brown-out Reset Voltage bits (Minimum setting 2.05V)
 #pragma config VREGEN = OFF     // USB Voltage Regulator Enable bit (USB voltage regulator disabled)
@@ -74,11 +86,11 @@ extern "C" {
 // CONFIG7H
 #pragma config EBTRB = OFF      // Boot Block Table Read Protection bit (Boot block (000000-0007FFh) is not protected from table reads executed in other blocks)
 
-
+#define _XTAL_FREQ  8000000
 
 #ifdef	__cplusplus
 }
 #endif
 
-#endif	/* FUSES_H */
+#endif	/* CONFIG_H */
 
