@@ -1,7 +1,7 @@
 /*!
 \file   delay_1ms.c
 \date   2020-11-13
-\author Fulvio Vivas <fulvio.vivas@unicauca.edu.co>
+\author Fulvio Vivas <fyvivas@unicauca.edu.co>
 \brief  Generating a delay of 1 ms in PIC18F4550 using Timer1.
 
 \par Copyright
@@ -18,10 +18,9 @@ intended publication of this material.
 ******************************************************************************
 */
 
-#include "fuses.h"		/* Configuration header file */
 #include <xc.h>
 #include <pic18f4550.h>  /*Header file PIC18f4550 definitions*/
-
+#include "config.h"		/* Configuration header file */
 
 #define Pulse LATB  		/* Define Pulse as LATB to output on PORTB */
 

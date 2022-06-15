@@ -1,7 +1,7 @@
 /*!
 \file   temporizador.c
 \date   2020-11-13
-\author Fulvio Vivas <fulvio.vivas@unicauca.edu.co>
+\author Fulvio Vivas <fyvivas@unicauca.edu.co>
 \brief  Example temporizador.
 
 \par Copyright
@@ -20,9 +20,7 @@ intended publication of this material.
 
 #include <xc.h>
 #include <pic18f4550.h>  /*Header file PIC18f4550 definitions*/
-#include "fuses.h"
-
-#define _XTAL_FREQ 1000000L
+#include "config.h"
 
 unsigned char count = 0;
 

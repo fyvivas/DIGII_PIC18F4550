@@ -18,10 +18,9 @@ intended publication of this material.
 ******************************************************************************
 */
 
-#include "fuses.h"		/* Configuration header file */
 #include <xc.h>
 #include <pic18f4550.h>  /*Header file PIC18f4550 definitions*/
-
+#include "config.h"		/* Configuration header file */
 
 void Timer1_start();
 
