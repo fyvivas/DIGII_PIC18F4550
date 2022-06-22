@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=contador.c
+SOURCEFILES_QUOTED_IF_SPACED=delay_1ms_irq.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/contador.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/contador.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/delay_1ms_irq.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/delay_1ms_irq.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/contador.p1
+OBJECTFILES=${OBJECTDIR}/delay_1ms_irq.p1
 
 # Source Files
-SOURCEFILES=contador.c
+SOURCEFILES=delay_1ms_irq.c
 
 
 
@@ -94,22 +94,22 @@ MP_PROCESSOR_OPTION=18F4550
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/contador.p1: contador.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/delay_1ms_irq.p1: delay_1ms_irq.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/contador.p1.d 
-	@${RM} ${OBJECTDIR}/contador.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fshort-double -fshort-float -memi=wordwrite -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/contador.p1 contador.c 
-	@-${MV} ${OBJECTDIR}/contador.d ${OBJECTDIR}/contador.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/contador.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/delay_1ms_irq.p1.d 
+	@${RM} ${OBJECTDIR}/delay_1ms_irq.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fshort-double -fshort-float -memi=wordwrite -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/delay_1ms_irq.p1 delay_1ms_irq.c 
+	@-${MV} ${OBJECTDIR}/delay_1ms_irq.d ${OBJECTDIR}/delay_1ms_irq.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/delay_1ms_irq.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
-${OBJECTDIR}/contador.p1: contador.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/delay_1ms_irq.p1: delay_1ms_irq.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/contador.p1.d 
-	@${RM} ${OBJECTDIR}/contador.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fshort-double -fshort-float -memi=wordwrite -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/contador.p1 contador.c 
-	@-${MV} ${OBJECTDIR}/contador.d ${OBJECTDIR}/contador.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/contador.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/delay_1ms_irq.p1.d 
+	@${RM} ${OBJECTDIR}/delay_1ms_irq.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fshort-double -fshort-float -memi=wordwrite -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/delay_1ms_irq.p1 delay_1ms_irq.c 
+	@-${MV} ${OBJECTDIR}/delay_1ms_irq.d ${OBJECTDIR}/delay_1ms_irq.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/delay_1ms_irq.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

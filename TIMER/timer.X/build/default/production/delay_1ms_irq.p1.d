@@ -1,6 +1,6 @@
- build/default/production/contador.d  \
- build/default/production/contador.p1:  \
- contador.c  \
+ build/default/production/delay_1ms_irq.d  \
+ build/default/production/delay_1ms_irq.p1:  \
+ delay_1ms_irq.c  \
 C:/Users/ASUS/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8/pic/include/language_support.h  \
 C:/Users/ASUS/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8/pic/include/errata.h  \
 C:/Users/ASUS/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8/pic/include/pic18.h  \

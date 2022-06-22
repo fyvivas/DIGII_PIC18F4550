@@ -629,7 +629,7 @@
         <property key="stack-type" value="compiled"/>
         <property key="user-pack-device-support" value=""/>
       </XC8-config-global>
-      <item path="contador.c" ex="false" overriding="false">
+      <item path="contador.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -649,7 +649,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="delay_1ms_irq.c" ex="true" overriding="false">
+      <item path="delay_1ms_irq.c" ex="false" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>

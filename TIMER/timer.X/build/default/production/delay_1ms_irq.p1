@@ -1,47 +1,38 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"8589 C:/Users/ASUS/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
-[s S355 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S355 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
-"8599
-[s S356 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S356 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-"8609
-[s S357 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S357 . . GIEL GIEH ]
-"8588
-[u S354 `S355 1 `S356 1 `S357 1 ]
-[n S354 . . . . ]
-"8615
-[v _INTCONbits `VS354 ~T0 @X0 0 e@4082 ]
-"8076
-[s S342 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S342 . T0PS PSA T0SE T0CS T08BIT TMR0ON ]
-"8084
-[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S343 . T0PS0 T0PS1 T0PS2 ]
-"8075
-[u S341 `S342 1 `S343 1 ]
-[n S341 . . . ]
-"8090
-[v _T0CONbits `VS341 ~T0 @X0 0 e@4053 ]
-"8147
-[v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
-"4002
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"3264
-[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
-"3439
-[s S137 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S137 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 ]
-"3448
-[s S138 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S138 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 ]
-"3438
-[u S136 `S137 1 `S138 1 ]
-[n S136 . . . ]
-"3458
-[v _TRISAbits `VS136 ~T0 @X0 0 e@3986 ]
+"7987 C:/Users/ASUS/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"3626
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"3074
+[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
+"25 delay_1ms_irq.c
+[v _Timer1_start `(v ~T0 @X0 0 ef ]
+"7519 C:/Users/ASUS/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+[v _TMR1 `Vus ~T0 @X0 0 e@4046 ]
+"4475
+[s S173 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S173 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
+"4485
+[s S174 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S174 . . TX1IF RC1IF . PSPIF ]
+"4474
+[u S172 `S173 1 `S174 1 ]
+[n S172 . . . ]
+"4493
+[v _PIR1bits `VS172 ~T0 @X0 0 e@3998 ]
+"9746
+[v _GIE `Vb ~T0 @X0 0 e@32663 ]
+"10274
+[v _PEIE `Vb ~T0 @X0 0 e@32662 ]
+"10832
+[v _TMR1IE `Vb ~T0 @X0 0 e@31976 ]
+"10835
+[v _TMR1IF `Vb ~T0 @X0 0 e@31984 ]
+"7416
+[v _T1CON `Vuc ~T0 @X0 0 e@4045 ]
+"10841
+[v _TMR1ON `Vb ~T0 @X0 0 e@32360 ]
 [; ;xc8\pic\include\xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8\pic\include\xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3656,82 +3647,91 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "87
 [p x EBTRB=OFF ]
-"25 contador.c
-[v _count `uc ~T0 @X0 1 e ]
-[i _count
--> -> 0 `i `uc
-]
-[; ;contador.c: 25: unsigned char count = 0;
+[; ;delay_1ms_irq.c: 25: void Timer1_start();
 [v $root$_main `(v ~T0 @X0 0 e ]
-"27
-[v _main `(i ~T0 @X0 1 ef ]
+"29 delay_1ms_irq.c
+[v _main `(v ~T0 @X0 1 ef ]
+"30
 {
-[; ;contador.c: 27: int main(void) {
+[; ;delay_1ms_irq.c: 29: void main()
+[; ;delay_1ms_irq.c: 30: {
 [e :U _main ]
 [f ]
-[; ;contador.c: 28: INTCONbits.GIE = 0;
-"28
-[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-[; ;contador.c: 29: T0CONbits.T0CS = 1;
-"29
-[e = . . _T0CONbits 0 3 -> -> 1 `i `uc ]
-[; ;contador.c: 30: T0CONbits.T0SE = 1;
-"30
-[e = . . _T0CONbits 0 2 -> -> 1 `i `uc ]
-[; ;contador.c: 31: T0CONbits.T08BIT = 1;
+[; ;delay_1ms_irq.c: 31: OSCCON=0x72;
 "31
-[e = . . _T0CONbits 0 4 -> -> 1 `i `uc ]
-[; ;contador.c: 32: T0CONbits.TMR0ON = 1;
+[e = _OSCCON -> -> 114 `i `uc ]
+[; ;delay_1ms_irq.c: 32: TRISB = 0;
 "32
-[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
-[; ;contador.c: 33: TMR0L = 0;
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;delay_1ms_irq.c: 33: LATB = 0xff;
 "33
-[e = _TMR0L -> -> 0 `i `uc ]
-[; ;contador.c: 34: TRISD = 0x00;
+[e = _LATB -> -> 255 `i `uc ]
+[; ;delay_1ms_irq.c: 34: Timer1_start();
 "34
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;contador.c: 35: LATD = 0x00;
-"35
-[e = _LATD -> -> 0 `i `uc ]
-[; ;contador.c: 36: TRISAbits.RA4 = 1;
+[e ( _Timer1_start ..  ]
+[; ;delay_1ms_irq.c: 36: while(1);
 "36
-[e = . . _TRISAbits 1 4 -> -> 1 `i `uc ]
-[; ;contador.c: 37: while (1) {
-"37
 [e :U 364 ]
-{
-[; ;contador.c: 38: if (TMR0L == 10) {
-"38
-[e $ ! == -> _TMR0L `i -> 10 `i 366  ]
-{
-[; ;contador.c: 39: TMR0L = 0;
-"39
-[e = _TMR0L -> -> 0 `i `uc ]
-[; ;contador.c: 40: count = 0;
-"40
-[e = _count -> -> 0 `i `uc ]
-"41
-}
-[e :U 366 ]
-[; ;contador.c: 41: }
-[; ;contador.c: 42: count = TMR0L;
-"42
-[e = _count _TMR0L ]
-[; ;contador.c: 43: LATD = (1 << 4) | count;
-"43
-[e = _LATD -> | << -> 1 `i -> 4 `i -> _count `i `uc ]
-"44
-}
 [e :U 363 ]
-"37
 [e $U 364  ]
 [e :U 365 ]
-[; ;contador.c: 44: }
-[; ;contador.c: 45: return 1;
-"45
-[e ) -> 1 `i ]
-[e $UE 362  ]
-[; ;contador.c: 46: }
-"46
+[; ;delay_1ms_irq.c: 38: }
+"38
 [e :UE 362 ]
+}
+[v $root$_Timer1_ISR `(v ~T0 @X0 0 e ]
+[v F3052 `(v ~T0 @X0 1 tf ]
+"40
+[v _Timer1_ISR `IF3052 ~T0 @X0 1 e ]
+"41
+{
+[; ;delay_1ms_irq.c: 40: void interrupt Timer1_ISR()
+[; ;delay_1ms_irq.c: 41: {
+[e :U _Timer1_ISR ]
+[f ]
+[; ;delay_1ms_irq.c: 43: TMR1=0xF856;
+"43
+[e = _TMR1 -> -> 63574 `ui `us ]
+[; ;delay_1ms_irq.c: 44: LATB = ~LATB;
+"44
+[e = _LATB -> ~ -> _LATB `i `uc ]
+[; ;delay_1ms_irq.c: 45: PIR1bits.TMR1IF=0;
+"45
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+[; ;delay_1ms_irq.c: 46: }
+"46
+[e :UE 366 ]
+}
+"48
+[v _Timer1_start `(v ~T0 @X0 1 ef ]
+"49
+{
+[; ;delay_1ms_irq.c: 48: void Timer1_start()
+[; ;delay_1ms_irq.c: 49: {
+[e :U _Timer1_start ]
+[f ]
+[; ;delay_1ms_irq.c: 50: GIE=1;
+"50
+[e = _GIE -> -> 1 `i `b ]
+[; ;delay_1ms_irq.c: 51: PEIE=1;
+"51
+[e = _PEIE -> -> 1 `i `b ]
+[; ;delay_1ms_irq.c: 52: TMR1IE=1;
+"52
+[e = _TMR1IE -> -> 1 `i `b ]
+[; ;delay_1ms_irq.c: 53: TMR1IF=0;
+"53
+[e = _TMR1IF -> -> 0 `i `b ]
+[; ;delay_1ms_irq.c: 54: T1CON=0x80;
+"54
+[e = _T1CON -> -> 128 `i `uc ]
+[; ;delay_1ms_irq.c: 55: TMR1=0xF856;
+"55
+[e = _TMR1 -> -> 63574 `ui `us ]
+[; ;delay_1ms_irq.c: 56: TMR1ON=1;
+"56
+[e = _TMR1ON -> -> 1 `i `b ]
+[; ;delay_1ms_irq.c: 57: }
+"57
+[e :UE 367 ]
 }

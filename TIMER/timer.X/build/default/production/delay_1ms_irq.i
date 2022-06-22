@@ -1,5 +1,5 @@
 
-# 1 "contador.c"
+# 1 "delay_1ms_irq.c"
 
 # 18 "C:/Users/ASUS/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -5721,26 +5721,37 @@ unsigned char __t3rd16on(void);
 
 #pragma config EBTRB = OFF
 
-# 25 "contador.c"
-unsigned char count = 0;
+# 25 "delay_1ms_irq.c"
+void Timer1_start();
 
-int main(void) {
-INTCONbits.GIE = 0;
-T0CONbits.T0CS = 1;
-T0CONbits.T0SE = 1;
-T0CONbits.T08BIT = 1;
-T0CONbits.TMR0ON = 1;
-TMR0L = 0;
-TRISD = 0x00;
-LATD = 0x00;
-TRISAbits.RA4 = 1;
-while (1) {
-if (TMR0L == 10) {
-TMR0L = 0;
-count = 0;
+
+
+void main()
+{
+OSCCON=0x72;
+TRISB = 0;
+LATB = 0xff;
+Timer1_start();
+
+while(1);
+
 }
-count = TMR0L;
-LATD = (1 << 4) | count;
+
+void interrupt Timer1_ISR()
+{
+
+TMR1=0xF856;
+LATB = ~LATB;
+PIR1bits.TMR1IF=0;
 }
-return 1;
+
+void Timer1_start()
+{
+GIE=1;
+PEIE=1;
+TMR1IE=1;
+TMR1IF=0;
+T1CON=0x80;
+TMR1=0xF856;
+TMR1ON=1;
 }
